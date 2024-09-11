@@ -1,2 +1,3 @@
-**Name:** Maya Agge
-**Period:** 2
+**Name:** Maya Agge <br />
+**Period:** 2 <br />
+**Email:** mayaa71@nycstudents.net
