@@ -1,0 +1,4 @@
+What do you notice about the mySum value?
+
+
+What is the value of checkResult, and why do we get that result?
