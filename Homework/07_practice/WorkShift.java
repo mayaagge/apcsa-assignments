@@ -1,5 +1,5 @@
 public class Homework{
-  public static void main(Sting[] args{
+  public static void main(Sting[] args){
     workHours = 20;
     workHours *= 60;
     workMinutes = 42 + workHours;
