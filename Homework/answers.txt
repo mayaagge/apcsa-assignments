@@ -1,4 +1,5 @@
 What do you notice about the mySum value?
-
+The mySum value is 0.30000000000000004 instead of just 0.3 even though 0.1 + 0.1 + 0.1 = 0.3.
 
 What is the value of checkResult, and why do we get that result?
+The value of checkResult is false because 0.30000000000000004 is not equal to 0.3 so the boolean checkResult returns false.
