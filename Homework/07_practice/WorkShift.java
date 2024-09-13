@@ -1,4 +1,4 @@
-public class Homework{
+public class WorkShift{
   public static void main(String[] args){
     int workHours = 20;
     workHours *= 60;
