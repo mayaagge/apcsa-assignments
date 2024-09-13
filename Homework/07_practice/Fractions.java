@@ -8,6 +8,6 @@ public class Fractions {
     System.out.println("The numerator of the first fraction is " +  b);
     System.out.println("The numerator of the first fraction is " +  c);
     System.out.println("The numerator of the first fraction is " +  d);
-    System.out.println("The numerator of the first fraction is " +  a/b + " + " + c/d + " = " + (a/b + c/d));
+    System.out.println("The numerator of the first fraction is " +  a + "/" + b + " + " + c + "/" + d + " = " + (a*d + c*b) + "/" + (b*d));
   }
 }
