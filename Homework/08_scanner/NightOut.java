@@ -15,6 +15,6 @@ public class NightOut{
     System.out.println("Dinner: " + "$" + dinner*3.0);
     System.out.println("Laser Tag: " + "$" + laserTag*2.0);
     System.out.println("Ice cream: " + "$" + iceCream* 4.0/3.0);
-    System.out.println("Grand Total: " + "$" + (dinner*3.0+laserTag*2.0+iceCream*4.0/3.0));
+    System.out.println("Grand Total: " + "$" + ((dinner*3.0) + (laserTag*2.0) + (iceCream*4.0/3.0)));
   }
 }
