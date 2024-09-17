@@ -10,7 +10,7 @@ public class NightOut{
     double laserTag = input.nextDouble();
     input.nextLine();
     System.out.println("How much does a triple scoop cost");
-    double iceCream = input.nextDouble()
+    double iceCream = input.nextDouble();
     input.nextLine();
     double total = (dinner*3.0) + (laserTag*2.0) + (iceCream*4.0/3.0);
     System.out.println("Dinner: " + "$" + dinner*3.0);
