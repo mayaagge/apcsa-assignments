@@ -23,7 +23,7 @@ public class MyStrings
        System.out.println(secondSubs.length()); // Print the length of secondSubs
         
        System.out.println(msg.substring(4,10)); // Get and print the word people
-       System.out.println(msg.length(firstSubs.length()-3); // Get and print the last three characters of msg
+       System.out.println(msg.substring(msg.length()-3); // Get and print the last three characters of msg
         
        System.out.println("firstSubs: " + firstSubs);
        System.out.println("secondSubs: " + secondSubs);
