@@ -36,8 +36,8 @@ public class MyStrings
         // REMEMBER DO NOT USE == TO COMPARE STRINGS
 
         System.out.println( "msg.charAt(0) is: " + msg.charAt(0));
-        // What is the output? 
-        msg.charAt(msg.length()-1); // Print the last character of msg using the method charAt()
+        // What is the output? The output is false
+        System.out.println(msg.charAt(msg.length()-1)); // Print the last character of msg using the method charAt()
 
         // YOU CAN COMPARE CHARACTERS USING ==
         System.out.println("msg.charAt(0) == \'A\': ");
