@@ -7,7 +7,7 @@ public class MyStrings
        String msg = "The people who are crazy enough to think they can change the world are the ones who do."; 
        System.out.println("My message:\n" + msg);
         
-`      System.out.println(msg.length()); // Print the length of msg
+       System.out.println(msg.length()); // Print the length of msg
        
        String firstSubs = msg.substring(4, 10);
        System.out.println("msg.substring(4, 10): " + firstSubs);
