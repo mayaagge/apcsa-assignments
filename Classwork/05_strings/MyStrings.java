@@ -7,13 +7,13 @@ public class MyStrings
        String msg = "The people who are crazy enough to think they can change the world are the ones who do."; 
        System.out.println("My message:\n" + msg);
         
-`      System.out.println(msg.length()) // Print the length of msg
+`      System.out.println(msg.length()); // Print the length of msg
        
        String firstSubs = msg.substring(4, 10);
        System.out.println("msg.substring(4, 10): " + firstSubs);
-       // What is the outuput?
-       // Are characters 4 and 10 included?
-       // Print the lenght of firstSub
+       // What is the outuput? msg.substring(4, 10): people
+       // Are characters 4 and 10 included? 4 is included but 10 is not
+       System.out.println(firstSubs.length()); // Print the length of firstSub
 
        String secondSubs = msg.substring(41);
        System.out.println("msg.substring(41): " + secondSubs);
