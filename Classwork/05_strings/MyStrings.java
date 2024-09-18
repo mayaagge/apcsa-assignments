@@ -32,7 +32,7 @@ public class MyStrings
         // What is the result of the comparison? The result is false
        String newStr = msg.substring(4,10);// Create a new String object newStr and assign a value. Requirement: firstSubs.equals(newStr) should be True
        System.out.println(newStr);
-       System.out.println(firstSubs.equals(newStr));
+       System.out.println("firstSubs.equals(newStr): " + firstSubs.equals(newStr));
         // REMEMBER DO NOT USE == TO COMPARE STRINGS
 
         System.out.println( "msg.charAt(0) is: " + msg.charAt(0));
