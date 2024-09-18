@@ -30,12 +30,14 @@ public class MyStrings
 
        System.out.println("firstSubs.equals(secondSubs): " + firstSubs.equals(secondSubs));
         // What is the result of the comparison? The result is false
-        // Create a new String object newStr and assign a value. Requirement: firstSubs.equals(newStr) should be True
+       String newStr = msg.substring(4,10);// Create a new String object newStr and assign a value. Requirement: firstSubs.equals(newStr) should be True
+       System.out.println(newStr);
+       System.out.println(firstSubs.equals(newStr));
         // REMEMBER DO NOT USE == TO COMPARE STRINGS
 
         System.out.println( "msg.charAt(0) is: " + msg.charAt(0));
-        // What is the output?
-        // Print the last character of msg using the method charAt()
+        // What is the output? 
+        msg.charAt(msg.length()-1); // Print the last character of msg using the method charAt()
 
         // YOU CAN COMPARE CHARACTERS USING ==
         System.out.println("msg.charAt(0) == \'A\': ");
