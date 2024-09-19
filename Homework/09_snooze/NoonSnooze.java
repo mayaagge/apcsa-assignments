@@ -18,7 +18,7 @@ public class NoonSnooze{
     {
       System.out.println("No negative values are allowed");
     }
-    if (minutes < 10)
+    if (minutes < 10 && time > 0)
     {
       System.out.println(hours + ":" + "0" + minutes + " " + day);
     }
