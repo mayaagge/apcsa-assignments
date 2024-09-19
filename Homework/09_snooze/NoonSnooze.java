@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class NoonSnooze{
   public static void main(String[] args) {
-    Scanner input = newe Scanner(System.in);
+    Scanner input = new Scanner(System.in);
     System.out.println("How much time has elapsed since 12:00pm in minutes");
     int time = input.nextInt();
     int minutes = time % 60;
@@ -12,7 +12,7 @@ public class NoonSnooze{
       day = "am";
     if (time < 0)
     {
-      System.out.println("No negative values are allowed")
+      System.out.println("No negative values are allowed");
     }
     else
     {
