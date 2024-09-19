@@ -22,7 +22,7 @@ public class NoonSnooze{
     {
       System.out.println(hours + ":" + "0" + minutes + " " + day);
     }
-    else
+    if (minutes > 10 && time > 0)
     {
       System.out.println(hours + ":" + minutes + " " + day);
     }
