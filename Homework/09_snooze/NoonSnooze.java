@@ -5,10 +5,6 @@ public class NoonSnooze{
     Scanner input = new Scanner(System.in);
     System.out.println("How much time has elapsed since 12:00 pm in minutes?");
     int time = input.nextInt();
-    if (time < 10)
-    {
-      (Str) time = "0" + time;
-    }
     int minutes = time % 60;
     int hours = (time / 60) % 12;
     if (hours == 0)
@@ -21,6 +17,10 @@ public class NoonSnooze{
     if (time < 0)
     {
       System.out.println("No negative values are allowed");
+    }
+    if (time < 10)
+    {
+      System.out.println(hours + ":" + "0" + minutes + " " + day);
     }
     else
     {
