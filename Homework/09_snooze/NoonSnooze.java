@@ -7,7 +7,7 @@ public class NoonSnooze{
     int time = input.nextInt();
     if (time < 10)
     {
-      time = "0" + time;
+      (Str) time = "0" + time;
     }
     int minutes = time % 60;
     int hours = (time / 60) % 12;
