@@ -53,12 +53,19 @@ public class MyStringMethods{
 
   public static void main(String[] args)
   {
-    System.out.println(myIndexOf("hello", "ll") + "hello".indexOf("ll") );
-    System.out.println(myIndexOf("Maya", "a") + "Maya".indexOf("a") );
-    System.out.println(myCompareTo("Maya", "Mama") + "Maya".compareTo("Mama"));
-    System.out.println(myCompareTo("Hello", "Hello!") + "Hello".compareTo("Hello!"));
-    System.out.println(myCompareTo("bye", "bye") + "bye".compareTo("bye"));
-    System.out.println(myparseInt("34") + Integer.parseInt("34"));
-    System.out.println(myparseInt("7") + Integer.parseInt("7"));
+    System.out.println(myIndexOf("hello", "ll"));
+    System.out.println("hello".indexOf("ll"));
+    System.out.println(myIndexOf("Maya", "a"));
+    System.out.println("Maya".indexOf("a"));
+    System.out.println(myCompareTo("Maya", "Mama"));
+    System.out.println("Maya".compareTo("Mama"));
+    System.out.println(myCompareTo("Hello", "Hello!"));
+    System.out.println("Hello".compareTo("Hello!"));
+    System.out.println(myCompareTo("bye", "bye");
+    System.out.println("bye".compareTo("bye"));
+    System.out.println(myparseInt("34")); 
+    System.out.println(Integer.parseInt("34"));
+    System.out.println(myparseInt("7"));
+    System.out.println(Integer.parseInt("7"));
   }
 }
