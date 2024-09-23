@@ -54,7 +54,7 @@ public class MyStringMethods{
   public static void main(String[] args)
   {
     System.out.println(myIndexOf("hello", "ll") + "hello".indexOf("ll") );
-    System.out.println(myIndexOf("Maya", "a") + "Maya.indexOf("a") );
+    System.out.println(myIndexOf("Maya", "a") + "Maya".indexOf("a") );
     System.out.println(myCompareTo("Maya", "Mama") + "Maya".compareTo("Mama"));
     System.out.println(myCompareTo("Hello", "Hello!") + "Hello".compareTo("Hello!"));
     System.out.println(myCompareTo("bye", "bye") + "bye".compareTo("bye"));
