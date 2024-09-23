@@ -48,7 +48,7 @@ public class MyStringMethods{
     for (int i = 0; i < myString.length(); i++)
     {
       a = (int) (myString.charAt(i)-48);
-      b += a*Math.pow(10, myString.length()-i);
+      b += a*Math.pow(10, myString.length()-i-1);
     }
    return b;
  }
