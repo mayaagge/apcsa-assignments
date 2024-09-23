@@ -6,7 +6,7 @@ public class MyStringMethods{
   public static int myIndexOf(String myString, String targetString){
     for (int i = 0; i < myString.length(); i++)
     {
-      if ((myString.substring(i,i+1)).equals(targetString))
+      if ((myString.substring(i,i+targetString.length())).equals(targetString))
       {
         return i;
       }
@@ -29,6 +29,6 @@ public class MyStringMethods{
   public static void main(String[] args)
   {
     System.out.println(myIndexOf("hello", "el"));
-    System.out.println(myIndexOf("Maya", "a"));
+    System.out.println(myIndexOf("Maya", "y"));
   }
 }
