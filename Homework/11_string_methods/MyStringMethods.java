@@ -44,11 +44,13 @@ public class MyStringMethods{
   // Then implement your own myParseInt()
  public static int myparseInt(String myString){
    int a = 0;
+   int b = 0;
     for (int i = 0; i < myString.length(); i++)
     {
-      a += (int) myString.charAt(i);
+      a = (int) (myString.charAt(i)-48);
+      b += a*Math.pow(10, myString.length()-i);
     }
-   return a;
+   return b;
  }
 
   public static void main(String[] args)
