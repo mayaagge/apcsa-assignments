@@ -61,7 +61,7 @@ public class MyStringMethods{
     System.out.println("Maya".compareTo("Mama"));
     System.out.println(myCompareTo("Hello", "Hello!"));
     System.out.println("Hello".compareTo("Hello!"));
-    System.out.println(myCompareTo("bye", "bye");
+    System.out.println(myCompareTo("bye", "bye"));
     System.out.println("bye".compareTo("bye"));
     System.out.println(myparseInt("34")); 
     System.out.println(Integer.parseInt("34"));
