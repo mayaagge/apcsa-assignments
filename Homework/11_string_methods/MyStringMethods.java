@@ -17,18 +17,48 @@ public class MyStringMethods{
   // Explain how CompareTo method works in a few sentences: compareTo return 0 when equals(x) returns true, but if the strings are different at different index positions then it returns the difference of the ascii values of the characters at those indices. If there is no index postion for which the strings are different then it subtracts the lengths. 
   // Then implement your own myCompareTo
   public static int myCompareTo(String myString, String otherString){
-    return 0;
+    if (myString.equals(otherString))
+    {
+      return 0;
+    }
+    else if (myString.length() <= otherString.length())
+      for (int i = 0; i < myString.length(); i++)
+      {
+        if (!(myString.substring(i,i+1)).equals(otherString.substring(i,i+1)))
+        {
+          return (myString.charAt(i)-otherString.charAt(i));
+        }
+      }
+    else if (otherString.length() <= myString.length())
+      for (int i = 0; i < otherString.length(); i++)
+      {
+        if (!(myString.substring(i,i+1)).equals(otherString.substring(i,i+1)))
+        {
+          return (myString.charAt(i)-otherString.charAt(i));
+        }
+      }
+    return myString.length()-otherString.length();
   }
 
   // Explain how parseInt method works in a few sentences: parseInt makes the string into a signed decimal integer.
   // Then implement your own myParseInt()
  public static int myparseInt(String myString){
-    return 0;
+   int a = 0;
+    for (int i = 0; i < myString.length(); i++)
+    {
+      a += (int) myString.charAt(i);
+    }
+   return a;
  }
 
   public static void main(String[] args)
   {
-    System.out.println(myIndexOf("hello", "ll"));
-    System.out.println(myIndexOf("Maya", "a"));
+    System.out.println(myIndexOf("hello", "ll") + "hello".indexOf("ll") );
+    System.out.println(myIndexOf("Maya", "a") + "Maya.indexOf("a") );
+    System.out.println(myCompareTo("Maya", "Mama") + "Maya".compareTo("Mama"));
+    System.out.println(myCompareTo("Hello", "Hello!") + "Hello".compareTo("Hello!"));
+    System.out.println(myCompareTo("bye", "bye") + "bye".compareTo("bye"));
+    System.out.println(myparseInt("34") + Integer.parseInt("34"));
+    System.out.println(myparseInt("7") + Integer.parseInt("7"));
   }
 }
