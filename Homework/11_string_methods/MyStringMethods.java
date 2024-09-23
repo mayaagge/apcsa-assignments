@@ -28,7 +28,7 @@ public class MyStringMethods{
 
   public static void main(String[] args)
   {
-    System.out.println(myIndexOf("hello", "el"));
+    System.out.println(myIndexOf("hello", "ll"));
     System.out.println(myIndexOf("Maya", "y"));
   }
 }
