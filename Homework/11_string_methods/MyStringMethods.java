@@ -12,7 +12,7 @@ public class MyStringMethods{
       }
     }
     return -1;
-  }                             
+  }   
 
   // Explain how CompareTo method works in a few sentences: compareTo return 0 when equals(x) returns true, but if the strings are different at different index positions then it returns the difference of the ascii values of the characters at those indices. If there is no index postion for which the strings are different then it subtracts the lengths. 
   // Then implement your own myCompareTo
@@ -25,3 +25,4 @@ public class MyStringMethods{
  public static int myparseInt(String myString){
 
  }
+}
