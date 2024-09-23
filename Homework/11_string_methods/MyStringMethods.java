@@ -23,6 +23,6 @@ public class MyStringMethods{
   // Explain how parseInt method works in a few sentences: parseInt makes the string into a signed decimal integer.
   // Then implement your own myParseInt()
  public static int myparseInt(String myString){
-
+    return 0;
  }
 }
