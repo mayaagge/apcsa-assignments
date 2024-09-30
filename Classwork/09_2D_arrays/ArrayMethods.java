@@ -46,7 +46,14 @@ public class ArrayMethods
       {
         for (int x =0; x < array[i].length; x++)
         {
-          shift[x][i] += array[i][x];
+          if (array.length == array[i].length)
+          {
+              shift[x][i] += array[i][x];
+          }
+          else
+          {
+              return 0;
+          }
         }
       }
       return shift;
