@@ -40,7 +40,7 @@ public class ChessBoard
             {
                 System.out.print(array[y][z] + "  ");
             }
-            else if (i==1 || i==6)
+            else if (y==1 || y==6)
             {
                 System.out.print(array[y][z] + "   ");
             }
