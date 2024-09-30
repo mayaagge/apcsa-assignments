@@ -11,7 +11,7 @@ public class ChessBoard
         {
           chess[i] = new String [] {"Rook", "Knight", "Bishop", "Queen", "King", "Bishop", "Knight","Rook"};
         }
-        if (i==1 || i==6)
+        else if (i==1 || i==6)
         {
           for (int x = 0; x < 8; x++)
           {
