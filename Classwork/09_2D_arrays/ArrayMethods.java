@@ -20,11 +20,12 @@ public class ArrayMethods
     
     
     public static void print(int[][] array){
+      String[] b = new String[array.length]
       for (int i=0; i< array.length; i++)
       {
-        array[i] = new String[Arrays.toString(array[i])];
+        b[i] = Arrays.toString(array[i]);
       }
-      System.out.println(Arrays.toString(array));
+      System.out.println(Arrays.toString(b));
     }
   
     public static int findSum(int[][] array){
