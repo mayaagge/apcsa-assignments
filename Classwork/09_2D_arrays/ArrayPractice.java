@@ -18,11 +18,11 @@ public class ArrayPractice
       arr[row][col] = value;
     }
     
-    public static void print(int[][] array)
+    public static void print(int[][] arraye)
     {
         for (int i =0; i < array.length; i++)
         {
-            System.out.println(array[i]);
+            System.out.println(arraye[i]);
         }
     }
 }
