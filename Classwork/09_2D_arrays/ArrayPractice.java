@@ -20,7 +20,7 @@ public class ArrayPractice
     
     public static void print(int[][] arraye)
     {
-        for (int i =0; i < array.length; i++)
+        for (int i =0; i < arraye.length; i++)
         {
             System.out.println(arraye[i]);
         }
