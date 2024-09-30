@@ -25,7 +25,7 @@ public class ChessBoard
     public static void print(String[][] array)
     {
       //Use this method to print the chess board onto the console
-      for (int y = 0; y < 9; y++)
+      for (int y = 0; y < 8; y++)
       {
         System.out.println(Arrays.toString(array[y]));
       }
