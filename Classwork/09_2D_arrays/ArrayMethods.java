@@ -13,9 +13,9 @@ public class ArrayMethods
       System.out.println(findSum(some));
       System.out.println(findSum(none));
       System.out.println(findSum(done));
-      System.out.println(print(transpose(some)));
-      System.out.println(print(transpose(none)));
-      System.out.println(print(transpose(done)));
+      print(transpose(some));
+      print(transpose(none));
+      print(transpose(done));
     }
     
     
