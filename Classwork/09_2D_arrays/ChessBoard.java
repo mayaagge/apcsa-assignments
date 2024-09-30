@@ -1,4 +1,4 @@
-import java.utils.Arrays;
+import java.util.Arrays;
 public class ChessBoard
 {
     public static void main(String[] args)
