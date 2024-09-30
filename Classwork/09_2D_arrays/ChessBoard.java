@@ -8,7 +8,7 @@ public class ChessBoard
       {
         if (i==0 || i==7)
         {
-          chess[i] = {"Rook", "Knight", "Bishop", "Queen", "King", "Bishop", "Knight","Rook"};
+          chess[i] = new String ["Rook", "Knight", "Bishop", "Queen", "King", "Bishop", "Knight","Rook"];
         }
         if (i==1 || i==6)
         {
