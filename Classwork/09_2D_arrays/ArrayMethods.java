@@ -53,11 +53,11 @@ public class ArrayMethods
           }
           else
           {
-              return array;
+              return Arrays.toString(array);
           }
         }
       }
-      return shift;
+      return Arrays.toString(shift);
     } 
   
 }
