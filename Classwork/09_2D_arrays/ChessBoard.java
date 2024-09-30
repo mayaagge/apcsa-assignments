@@ -26,7 +26,7 @@ public class ChessBoard
       //Use this method to print the chess board onto the console
       for (int y = 0; y < 9; y++)
       {
-        System.out.println(chess[y]);
+        System.out.println(array[y]);
       }
     }
 }
