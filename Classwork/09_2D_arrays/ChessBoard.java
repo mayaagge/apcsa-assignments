@@ -12,9 +12,9 @@ public class ChessBoard
         }
         if (i==1 || i==6)
         {
-          for (int i = 0; i < 8; i++)
+          for (int x = 0; x < 8; x++)
           {
-            chess[i][i] = "Pawn";
+            chess[i][x] = "Pawn";
           }
         }
       }
@@ -24,9 +24,9 @@ public class ChessBoard
     public static void print(String[][] array)
     {
       //Use this method to print the chess board onto the console
-      for (int i = 0; i < 9; i++)
+      for (int y = 0; y < 9; y++)
       {
-        System.out.println(chess[i]);
+        System.out.println(chess[y]);
       }
     }
 }
