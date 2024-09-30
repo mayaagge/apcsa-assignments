@@ -13,9 +13,9 @@ public class ArrayMethods
       System.out.println(findSum(some));
       System.out.println(findSum(none));
       System.out.println(findSum(done));
-      System.out.println(transpose(some));
-      System.out.println(transpose(none));
-      System.out.println(transpose(done));
+      System.out.println(print(transpose(some)));
+      System.out.println(print(transpose(none)));
+      System.out.println(print(transpose(done)));
     }
     
     
@@ -53,11 +53,11 @@ public class ArrayMethods
           }
           else
           {
-              return Arrays.toString(array);
+              return array;
           }
         }
       }
-      return Arrays.toString(shift);
+      return shift;
     } 
   
 }
