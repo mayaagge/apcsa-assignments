@@ -5,8 +5,9 @@ public class ArrayPractice
         int[][] array = {{3, 5, 7, 8, 0}, {500, 250, 125, 784, 267, 674, 0}, {9, 8, 0}};
         
         // Call the updateValue method three times on this array:
-        
-        
+        updateValue(array, 0, array[0].length - 1, array.length);
+        updateValue(array, 1, array[0].length - 1, array[0].length + array[1].length + array[2].length);
+        updateValue(array, 2, array[0].length - 1, array[0] + array[array.length-1]);
         
         print(array);
     }
@@ -21,6 +22,9 @@ public class ArrayPractice
     
     public static void print(int[][] array)
     {
-
+        for (int i =0; i < array.length; i++)
+        {
+            System.out.println(array[i])
+        }
     }
 }
