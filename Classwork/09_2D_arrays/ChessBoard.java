@@ -18,6 +18,13 @@ public class ChessBoard
             chess[i][x] = "Pawn";
           }
         }
+        else 
+        {
+          for (int x = 0; x < 8; x++)
+          {
+            chess[i][x] = "-";
+          }
+        }
       }
        print(chess);
     }
