@@ -18,11 +18,15 @@ public class ArrayPractice
       arr[row][col] = value;
     }
     
-    public static void print(int[][] arraye)
+    public static void print(int[][] arrays)
     {
-        for (int i =0; i < arraye.length; i++)
+        for (int i =0; i < arrays.length; i++)
         {
-            System.out.println(arraye[i]);
+            for (x = 0; x < arrays[i].length; x++)
+            {
+                System.out.print(arrays[i][x]);
+            }
+            System.out.println(" ");
         }
     }
 }
