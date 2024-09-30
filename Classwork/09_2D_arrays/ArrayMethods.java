@@ -52,7 +52,7 @@ public class ArrayMethods
           }
           else
           {
-              return 0;
+              return array;
           }
         }
       }
