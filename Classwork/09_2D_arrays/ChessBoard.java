@@ -42,11 +42,11 @@ public class ChessBoard
             }
             else if (y==1 || y==6)
             {
-                System.out.print(" " + array[y][z] + "   ");
+                System.out.print(" " + array[y][z] + "  ");
             }
             else
             {
-                System.out.print(" " + array[y][z] + "     ");
+                System.out.print(" " + array[y][z] + "      ");
             }
         }
         System.out.println("");
