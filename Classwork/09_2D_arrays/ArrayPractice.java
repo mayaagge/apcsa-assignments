@@ -7,7 +7,7 @@ public class ArrayPractice
         // Call the updateValue method three times on this array:
         updateValue(array, 0, array[0].length - 1, array.length);
         updateValue(array, 1, array[0].length - 1, array[0].length + array[1].length + array[2].length);
-        updateValue(array, 2, array[0].length - 1, array[0] + array[array.length-1]);
+        updateValue(array, 2, array[0].length - 1, array[0][0] + array[array.length-1][array[array.length-1].length-1]);
         
         print(array);
     }
@@ -17,8 +17,6 @@ public class ArrayPractice
     {
       arr[row][col] = value;
     }
-    
-    
     
     public static void print(int[][] array)
     {
