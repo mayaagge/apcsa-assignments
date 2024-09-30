@@ -46,7 +46,7 @@ public class ChessBoard
             }
             else
             {
-                System.out.print("  " + array[y][z] + "     ");
+                System.out.print(" " + array[y][z] + "     ");
             }
         }
         System.out.println("");
