@@ -24,7 +24,7 @@ public class ArrayPractice
         {
             for (int x = 0; x < arrays[i].length; x++)
             {
-                System.out.print(arrays[i][x]);
+                System.out.print(arrays[i][x] + ", ");
             }
             System.out.println(" ");
         }
