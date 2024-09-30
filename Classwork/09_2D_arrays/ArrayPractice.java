@@ -22,7 +22,7 @@ public class ArrayPractice
     {
         for (int i =0; i < arrays.length; i++)
         {
-            for (x = 0; x < arrays[i].length; x++)
+            for (int x = 0; x < arrays[i].length; x++)
             {
                 System.out.print(arrays[i][x]);
             }
