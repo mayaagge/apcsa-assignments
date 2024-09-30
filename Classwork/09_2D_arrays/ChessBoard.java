@@ -36,7 +36,18 @@ public class ChessBoard
       {
         for (int z=0; z<8; z++)
         {
-            System.out.print(array[y][z] + " ");
+            if (y==0 || y==7)
+            {
+                System.out.print(array[y][z] + "  ");
+            }
+            else if (i==1 || i==6)
+            {
+                System.out.print(array[y][z] + "   ");
+            }
+            else
+            {
+                System.out.print(array[y][z] + "      ");
+            }
         }
         System.out.println("");
       }
