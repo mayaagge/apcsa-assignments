@@ -20,7 +20,7 @@ public class ArrayMethods
     
     
     public static void print(int[][] array){
-      String[] b = new String[array.length]
+      String[] b = new String[array.length];
       for (int i=0; i< array.length; i++)
       {
         b[i] = Arrays.toString(array[i]);
