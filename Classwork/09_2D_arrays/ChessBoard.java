@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//import java.util.Arrays;
 public class ChessBoard
 {
     public static void main(String[] args)
@@ -34,7 +34,11 @@ public class ChessBoard
       //Use this method to print the chess board onto the console
       for (int y = 0; y < 8; y++)
       {
-        System.out.println(Arrays.toString(array[y]));
+        for (int z=0; z<8; z++)
+        {
+            System.out.println(array[y][z]);
+        }
+        //System.out.println(Arrays.toString(array[y]));
       }
     }
 }
