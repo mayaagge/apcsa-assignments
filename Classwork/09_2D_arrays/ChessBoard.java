@@ -36,9 +36,9 @@ public class ChessBoard
       {
         for (int z=0; z<8; z++)
         {
-            System.out.println(array[y][z]);
+            System.out.print(array[y][z] + " ");
         }
-        //System.out.println(Arrays.toString(array[y]));
+        System.out.println("");
       }
     }
 }
