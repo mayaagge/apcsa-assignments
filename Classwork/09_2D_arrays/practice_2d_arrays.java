@@ -107,7 +107,7 @@ public class practice_2d_arrays
         }
         return charArray; // replace this with your 2D array
     }
-  public static void print(int[][] arrays)
+  public static void print(String[][] arrays)
     {
         for (int i =0; i < arrays.length; i++)
         {
