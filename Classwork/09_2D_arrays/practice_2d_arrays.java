@@ -41,8 +41,8 @@ public class practice_2d_arrays
     public static void colSwap(int[][] array, int colAIndex, int colBIndex)
     {
         // Your code here
-      int[][] newArray = new int[array.length][array.length];
-      for (int x = 0; x < array.length; x++)
+      int[][] newArray = new int[array[0].length][array.length];
+      for (int x = 0; x < array[i].length; x++)
       {
         for (int y =0; y < array[x].length; y++)
         {
