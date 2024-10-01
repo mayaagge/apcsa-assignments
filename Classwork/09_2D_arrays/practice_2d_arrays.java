@@ -22,7 +22,7 @@ public class practice_2d_arrays
       int[]temp = (array[rowBIndex]).clone();
       array[rowBIndex]= array[rowAIndex];
       array[rowAIndex] = temp;
-      System.out.println(Array.toString(array_));
+      System.out.println(Arrays.toString(array));
     }
 
   
