@@ -10,8 +10,9 @@ public class practice_2d_arrays
       rowSwap(arr1, 2, 1);
       rowSwap(arr2, 0, 2);
       colSwap(arr2, 1, 0);
-      System.out.print(fillRows("Happy Halloween",3, 4));
-      System.out.print(fillRows("Hello",3, 4));
+       
+      System.out.print(print(fillRows("Happy Halloween",3, 4)));
+      System.out.print(print(fillRows("Hello",3, 4)));
       
       // Print the status of your 2D array before and after
       // invoking a method. You will need to add a print() method
@@ -106,5 +107,17 @@ public class practice_2d_arrays
         }
         return charArray; // replace this with your 2D array
     }
+  public static void print(int[][] arrays)
+    {
+        for (int i =0; i < arrays.length; i++)
+        {
+            for (int x = 0; x < arrays[i].length; x++)
+            {
+                System.out.print(arrays[i][x] + ", ");
+            }
+            System.out.println(" ");
+        }
+    }
+
   
 }    
