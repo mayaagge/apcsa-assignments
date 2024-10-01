@@ -11,8 +11,8 @@ public class practice_2d_arrays
       rowSwap(arr2, 0, 2);
       colSwap(arr2, 1, 0);
        
-      System.out.print(print(fillRows("Happy Halloween",3, 4)));
-      System.out.print(print(fillRows("Hello",3, 4)));
+      print(fillRows("Happy Halloween",3, 4));
+      print(fillRows("Hello",3, 4));
       
       // Print the status of your 2D array before and after
       // invoking a method. You will need to add a print() method
