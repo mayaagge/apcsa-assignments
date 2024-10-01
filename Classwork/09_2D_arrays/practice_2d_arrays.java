@@ -104,7 +104,7 @@ public class practice_2d_arrays
               }
             }
         }
-        return Arrays.toString(charArray); // replace this with your 2D array
+        return charArray; // replace this with your 2D array
     }
   
 }    
