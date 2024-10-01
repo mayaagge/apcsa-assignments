@@ -9,7 +9,7 @@ public class practice_2d_arrays
       int[][] arr2 = {{1,3},{4,5},{1,7}};
       rowSwap(arr1, 2, 1);
       rowSwap(arr2, 0, 2);
-      colSwap(arr2, 2, 0);
+      colSwap(arr2, 1, 0);
       
       
       // Print the status of your 2D array before and after
@@ -41,7 +41,7 @@ public class practice_2d_arrays
     public static void colSwap(int[][] array, int colAIndex, int colBIndex)
     {
         // Your code here
-      int[][] newArray = new int[][array.length];
+      int[][] newArray = new int[array.length][array.length];
       for (int x = 0; x < array.length; x++)
       {
         for (int y =0; y < array[x].length; y++)
@@ -53,7 +53,7 @@ public class practice_2d_arrays
       newArray[colBIndex]= newArray[colAIndex];
       newArray[colAIndex] = temp;
       String[] b = new String[newArray.length];
-      for (int i=0; i< newArray.length; i++)
+      for (int i=0; i< array[0].length; i++)
       {
         b[i] = Arrays.toString(newArray[i]);
       }
