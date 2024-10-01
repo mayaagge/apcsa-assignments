@@ -19,7 +19,7 @@ public class TwoDArrayPractice
     */
   public static void rowSwap(int[][] array, int rowAIndex, int rowBIndex)
     {
-        int[][]temp = (array[rowBIndex]).clone();
+        int[]temp = (array[rowBIndex]).clone();
       array[rowBIndex]= array[rowAIndex];
       array[rowAIndex] = temp;
     }
