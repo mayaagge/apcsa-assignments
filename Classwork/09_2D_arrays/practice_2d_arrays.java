@@ -32,7 +32,12 @@ public class practice_2d_arrays
             System.out.println(" ");
         }
       */
-      System.out.println(array);
+      String[] b = new String[array.length];
+      for (int i=0; i< array.length; i++)
+      {
+        b[i] = Arrays.toString(array[i]);
+      }
+      System.out.println(Arrays.toString(b));
     }
 
   
