@@ -6,7 +6,11 @@ public class practice_2d_arrays
     {
       // Create test cases here.
       int[][] arr1 = {{1,2,3},{2,3,4,5},{1}};
+      int[][] arr2 = {{1,3},{4,5},{1,7}};
       rowSwap(arr1, 2, 1);
+      rowSwap(arr2, 1, 3);
+      colSwap(arr2, 2, 3);
+      
       
       // Print the status of your 2D array before and after
       // invoking a method. You will need to add a print() method
@@ -22,16 +26,6 @@ public class practice_2d_arrays
       int[]temp = (array[rowBIndex]).clone();
       array[rowBIndex]= array[rowAIndex];
       array[rowAIndex] = temp;
-      /*
-      for (int i =0; i < array.length; i++)
-        {
-            for (int x = 0; x < array[i].length; x++)
-            {
-                System.out.print(array[i][x] + ", ");
-            }
-            System.out.println(" ");
-        }
-      */
       String[] b = new String[array.length];
       for (int i=0; i< array.length; i++)
       {
@@ -46,7 +40,24 @@ public class practice_2d_arrays
      */
     public static void colSwap(int[][] array, int colAIndex, int colBIndex)
     {
-        // Your code her
+        // Your code here
+      int[][] newArray = new int[array.length][array.length];
+      for (int x = 0; x < array.length; x++)
+      {
+        for (int y =0; y < array[x].length; y++)
+        {
+          newArray[y][x] = array[x][y];
+        }
+      }
+      int[]temp = (newArray[colBIndex]).clone();
+      newArray[colBIndex]= newArray[colAIndex];
+      newArray[colAIndex] = temp;
+      String[] b = new String[newArray.length];
+      for (int i=0; i< newArray.length; i++)
+      {
+        b[i] = Arrays.toString(newArray[i]);
+      }
+      System.out.println(Arrays.toString(b));
     }
 
   
