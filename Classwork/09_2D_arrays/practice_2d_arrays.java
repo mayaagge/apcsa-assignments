@@ -53,7 +53,7 @@ public class practice_2d_arrays
       newArray[colBIndex]= newArray[colAIndex];
       newArray[colAIndex] = temp;
       String[] b = new String[newArray.length];
-      for (int i=0; i< array[0].length; i++)
+      for (int i=0; i< newArray.length; i++)
       {
         b[i] = Arrays.toString(newArray[i]);
       }
@@ -88,7 +88,22 @@ public class practice_2d_arrays
      */
     public static String[][] fillRows(String str, int rows, int cols)
     {
-        return null; // replace this with your 2D array
+      String[][] charArray = new String[rows][cols];
+      for (int x =0; x <charArray.length; x++)
+        {
+          for (int y = 0; y<charArray[x].length; y++)
+            {
+              if (str.length()>= rows*cols || (x*cols+y) <= str.length()-1)
+              {
+                 charArray[x][y] = str.substring((x*cols+y),(x*cols+y+1));
+              }
+              else if (str.length()< rows*cols && (x*cols+y) > str.length()-1)
+              {
+                break;
+              }
+            }
+        }
+        return charArray; // replace this with your 2D array
     }
   
 }    
