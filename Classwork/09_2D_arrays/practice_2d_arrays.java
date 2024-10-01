@@ -8,8 +8,8 @@ public class practice_2d_arrays
       int[][] arr1 = {{1,2,3},{2,3,4,5},{1}};
       int[][] arr2 = {{1,3},{4,5},{1,7}};
       rowSwap(arr1, 2, 1);
-      rowSwap(arr2, 1, 3);
-      colSwap(arr2, 2, 3);
+      rowSwap(arr2, 0, 2);
+      colSwap(arr2, 2, 0);
       
       
       // Print the status of your 2D array before and after
