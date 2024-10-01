@@ -1,12 +1,12 @@
 import java.util.Arrays;
-public class TwoDArrayPractice
+public class practice_2d_arrays
 {
 
   public static void main(String[] args)
     {
       // Create test cases here.
       int[][] arr1 = {{1,2,3},{2,3,4,5},{1}};
-      System.out.println(Arrays.toString(rowSwap(arr1, 2, 1)));
+      rowSwap(arr1, 2, 1);
       
       // Print the status of your 2D array before and after
       // invoking a method. You will need to add a print() method
@@ -19,9 +19,10 @@ public class TwoDArrayPractice
     */
   public static void rowSwap(int[][] array, int rowAIndex, int rowBIndex)
     {
-        int[]temp = (array[rowBIndex]).clone();
+      int[]temp = (array[rowBIndex]).clone();
       array[rowBIndex]= array[rowAIndex];
       array[rowAIndex] = temp;
+      System.out.println(Array.toString(array_));
     }
 
   
