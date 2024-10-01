@@ -104,12 +104,7 @@ public class practice_2d_arrays
               }
             }
         }
-      String[] b = new String[newArray.length];
-      for (int i=0; i< charArray.length; i++)
-      {
-        b[i] = Arrays.toString(charArray[i]);
-      }
-        return Arrays.toString(b); // replace this with your 2D array
+        return Arrays.toString(charArray); // replace this with your 2D array
     }
   
 }    
