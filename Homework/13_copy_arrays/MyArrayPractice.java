@@ -26,7 +26,7 @@ public class MyArrayPractice{
   public static void main (String[] args){
     int[][] m = {{2,3,4},{4,5,6,7,8},{9,2},{777,7,7}};
     int[][] s = {{},{},{},{}};
-    int[][] n = {{1,2},{3,4}}
+    int[][] n = {{1,2},{3,4}};
     print(copy(m));
     print(updateValues(m));
     print(copy(n));
