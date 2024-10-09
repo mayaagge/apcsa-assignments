@@ -1,0 +1,12 @@
+1. What instance variables should the Employee class have?
+
+The instance variables would be how many hours the employee works, how much they earn per year, where they work, and what level employee they are.
+
+2. What do the instance variables represent? What are the types of those instance variables?
+
+The instance variables represent attributes of the Employee class. The hours the employee works would be an array of integers. Same with the earnings. Where they work and their level would be arrays of strings.
+
+3. What methods would you implement in your Employee class?
+
+Methods implemented would be to figure out how much they earn per hour, and how high status they are based on these instance variables.
+
