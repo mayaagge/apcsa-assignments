@@ -35,6 +35,7 @@ public class MyArrayPractice{
         System.out.print(bruh[i][x] + ", ");
       }
     }
+    System.out.println(" ");
   }
 }
           
