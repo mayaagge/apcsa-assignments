@@ -1,4 +1,15 @@
 public class MyArrayPractice{
+  public static void main (String[] args){
+    int[][] m = {{2,3,4},{4,5,6,7,8},{9,2},{777,7,7}};
+    int[][] s = {{},{},{},{}};
+    int[][] n = {{1,2},{3,4}};
+    print(copy(m));
+    print(updateValues(m));
+    print(copy(n));
+    print(updateValues(n));
+    print(copy(s));
+    print(updateValues(s));
+  }
   public static int[][] copy(int[][] nums){
     int[][] newArray = new nums.clone();
     return newArray;
@@ -20,20 +31,9 @@ public class MyArrayPractice{
   }
   public static void print(int[][] bruh){
     for (int i = 0; i < bruh.length; i++) {
-      for (int x = 0; x < bruh[i].length, x++) {
+      for (int x = 0; x < bruh[i].length; x++) {
         System.out.print(bruh[i][x] + ", ");
     }
-  }
-  public static void main (String[] args){
-    int[][] m = {{2,3,4},{4,5,6,7,8},{9,2},{777,7,7}};
-    int[][] s = {{},{},{},{}};
-    int[][] n = {{1,2},{3,4}};
-    print(copy(m));
-    print(updateValues(m));
-    print(copy(n));
-    print(updateValues(n));
-    print(copy(s));
-    print(updateValues(s));
   }
 }
           
