@@ -33,6 +33,7 @@ public class MyArrayPractice{
     for (int i = 0; i < bruh.length; i++) {
       for (int x = 0; x < bruh[i].length; x++) {
         System.out.print(bruh[i][x] + ", ");
+      }
     }
   }
 }
