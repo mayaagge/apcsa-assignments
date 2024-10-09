@@ -1,0 +1,11 @@
+1. What instance variables should the Pizza class have?
+
+The Pizza class should have an instance variable with an array with strings for the toppings, integers for the size, integers for the rating, and strings for the type of bread.
+
+2. What do the instance variables represent? What are types of those instance variables?
+
+The instance variables are the attributes of the Pizza class and types of those instance variables are arrays that are strings or integers and such like strings for the toppings like "pepperoni" and integers for the size like 1,2, or 3 describing small, medium, or large.
+
+3. Methods
+
+The methods would describe what the pizza class should do like get the size, integers, rating, and bread type from the user.
