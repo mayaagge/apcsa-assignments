@@ -19,8 +19,9 @@ public class MyArrayPractice{
     return nums;
   }
   public static void print(int[][] bruh){
-    for (int stuff: bruh) {
-      System.out.print(stuff + ", ");
+    for (int i = 0; i < bruh.length; i++) {
+      for (int x = 0; x < bruh[i].length, x++) {
+        System.out.print(bruh[i][x] + ", ");
     }
   }
   public static void main (String[] args){
