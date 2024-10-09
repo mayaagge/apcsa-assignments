@@ -11,7 +11,7 @@ public class MyArrayPractice{
     print(updateValues(s));
   }
   public static int[][] copy(int[][] nums){
-    int[][] newArray = new nums.clone();
+    int[][] newArray = nums.clone();
     return newArray;
   }
   public static int[][] updateValues(int[][] nums){
