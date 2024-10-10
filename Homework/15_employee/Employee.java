@@ -19,7 +19,46 @@ public class Employee{
     hoursWeek = myHoursWeek;
   }
 
-  public get
+  public int getSalary(){
+    return salary;
+  }
 
-  public static
-  public 
+  public int getHoursWeek(){
+    return hoursWeek;
+  }
+  
+  public String getPosition(){
+    return position;
+  }
+
+  public String getField(){
+    return field;
+  }
+
+  public void setSalary (int newSalary){
+    salary = newSalary;
+  }
+
+  public void getHoursWeek (int newHoursWeek){
+    hoursWeek = newHoursWeek;
+  }
+
+  public void setPosition (String newPosition){
+    position = newPosition;
+  }
+
+  public void setField (String newField){
+    field = newField;
+  }
+
+  public static void information(){
+    System.out.println("Salary: " + salary);
+    System.out.println("Hours per week: " + hoursWeek);
+    System.out.println("Field: " + field);
+    System.out.println("Position: " + position);
+  }
+  
+  public int calcSalaryWeek(){
+    return salary/hoursWeek;
+  }
+}
