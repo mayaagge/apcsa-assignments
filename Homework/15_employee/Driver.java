@@ -4,6 +4,6 @@ public class Driver{
       System.out.println("initial salary with: " + salary.getSalary());
       salary.setSalary(500,000);
       System.out.println("updated salary with: " + salary.getSalary());
-      Employee.information();
+      Employee.message();
     }
 }
