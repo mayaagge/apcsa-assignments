@@ -7,16 +7,15 @@ public class Employee{
   public Employee(){
   }
 
-  public Employee(int mySalary)
+  public Employee(int mySalary, int myHoursWeek)
   {
     salary = mySalary;
+    hoursWeek = myHoursWeek;
   }
 
-  public Employee(int mySalary, String myPosition, String myField, int myHoursWeek){
-    salary = mySalary;
+  public Employee(String myPosition, String myField){
     position = myPosition;
     field = myField;
-    hoursWeek = myHoursWeek;
   }
 
   public int getSalary(){
