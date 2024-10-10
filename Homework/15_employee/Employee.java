@@ -51,7 +51,7 @@ public class Employee{
     field = newField;
   }
 
-  public static void information(){
+  public void information(){
     System.out.println("Salary: " + salary);
     System.out.println("Hours per week: " + hoursWeek);
     System.out.println("Field: " + field);
@@ -60,5 +60,9 @@ public class Employee{
   
   public int calcSalaryWeek(){
     return salary/hoursWeek;
+  }
+
+  public static void message(){
+    System.out.println("Hi!");
   }
 }
