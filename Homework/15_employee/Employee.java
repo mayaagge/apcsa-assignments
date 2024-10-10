@@ -12,7 +12,7 @@ public class Employee{
     salary = mySalary;
   }
 
-  public Employee(int mySalary; String myPosition; String myField; int myHoursWeek){
+  public Employee(int mySalary, String myPosition, String myField, int myHoursWeek){
     salary = mySalary;
     position = myPosition;
     field = myField;
