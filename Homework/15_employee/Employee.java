@@ -65,11 +65,17 @@ public class Employee{
     System.out.println("Hi!");
   }
 
+  //static in non-static
   public void test(){
     Employee.message();
   }
 
+  //non-static in static (doesn't work)
+  /*
   public static void test2(){
     calcSalaryWeek();
   }
+  */
+  //Error: Main method not found in class Employee, please define the main method as: public static void main(String[] args)
+
 }
