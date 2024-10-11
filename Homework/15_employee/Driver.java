@@ -3,6 +3,7 @@ public class Driver{
       Employee emp = new Employee(70000, 50);
       System.out.println("initial salary with: " + emp.getSalary());
       emp.setSalary(500000);
+      emp.calcSalaryWeek();
       System.out.println("updated salary with: " + emp.getSalary());
       Employee.message();
     }
