@@ -64,4 +64,12 @@ public class Employee{
   public static void message(){
     System.out.println("Hi!");
   }
+
+  public void test(){
+    Employee.message();
+  }
+
+  public static void test2(){
+    calcSalaryWeek();
+  }
 }
