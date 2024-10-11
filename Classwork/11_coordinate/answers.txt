@@ -1,0 +1,24 @@
+Part 1
+
+1. Can you call a static method from a non-static one?
+Yes you can because when you call the non-static method, the object belongs to a class, which means the static method will be known what class to call from.
+
+2. Or vice versa, can you call a non-static method from a static one?
+No you can't because it doesn't know what object you're calling.
+
+3. Try that in your class Employee, and write your answers as comments at the end of your Employee class.
+Look at Employee class
+
+Part 2
+
+1. How many instance variable are needed? Private or Public?
+We would need two instance variable one for each coordinate x and y which would both be private.
+
+2. What constructors should be needed?
+We would should use three constructors: one default constructor, one where both x and y are equal, and one constructor with both x and y.
+
+3.What methods do you think should be needed?
+We can have a method where we find the distance from the origin, and another method where we swap the x and y coordinates. We would make these methods after the getters and setters.
+
+4. Would it be possible to make the Point class immutable? If so, how?
+We could set x and y to be final variables so that they cannot be changed.
