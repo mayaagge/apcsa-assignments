@@ -20,6 +20,10 @@ public class Driver{
 *  3. point1.distanceTo(point2)
 *  
 *  For each of those methods respond the following questions:
+
 *  1. Where is the method implemented (which class)? Justify your answer.
+It is implemented in the Point Class because it is defining all the variables using the Point Class.
+
 *  2. Is the method static or non-static? Justify your answer.
+The method for finding the distance(point1, point2) is in driver. The second one is a static method because it is using the class to get the method. The last one is a non-static method because it is using an object.
 */
