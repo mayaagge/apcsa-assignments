@@ -5,5 +5,6 @@ public class Driver{
       emp.setSalary(500000);
       System.out.println("updated salary with: " + emp.getSalary());
       Employee.message();
+      calcSalaryWeek();
     }
 }
