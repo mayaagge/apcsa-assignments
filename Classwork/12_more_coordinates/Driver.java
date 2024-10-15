@@ -17,7 +17,7 @@ public class Driver{
     * Reuse code
     */
     public static double distance(Point a, Point b){
-        return 0.0;
+        return Point.distance(a, b);
     }
 
     public static void main(String[]args){
