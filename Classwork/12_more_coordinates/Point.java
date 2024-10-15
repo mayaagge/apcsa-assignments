@@ -32,7 +32,7 @@ public class Point{
 
     public String toString(){
         // YOUR CODE
-        int coordinate = "(" + x+ ", " + y+ ")"
+        int coordinate = "(" + x+ ", " + y+ ")";
         return coordinate;
     }
 
@@ -41,7 +41,7 @@ public class Point{
     */
     public static double distance(Point a, Point b){
         // YOUR CODE HERE
-        distancePoints = Math.exp(a*a + b*b, 1/2)
+        distancePoints = Math.exp(a*a + b*b, 1/2);
         return distancePoints;
     }
 
@@ -51,7 +51,7 @@ public class Point{
     Reuse code from prior methods
     */
     public double distanceTo(Point other){
-        d = distance(new Point x, y, other)
+        d = distance(this, other);
         return d;
     }
 }
