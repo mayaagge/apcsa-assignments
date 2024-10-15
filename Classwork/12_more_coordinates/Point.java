@@ -41,7 +41,7 @@ public class Point{
     */
     public static double distance(Point a, Point b){
         // YOUR CODE HERE
-        double distancePoints = Math.exp(Math.exp((a.getX() - b.getX()),2.0) + Math.exp((a.getY() - b.getY()),2),0.5) ;
+        double distancePoints = Math.exp(Math.exp((a.getX() - b.getX()),2.0) + Math.exp((a.getY() - b.getY()),2.0),0.5) ;
         return distancePoints;
     }
 
