@@ -31,14 +31,6 @@ public class APLine{
   public int getC(){
     return c;
   }
-  
-  public int getX(){
-    return x;
-  }
-
-  public int getY(){
-    return y;
-  }
 
   public double getSlope(){
     return -a/b;
