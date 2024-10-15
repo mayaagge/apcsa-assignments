@@ -32,7 +32,7 @@ public class Point{
 
     public String toString(){
         // YOUR CODE
-        int coordinate = "(" + x+ ", " + y+ ")";
+        String coordinate = "(" + x + ", " + y + ")";
         return coordinate;
     }
 
