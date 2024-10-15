@@ -41,7 +41,7 @@ public class Point{
     */
     public static double distance(Point a, Point b){
         // YOUR CODE HERE
-        distancePoints = Math.exp(a*a + b*b, 1/2);
+        double distancePoints = Math.exp(a*a + b*b, 1/2);
         return distancePoints;
     }
 
@@ -51,7 +51,7 @@ public class Point{
     Reuse code from prior methods
     */
     public double distanceTo(Point other){
-        d = distance(this, other);
+        double d = distance(this, other);
         return d;
     }
 }
