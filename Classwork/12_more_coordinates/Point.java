@@ -14,6 +14,8 @@ public class Point{
     // Initialize this Point with other Point's values
     public Point(Point other){
         // YOUR CODE HERE
+        this.x = other.x;
+        this.y = other.y;
     }
 
     // Getters
@@ -30,7 +32,8 @@ public class Point{
 
     public String toString(){
         // YOUR CODE
-        return "";
+        int coordinate = "(" + x+ ", " + y+ ")"
+        return coordinate;
     }
 
     /*
@@ -38,7 +41,8 @@ public class Point{
     */
     public static double distance(Point a, Point b){
         // YOUR CODE HERE
-        return 0.0;
+        distancePoints = Math.exp(a*a + b*b, 1/2)
+        return distancePoints;
     }
 
     /*
@@ -47,6 +51,7 @@ public class Point{
     Reuse code from prior methods
     */
     public double distanceTo(Point other){
-        return 0.0;
+        d = distance(new Point x, y, other)
+        return d;
     }
 }
