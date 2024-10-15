@@ -7,7 +7,7 @@ public class Driver{
   }
   public static void onLine(boolean coordinates){
     if (coordinates == true){
-      System.out.println("Yes";
+      System.out.println("Yes");
     }
     else{
       System.out.println("No");
