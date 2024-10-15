@@ -1,6 +1,7 @@
 public class APLine{
   //Instance variables
   private int a, b, c;
+  private int x, y;
 
   // Constructors
 
@@ -29,6 +30,14 @@ public class APLine{
 
   public int getC(){
     return c;
+  }
+  
+  public int getX(){
+    return x;
+  }
+
+  public int getY(){
+    return y;
   }
 
   public double getSlope(){
