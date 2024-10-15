@@ -36,7 +36,7 @@ public class APLine{
   }
 
   public boolean isOnLine(int x, int y){
-    if (x*this.getA() + y*this.getB() + this.getC()) == 0 {
+    if ((x*this.getA() + y*this.getB() + this.getC()) == 0) {
       return true;
     }
     else {
