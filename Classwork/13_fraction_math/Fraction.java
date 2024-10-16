@@ -4,7 +4,8 @@ public class Fraction
     private int denominator;
 
     public Fraction(int numerator, int denominator){
-      
+      this.numerator = numerator;
+	this.denominator = denominator;
     }
 
 	/**
@@ -71,6 +72,7 @@ public class Fraction
 	*/
 
     public String toString(){
-      System.out.println(this.getNumerator() + "/" + this.getDenominator());
+	String s = this.getNumerator() + "/" + this.getDenominator();
+	return s;
     }
 }
