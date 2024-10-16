@@ -71,6 +71,6 @@ public class Fraction
 	*/
 
     public String toString(){
-      System.out.println(this.numerator + "/" this.denominator);
+      System.out.println(this.getNumerator() + "/" this.getDenominator());
     }
 }
