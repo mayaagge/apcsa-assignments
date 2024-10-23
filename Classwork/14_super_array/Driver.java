@@ -16,9 +16,10 @@ public class Driver{
     System.out.println(s.get(3));
     s.set(2, "happy");
     System.out.println(s);
-    s.remove(0);
+    System.out.println(s.remove(0));
     System.out.println(s);
     s.remove("bye");
+    System.out.println(s.remove("sleep"));
     System.out.println(s);
   }
 }
