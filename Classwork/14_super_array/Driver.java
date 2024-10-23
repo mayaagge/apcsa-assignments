@@ -19,7 +19,7 @@ public class Driver{
     System.out.println(s.remove(0));
     System.out.println(s);
     s.remove("bye");
-    System.out.println(s.remove("sleep"));
+    s.remove("sleep");
     System.out.println(s);
   }
 }
