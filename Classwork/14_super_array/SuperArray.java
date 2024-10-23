@@ -6,7 +6,7 @@ public class SuperArray{
     size = 0;
   }
   public SuperArray(int initialCapacity){
-    data = new int[initialCapacity];
+    data = new String[initialCapacity];
     size = 0;
   }
   public int size(){
