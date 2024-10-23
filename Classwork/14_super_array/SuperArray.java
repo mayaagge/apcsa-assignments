@@ -20,7 +20,7 @@ public class SuperArray{
     return false;
   }
   public String toString(){
-    String s = "[ + data[0]";
+    String s = "[" + data[0];
     for (int i =1; i< data.length; i++){
       s += ", " + data[i];
     }
