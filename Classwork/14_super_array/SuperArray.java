@@ -5,8 +5,8 @@ public class SuperArray{
     data = new String[0];
     size = 0;
   }
-  public SuperArray(int intialCapacity){
-    data = new String(initialCapacity);
+  public SuperArray(int initialCapacity){
+    data = new int(initialCapacity);
     size = 0;
   }
   public int size(){
