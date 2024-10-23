@@ -22,7 +22,7 @@ public class SuperArray{
   public String toString(){
     String s = "[ + data[0]";
     for (int i =1; i< data.length; i++){
-      s += ", " data[i];
+      s += ", " + data[i];
     }
     return s + "]";
   }
@@ -38,7 +38,7 @@ public class SuperArray{
     }
     String temp = data[index];
     data[index] = newValue;
-    return temp];
+    return temp;
     }
   public String remove(int index){
     if (index < 0 || index >= size){
@@ -65,4 +65,4 @@ public class SuperArray{
     }
     return false;
   }
-  
+}
