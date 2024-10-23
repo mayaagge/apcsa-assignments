@@ -57,6 +57,9 @@ public class SuperArray{
   }
   public boolean remove(String target){
     for (int i = 0; i < data.length; i++){
+      if (data[i] == null){
+        return false;
+      }
       if (data[i].equals(target)){
         String a = this.remove(i);
         if (a!= null){
