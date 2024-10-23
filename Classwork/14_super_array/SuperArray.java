@@ -47,7 +47,7 @@ public class SuperArray{
     }
     data[index] = null;
     String temp = data[index];
-    for(int i=0; i< data.length; i++){
+    for(int i=0; i< data.length-1; i++){
       if (i >= index){
         data[i] = data[i+1];
       }
