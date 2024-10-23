@@ -13,7 +13,7 @@ public class SuperArray{
     return size;
   }
   public boolean add(String value){
-    if (data.length < size){
+    if (data.length > size){
       data[size] = value;
       return true;
     }
