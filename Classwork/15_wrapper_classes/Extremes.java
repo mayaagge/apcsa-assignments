@@ -15,7 +15,7 @@ public class Extremes
     // max - number
     public Integer maxDiff(Integer number)
     {
-      int md = max - number;
+      int md = Math.abs(max - number);
       return md;
     }
 
@@ -23,7 +23,7 @@ public class Extremes
     // min - number
     public Integer minDiff(Integer number)
     {
-      int mi = min - number;
+      int mi = Math.abs(min - number);
       return mi;
     }
     
