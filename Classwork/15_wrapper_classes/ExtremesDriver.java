@@ -10,7 +10,7 @@ public class ExtremesDriver{
       System.out.println("Guess the minimum Integer value: ");
       value = input.nextInt();
       input.nextLine();
-      System.out.println("You were off by " + a.minValue(value));
+      System.out.println("You were off by " + a.minDiff(value));
     }
 
 }
