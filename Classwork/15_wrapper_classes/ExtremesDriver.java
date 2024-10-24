@@ -8,9 +8,9 @@ public class ExtremesDriver{
       input.newLine();
       System.out.println("You were off by 21" + a.maxDiff(value));
       System.out.println("Guess the minimum Integer value: ");
-      int value1 = input.nextInt();
+      value = input.nextInt();
       input.newLine();
-      System.out.println("You were off by 21" + a.minValue(value1));
+      System.out.println("You were off by 21" + a.minValue(value));
     }
 
 }
