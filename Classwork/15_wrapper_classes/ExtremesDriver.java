@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class ExtremesDriver{
     public static void main (String[] args){
       Extremes a = new Extremes();
