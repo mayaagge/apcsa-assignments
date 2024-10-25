@@ -21,9 +21,6 @@ public class SuperArray{
     return false;
   }
   public String toString(){
-    if (data.length == 0){
-      return "[]";
-    }
     String s = "[" + data[0];
     for (int i =1; i< data.length; i++){
       s += ", " + data[i];
