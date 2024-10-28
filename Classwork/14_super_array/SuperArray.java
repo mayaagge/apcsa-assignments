@@ -118,6 +118,9 @@ public class SuperArray{
     return count;
   }
   public void add(int index, String value){
+    if (index < 0 || index >= size){
+      throw new IndexOutofBoundsException("Index out of bounds.");
+    }else{
     int count = 0;
     if (size == data.length && size !=0){
       this.add(data[data.length-1]);
@@ -125,9 +128,6 @@ public class SuperArray{
     }
     else if (size == data.length && size == 0){
       this.add(null);
-    }
-    if (index < 0 || index >= size){
-      System.out.print("Error! Check index.");
     }
     for(int i=data.length-1; i >= index; i--){
       if (i == 0){
