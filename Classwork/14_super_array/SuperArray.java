@@ -6,8 +6,12 @@ public class SuperArray{
     size = 0;
   }
   public SuperArray(int initialCapacity){
-    data = new String[initialCapacity];
-    size = 0;
+    if (intialCapacity < 0){
+      throw IllegalArgumentException;
+    }else{
+      data = new String[initialCapacity];
+      size = 0;
+    }
   }
   public int size(){
     return size;
