@@ -40,6 +40,7 @@ public class Driver{
     System.out.println("Set the last element of this superArray to 7: " + s2);
     SuperArray s3 = new SuperArray(0);
     System.out.println(s3.toString());
+    SuperArray s4 = new SuperArray(-5);
   }
 }
       
