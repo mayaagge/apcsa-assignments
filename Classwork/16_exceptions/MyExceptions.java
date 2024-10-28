@@ -6,6 +6,7 @@ public class MyExceptions{
       int c = a/b;
     }catch(ArithmeticException e){
       System.out.println("Error division by zero");
+      e.printStackTrace();
     }
   }
 }
