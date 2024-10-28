@@ -9,6 +9,7 @@ public class Driver{
     System.out.println(s);
     System.out.println(s.toString());
     System.out.println("The fourth element of this superArray is: " + s.get(3));
+    System.out.println("The 21st element of this superArray is: " + s.get(21));
     s.set(2, "happy");
     System.out.println("Set the third element of this superArray to happy: " + s);
     System.out.println("The index of bye in this superArray is " + s.indexOf("bye"));
@@ -67,10 +68,8 @@ public class Driver{
     SuperArray s4 = new SuperArray(0);
     System.out.print("Add BYE at the 0th index: ");
     s4.add(0,"BYE");
-    SuperArray s4 = new SuperArray(-5);
+    System.out.print("Add sigh at the 5th index: ");
+    s4.add(5,"sigh");
+    SuperArray s5 = new SuperArray(-5);
   }
 }
-      
-
-      
-      
