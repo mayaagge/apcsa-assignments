@@ -71,5 +71,9 @@ public class Driver{
     System.out.print("Add sigh at the 5th index: ");
     s4.add(5,"sigh");
     SuperArray s5 = new SuperArray(-5);
+    s4.add(21, "hi");
+    s4.remove(9);
+    s4.get(10);
+    s4.set(25, "maya");
   }
 }
