@@ -41,22 +41,24 @@ public class SuperArray{
   }
   public String get(int index){
     if (index < 0 || index >= size){
-      return null;
-    }
+      throw new IndexOutofBoundsException("Index out of bounds.");
+    }else{
     return data[index];
+    }
   }
   public String set(int index, String newValue){
     if (index < 0 || index >= size){
-      return null;
-    }
+      throw new IndexOutofBoundsException("Index out of bounds.");
+    }else{
     String temp = data[index];
     data[index] = newValue;
     return temp;
     }
+    }
   public String remove(int index){
     if (index < 0 || index >= size){
-      return null;
-    }
+      throw new IndexOutofBoundsException("Index out of bounds.");
+    }else{
     data[index] = null;
     String temp = data[index];
     for(int i=0; i< data.length-1; i++){
@@ -66,6 +68,7 @@ public class SuperArray{
     }
     data[data.length-1] = null;
     return temp;
+    }
   }
   public boolean remove(String target){
     for (int i = 0; i < data.length; i++){
@@ -142,5 +145,6 @@ public class SuperArray{
       this.remove(data[size-1]);
     }
     System.out.println(this);
+    }
   }
 }
