@@ -3,6 +3,7 @@ public class PracticeExceptions{
     try{
       oddException(3);
     }catch(Exception e){
+      System.out.println("It is odd");
       e.printStackTrace();
     }
   }
