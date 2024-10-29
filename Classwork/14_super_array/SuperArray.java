@@ -121,7 +121,7 @@ public class SuperArray{
     return count;
   }
   public void add(int index, String value){
-    if (index < 0 || index >= size){
+    if (index < 0 || index > size){
       throw new IndexOutOfBoundsException("Index out of bounds.");
     }else{
     int count = 0;
