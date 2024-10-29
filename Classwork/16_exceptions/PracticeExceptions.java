@@ -18,8 +18,10 @@ public class PracticeExceptions{
   }
   public static void negativeException(int[] n) throws Exception{
     try{
-      if (int i = 0; i < n.length; i++){
-        throw new Exception("There is a negative number");
+      for (int i = 0; i < n.length; i++){
+        if (n[i] <0){
+          throw new Exception("There is a negative number");
+        }
       }
     } catch (Exception e){
       System.out.println("There is a negative number");
