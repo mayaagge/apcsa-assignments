@@ -1,5 +1,10 @@
 public class PracticeExceptions{
   public static void main(String[] args){
+    oddException(3);
+    negativeException(new int[] {1,-1,2,3});
+    String a = "";
+    nullExceptions(a);
+    vowelException("a");
   }
   public static void oddException(int n) throws Exception{
     try{
@@ -21,7 +26,7 @@ public class PracticeExceptions{
       e.printStackTrace();
     }
   }
-  public static void negativeException(String n) throws Exception{
+  public static void nullException(String n) throws Exception{
     try{
       if (n == null){
         throw new NullPointerException("There's nothing here");
@@ -32,7 +37,7 @@ public class PracticeExceptions{
     }
     System.out.println(n.length());
   }
-  public static void negativeException(String n) throws Exception{
+  public static void vowelException(String n) throws Exception{
     try{
       if (! n.contains("a") && ! n.contains("e") && !n.contains("i") && !n.contains("o") && !n.contains("u")){
         throw new Exception("No vowels");
