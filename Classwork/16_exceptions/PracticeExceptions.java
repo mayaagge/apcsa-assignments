@@ -3,7 +3,7 @@ public class PracticeExceptions{
     oddException(3);
     negativeException(new int[] {1,-1,2,3});
     String a = "";
-    nullExceptions(a);
+    nullException("a");
     vowelException("a");
   }
   public static void oddException(int n) throws Exception{
