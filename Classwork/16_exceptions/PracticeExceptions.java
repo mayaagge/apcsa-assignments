@@ -23,22 +23,18 @@ public class PracticeExceptions{
     System.out.println("There are all positive numbers");
     }
   public static void nullException(String n) throws Exception{
-    try{
-      if (n == null){
-        throw new NullPointerException("There's nothing here");
-      }
-    } catch (Exception e){
-      System.out.println("There's nothing here");
-      e.printStackTrace();
+    if (n == null){
+      throw new NullPointerException("There's nothing here");
     }
-    System.out.println(n.length());
+    else{
+      System.out.println("There's stuff here");
+    }
   }
   public static void vowelException(String n) throws Exception{
-    try{
-      if (! n.contains("a") && ! n.contains("e") && !n.contains("i") && !n.contains("o") && !n.contains("u")){
-        throw new Exception("No vowels");
-      }
-    } catch (Exception e){
+    if (! n.contains("a") && ! n.contains("e") && !n.contains("i") && !n.contains("o") && !n.contains("u")){
+      throw new Exception("No vowels");
+    }
+    else {
       System.out.println("No vowels");
       e.printStackTrace();
     }
