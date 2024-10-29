@@ -1,31 +1,27 @@
 public class PracticeExceptions{
   public static void main(String[] args){
-    oddException(3);
-    negativeException(new int[] {1,-1,2,3});
-    String a = "";
-    nullException("a");
-    vowelException("a");
-  }
-  public static void oddException(int n) throws Exception{
     try{
-      if (n%2 != 0){
-        throw new Exception("It is odd!");
-      }
+      oddException(3);
     }catch(Exception e){
-      System.out.println("It is odd!");
+      System.out.print("It is odd!");
       e.printStackTrace();
     }
   }
+  public static void oddException(int n) throws Exception{
+    if (n%2 != 0){
+      throw new Exception("It is odd!");
+    }
+    else{
+      System.out.println("It is even!");
+    }
+  }
   public static void negativeException(int[] n) throws Exception{
-    try{
-      for (int i = 0; i < n.length; i++){
-        if (n[i] <0){
-          throw new Exception("There is a negative number");
-        }
+    for (int i = 0; i < n.length; i++){
+      if (n[i] <0){
+        throw new Exception("There is a negative number");
       }
-    } catch (Exception e){
-      System.out.println("There is a negative number");
-      e.printStackTrace();
+    }
+    System.out.println("There are all positive numbers");
     }
   }
   public static void nullException(String n) throws Exception{
