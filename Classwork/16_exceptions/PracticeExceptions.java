@@ -23,7 +23,6 @@ public class PracticeExceptions{
     }
     System.out.println("There are all positive numbers");
     }
-  }
   public static void nullException(String n) throws Exception{
     try{
       if (n == null){
