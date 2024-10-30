@@ -2,7 +2,7 @@ public class Driver{
      public static void main(String[] args)
      {
      	 // Array of strings
-         String[] words = {"Hi", "there", "Tyler", "Sam", "Hi", "there"};
+          String[] words = {"Hi", "there", "Tyler", "Sam", "Hi", "there"};
          
          // Create an ArrayList with words pairs
           WordPairList list = new WordPairList(words);
@@ -14,5 +14,21 @@ public class Driver{
           System.out.println("The number of matched pairs is: " + list.numMatches());
          
          // ADD MORE TEST CASES (at least 2 more)
+          String[] words1 = {"Hi", "Hi"};
+          String[] words2 = {"Hi"};
+          String[] words3 = {};
+          String[] words4 = {"hi", "bye"};
+          WordPairList list = new WordPairList(words1);
+          WordPairList list = new WordPairList(words2);
+          WordPairList list = new WordPairList(words3);
+          WordPairList list = new WordPairList(words4);
+          System.out.println(list1);
+          System.out.println("The number of matched pairs is: " + list1.numMatches());
+          System.out.println(list2);
+          System.out.println("The number of matched pairs is: " + list2.numMatches());
+          System.out.println(list3);
+          System.out.println("The number of matched pairs is: " + list3.numMatches());
+          System.out.println(list4);
+          System.out.println("The number of matched pairs is: " + list4.numMatches());
      }
  }
