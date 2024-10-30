@@ -34,4 +34,11 @@ public class WordPairList
 		}
 		return count;
 	}
+	public void listArrayPrint(){
+          System.out.print("{");
+          for (WordPair pair: allPairs){
+               System.out.print(pair.toString() + ",");
+          }
+          System.out.print("}");
+      }
 }
