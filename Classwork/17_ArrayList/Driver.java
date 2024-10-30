@@ -8,7 +8,7 @@ public class Driver{
           WordPairList list = new WordPairList(words);
          
          // Print the list
-          System.out.println(list);
+          System.out.println(list.toString());
          
          // Print number of matched pairs
           System.out.println("The number of matched pairs is: " + list.numMatches());
