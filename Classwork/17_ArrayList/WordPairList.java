@@ -36,7 +36,7 @@ public class WordPairList
 	}
 	public void listArrayPrint(){
           System.out.print("{");
-          for (WordPair pair = 0; pair < allPairs.length-1; pair++){
+          for (int pair = 0; pair < allPairs.length-1; pair++){
                System.out.print(allPairs[pair].toString() + ", ");
           }
           System.out.println(allPairs[allPairs.length-1] +  "}");
