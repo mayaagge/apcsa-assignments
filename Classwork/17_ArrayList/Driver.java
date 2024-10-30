@@ -38,8 +38,8 @@ public class Driver{
      }
      public static void listArrayPrint(WordPairList a){
           System.out.print("{");
-          for (int i = 0; i < a.length; i++){
-               System.out.print(a[i] + ",");
+          for (WordPair pair: a){
+               System.out.print(print + ",");
           }
           System.out.print("}");
       }
