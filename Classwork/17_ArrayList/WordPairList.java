@@ -26,7 +26,7 @@ public class WordPairList
 	{ /* to be implemented part (b) */ }
 		int count = 0;
 		for (WordPair pair: allPairs){
-			if ((pair.getFirst()).equals(pair.getSecond)){
+			if ((pair.getFirst()).equals(pair.getSecond())){
 				count += 1;
 			}
 		}
