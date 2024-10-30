@@ -9,7 +9,7 @@ public class Driver{
          
          // Print the list
           //System.out.println(list);
-          listArrayPrint(list);
+          list.listArrayPrint();
          
          // Print number of matched pairs
           System.out.println("The number of matched pairs is: " + list.numMatches());
@@ -24,23 +24,16 @@ public class Driver{
           WordPairList list3 = new WordPairList(words3);
           WordPairList list4 = new WordPairList(words4);
           //System.out.println(list1);
-          listArrayPrint(list1);
+          list1.listArrayPrint();
           System.out.println("The number of matched pairs is: " + list1.numMatches());
           //System.out.println(list2);
-          listArrayPrint(list2);
+          list2.listArrayPrint();
           System.out.println("The number of matched pairs is: " + list2.numMatches());
           //System.out.println(list3);
-          listArrayPrint(list3);
+          list3.listArrayPrint();
           System.out.println("The number of matched pairs is: " + list3.numMatches());
           //System.out.println(list4);
-          listArrayPrint(list4);
+          list4.listArrayPrint();
           System.out.println("The number of matched pairs is: " + list4.numMatches());
      }
-     public static void listArrayPrint(WordPairList a){
-          System.out.print("{");
-          for (WordPair pair: a){
-               System.out.print(pair.toString() + ",");
-          }
-          System.out.print("}");
-      }
 }
