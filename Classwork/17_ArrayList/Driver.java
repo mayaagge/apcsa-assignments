@@ -18,10 +18,10 @@ public class Driver{
           String[] words2 = {"Hi"};
           String[] words3 = {};
           String[] words4 = {"hi", "bye"};
-          WordPairList list = new WordPairList(words1);
-          WordPairList list = new WordPairList(words2);
-          WordPairList list = new WordPairList(words3);
-          WordPairList list = new WordPairList(words4);
+          WordPairList list1 = new WordPairList(words1);
+          WordPairList list2 = new WordPairList(words2);
+          WordPairList list3 = new WordPairList(words3);
+          WordPairList list4 = new WordPairList(words4);
           System.out.println(list1);
           System.out.println("The number of matched pairs is: " + list1.numMatches());
           System.out.println(list2);
