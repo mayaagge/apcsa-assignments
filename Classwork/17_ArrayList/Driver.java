@@ -5,7 +5,7 @@ public class Driver{
          String[] words = {"Hi", "there", "Tyler", "Sam", "Hi", "there"};
          
          // Create an ArrayList with words pairs
-          WordPairsList list = new WordPairsList(words);
+          WordPairList list = new WordPairList(words);
          
          // Print the list
           System.out.println(list);
