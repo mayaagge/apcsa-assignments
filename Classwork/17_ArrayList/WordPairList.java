@@ -13,7 +13,7 @@ public class WordPairList
 	{ /* to be implemented part (a) */ }
 		for (int i = 0; i< words.length;i++){
 			for(int j = i+1; j<words.length; j++){
-				WordPair a = new WordPain(words[i], words[j]);
+				WordPair a = new WordPair(words[i], words[j]);
 				allPairs.add(a);
 			}
 		}
