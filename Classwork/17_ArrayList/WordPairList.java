@@ -11,6 +11,7 @@ public class WordPairList
 	*/
 	public WordPairList(String[] words){
 	{ /* to be implemented part (a) */ }
+		allPairs = new ArrayList<WordPair>();
 		for (int i = 0; i< words.length;i++){
 			for(int j = i+1; j<words.length; j++){
 				WordPair a = new WordPair(words[i], words[j]);
