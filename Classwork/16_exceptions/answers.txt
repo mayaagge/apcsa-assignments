@@ -1,0 +1,2 @@
+1. It has a print before the catch.
+2. i=3
