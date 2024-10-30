@@ -39,7 +39,7 @@ public class Driver{
      public static void listArrayPrint(WordPairList a){
           System.out.print("{");
           for (WordPair pair: a){
-               System.out.print(print + ",");
+               System.out.print(pair + ",");
           }
           System.out.print("}");
       }
