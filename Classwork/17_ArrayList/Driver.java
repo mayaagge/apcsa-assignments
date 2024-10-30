@@ -36,7 +36,7 @@ public class Driver{
           listArrayPrint(list4);
           System.out.println("The number of matched pairs is: " + list4.numMatches());
      }
-     pubic static void listArrayPrint(WordPairList a){
+     public static void listArrayPrint(WordPairList a){
           System.out.print("{");
           for (int i = 0; i < a.length; i++){
                System.out.print(a[i] + ",");
