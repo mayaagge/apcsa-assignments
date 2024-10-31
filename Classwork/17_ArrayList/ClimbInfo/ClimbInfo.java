@@ -32,4 +32,8 @@ public class ClimbInfo
         return climbTime;
     }
 
+    public static String toString(){
+        return "[" + peakInfo + ", " + climbTime + "]";
+    }
+
 }
