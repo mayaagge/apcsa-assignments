@@ -35,10 +35,16 @@ public class WordPairList
 		return count;
 	}
 	public void listArrayPrint(){
-          System.out.print("{");
-          for (WordPair pair: allPairs){
-               System.out.print(pair.toString() + ", ");
-          }
-          System.out.println("}");
+		if (allPairs.size() == 0){
+			System.out.println("{}");
+		}
+		else{
+			System.out.print("{");
+			for (int i = 0; i< allPairs.size()-1; i++){
+				System.out.print((allPairs.get(i)).toString() + ", ");
+		   }
+		   System.out.println(allPairs.get(allPairs.size()-1) + "}");
+		   }
+
       }
 }

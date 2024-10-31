@@ -7,26 +7,23 @@ public class StudyAtHome
       // YOU MAY REMOVE MY CODE FOR ARRAY AFTER YOU CREATE YOUR ARRAYLIST.
       
        // Rewrite this code using an ArrayList instead of an array
-       String[] toDoList = new String[3];
-       toDoList[0] = "Review the lessons";
-       toDoList[1] = "Drink water";
-       toDoList[2] = "Work on the lab";
+       ArrayList<String> a = new ArrayList<String>();
+       a.add("Review the lessons");
+       a.add("Drink the water");
+       a.add("Work on the lab");
+       System.out.println(a);
 
        // changing element 1
-       toDoList[1] = "Do homework";
+       a.set(1,"Do homework");
+       System.out.println(a);
 
-       System.out.println(toDoList.length + " things to do!");
-       System.out.println("Here's the first thing to do: "
-           + toDoList[0] );
+       System.out.println(a.size() + " things to do!");
+       System.out.println("Here's the first thing to do: " + a.get(0));
 
        // remove item 0 and move everything down
        // (this can be done in 1 line with ArrayList)
-       toDoList[0] = toDoList[1];
-       toDoList[1] = toDoList[2];
-       toDoList[2] = "";
-
-       System.out.println("Here's the next thing to do: "
-           + toDoList[0] );
+        a.remove(0);
+        System.out.println("Here's the next thing to do: " + a.get(0));
 
    }
 }
