@@ -20,13 +20,13 @@ public class ClimbingClub
     */
     public void addClimb(String peakName, int climbTime)
     { /* to be implemented in part (1) with ClimbInfo objects in alphabetical order by name */
-        for (int i = 0; i < climbList.size(); i++({
-            if (peakName.compareTo(climbList.getName(i) < 0){
+        for (int i = 0; i < climbList.size(); i++){
+            if (peakName.compareTo(climbList.getName(i) < 0)){
                 climbList.add(i, new ClimbInfo(peakName, climbTime));
                 break;
             }
         }
-        if (peakName.compareTo(climbList.getName(climbList.size()-1) >=0)
+        if (peakName.compareTo(climbList.getName(climbList.size()-1) >=0))
             {
             climbList.add(i, newClimbInfo(peakName, climbTime));
             }
