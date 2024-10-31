@@ -32,7 +32,7 @@ public class ClimbInfo
         return climbTime;
     }
 
-    public static String toString(){
+    public String toString(){
         return "[" + peakInfo + ", " + climbTime + "]";
     }
 
