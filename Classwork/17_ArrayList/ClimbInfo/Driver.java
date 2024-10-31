@@ -9,7 +9,7 @@ public class Driver{
           hikerClub.printNames();
           int numNames = hikerClub.distinctPeakNames();
           System.out.println(numNames);
-          climbingClub climb2 = new ClimbingClub();
+          ClimbingClub climb2 = new ClimbingClub();
           climb2.addClimb("A", 305);
           climb2.addClimb("A", 273);
           climb2.addClimb("B", 274);
