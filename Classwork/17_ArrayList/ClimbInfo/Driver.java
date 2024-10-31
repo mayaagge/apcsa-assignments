@@ -7,6 +7,8 @@ public class Driver{
           hikerClub.addClimb("Algonquin", 225);
           hikerClub.addClimb("Monadnock", 344);
           hikerClub.printNames();
+          int numNames = hikerClub.distinctPeakNames();
+          System.out.println(numNames);
          // YOUR CODE HERE
      }
  }
