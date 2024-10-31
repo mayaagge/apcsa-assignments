@@ -41,5 +41,18 @@ public class ClimbingClub
     { /* implementation shown in directions file */
       return -1;
     }
+    public static void printNames(){
+        if (climbList.size() == 0){
+			System.out.println("{}");
+		}
+		else{
+			System.out.print("{");
+			for (int i = 0; i< climbList.size()-1; i++){
+				System.out.print((climbList.get(i)).toString() + ", ");
+		   }
+		   System.out.println(climbList.get(climbList.size()-1) + "}");
+		   }
+
+    }
 
 }
