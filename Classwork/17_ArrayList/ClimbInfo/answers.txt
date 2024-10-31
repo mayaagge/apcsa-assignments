@@ -1,1 +1,5 @@
+Does this implementation of the distinctPeakNames method work as intended when the
+addClimb method stores the ClimbInfo objects in alphabetical order by name as described in
+part (1)?  Yes/No and why
 
+This implementation of the distinctPeakNames method words as intended whent he addClimb method stores the ClimbInfo objects in alphabetical order by name as deceibed in part (1) because all the same names are next to each other since they are alphabetically ordered so comparing each element to the previous one would work to check for new peaks.
