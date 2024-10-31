@@ -41,7 +41,7 @@ public class ClimbingClub
     { /* implementation shown in directions file */
       return -1;
     }
-    public static void printNames(){
+    public void printNames(){
         if (climbList.size() == 0){
 			System.out.println("{}");
 		}
