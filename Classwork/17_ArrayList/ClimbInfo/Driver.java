@@ -6,6 +6,7 @@ public class Driver{
           hikerClub.addClimb("Whiteface", 301);
           hikerClub.addClimb("Algonquin", 225);
           hikerClub.addClimb("Monadnock", 344);
+          System.out.println();
          // YOUR CODE HERE
      }
  }
