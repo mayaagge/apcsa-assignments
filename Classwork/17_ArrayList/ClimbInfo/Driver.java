@@ -21,7 +21,7 @@ public class Driver{
           climb2.addClimb("C", 347);
           climb2.printNames();
           int numNames2 = climb2.distinctPeakNames();
-          System.out.println(numNames3);
+          System.out.println(numNames2);
           ClimbingClub climb3 = new ClimbingClub();
           int numNames3 = climb3.distinctPeakNames();
           System.out.println(numNames3);
