@@ -21,12 +21,12 @@ public class ClimbingClub
     public void addClimb(String peakName, int climbTime)
     { /* to be implemented in part (1) with ClimbInfo objects in alphabetical order by name */
         for (int i = 0; i < climbList.size(); i++){
-            if (peakName.compareTo(climbList.get(i).getName()) < 0)){
+            if (peakName.compareTo(climbList.get(i).getName()) < 0){
                 climbList.add(i, new ClimbInfo(peakName, climbTime));
                 break;
             }
         }
-        if (peakName.compareTo(climbList.get(climbList.size()-1).getName()) >=0))
+        if (peakName.compareTo(climbList.get(climbList.size()-1).getName()) >=0)
             {
             climbList.add(i, new ClimbInfo(peakName, climbTime));
             }
