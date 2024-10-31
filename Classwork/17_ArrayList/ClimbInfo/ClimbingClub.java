@@ -20,6 +20,10 @@ public class ClimbingClub
     */
     public void addClimb(String peakName, int climbTime)
     { /* to be implemented in part (1) with ClimbInfo objects in alphabetical order by name */
+        if (climbList.size() == 0){
+            climbList.add(new ClimbInfo(peakName, ClimbTime));
+        }
+        else{
         for (int i = 0; i < climbList.size(); i++){
             if (peakName.compareTo(climbList.get(i).getName()) < 0){
                 climbList.add(i, new ClimbInfo(peakName, climbTime));
@@ -30,6 +34,7 @@ public class ClimbingClub
             {
             climbList.add(new ClimbInfo(peakName, climbTime));
             }
+        }
     }
     /** @return the number of distinct names in the list of climbs */
     public int distinctPeakNames()
