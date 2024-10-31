@@ -28,7 +28,7 @@ public class ClimbingClub
         }
         if (peakName.compareTo(climbList.get(climbList.size()-1).getName()) >=0)
             {
-            climbList.add(i, new ClimbInfo(peakName, climbTime));
+            climbList.add(new ClimbInfo(peakName, climbTime));
             }
     }
     /** @return the number of distinct names in the list of climbs */
