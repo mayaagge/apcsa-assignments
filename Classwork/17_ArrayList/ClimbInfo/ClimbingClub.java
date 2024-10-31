@@ -36,11 +36,7 @@ public class ClimbingClub
             }
         }
     }
-    /** @return the number of distinct names in the list of climbs */
-    public int distinctPeakNames()
-    { /* implementation shown in directions file */
-      return -1;
-    }
+
     public void printNames(){
         if (climbList.size() == 0){
 			System.out.println("{}");
