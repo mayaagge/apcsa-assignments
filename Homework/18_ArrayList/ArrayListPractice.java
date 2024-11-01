@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 public class ArrayListPractice{
-  public int listSumEvenIndexes(ArrayList<Integer> numsList){
+  public static int listSumEvenIndexes(ArrayList<Integer> numsList){
     int count = 0;
     for (int i = 0; i<numsList.size(); i++){
       if (i % 2 == 0){
@@ -9,7 +9,7 @@ public class ArrayListPractice{
     }
     return count;
   }
-  public ArrayList<String> listCatty(ArrayList<String> animalsList){
+  public static ArrayList<String> listCatty(ArrayList<String> animalsList){
     ArrayList<String> s = "";
     for (int i = 0; i<animalsList.size(); i++){
       for (int a = 0; a<(animalsList.get(i)).length()-2; a++){
@@ -20,7 +20,7 @@ public class ArrayListPractice{
     }
     return s;
   }
-  public int listFairlyOddNums(ArrayList<Integer> numsList){
+  public static int listFairlyOddNums(ArrayList<Integer> numsList){
     int count = 0;
     for (int i = 0; i<numsList.size(); i++){
       if (i%2 == 0){
@@ -50,14 +50,14 @@ public class ArrayListPractice{
     l3.add(5);
     l3.add(0);
     l3.add(-10);
-    ArrayList<Integer> s1 = new ArrayList<Integer>();
+    ArrayList<String> s1 = new ArrayList<String>();
     s1.add("buffalo");
     s1.add("dog");
-    ArrayList<Integer> s2 = new ArrayList<Integer>();
+    ArrayList<String> s2 = new ArrayList<String>();
     s2.add("bobcat");
     s2.add("siamese cat");
     s2.add("catbird");
-    ArrayList<Integer> s3 = new ArrayList<Integer>();
+    ArrayList<String> s3 = new ArrayList<String>();
     s3.add("Cat");
     s3.add("frog");
     s3.add("mouse");
