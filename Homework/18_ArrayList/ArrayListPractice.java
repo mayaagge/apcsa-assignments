@@ -10,7 +10,7 @@ public class ArrayListPractice{
     return count;
   }
   public static ArrayList<String> listCatty(ArrayList<String> animalsList){
-    ArrayList<String> s = "";
+    ArrayList<String> s = new ArrayList<String>();
     for (int i = 0; i<animalsList.size(); i++){
       for (int a = 0; a<(animalsList.get(i)).length()-2; a++){
         if (((animalsList.get(i)).substring(a,a+3)).equals("cat")||((animalsList.get(i)).substring(a,a+3)).equals("Cat")){
