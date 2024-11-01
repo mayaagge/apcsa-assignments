@@ -66,14 +66,14 @@ public class ArrayListPractice{
     l4.add(0);
     l4.add(13);
     l4.add(51);
-    listSumEvenIndexes(l1);
-    listSumEvenIndexes(l2);
-    listSumEvenIndexes(l3);
-    listCatty(s1);
-    listCatty(s2);
-    listCatty(s3);
-    listFairlyOddNums(l1);
-    listFairlyOddNums(l2);
-    listFairlyOddNums(l4);
+    System.out.println(listSumEvenIndexes(l1));
+    System.out.println(listSumEvenIndexes(l2));
+    System.out.println(listSumEvenIndexes(l3));
+    System.out.println(listCatty(s1));
+    System.out.println(listCatty(s2));
+    System.out.println(listCatty(s3));
+    System.out.println(listFairlyOddNums(l1));
+    System.out.println(listFairlyOddNums(l2));
+    System.out.println(listFairlyOddNums(l4));
   }
 }
