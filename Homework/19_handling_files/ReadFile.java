@@ -23,10 +23,12 @@ public class ReadFile{
       Scanner input = new Scanner(file);
       while (input.hasNextLine()){
         String line = input.nextLine();
-        for (int i = 0; i<line.length(); i++){
+        while(line.hasNextInt()){
           int numy = line.nextInt();
-          for(int j = 0; j< line.length(); j++)
-            nums[i][j] = numy;
+          for (int i = 0; i<4; i++){
+            for(int j = 0; j<4; j++)
+              nums[i][j] = numy;
+          }
         }
       }
       System.out.println("The 2d array is");
