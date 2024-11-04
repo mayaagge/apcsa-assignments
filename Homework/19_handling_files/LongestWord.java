@@ -1,14 +1,18 @@
-import java.util.Scanner;
+import java.io.File;  // Import the File class
+import java.io.FileWriter; //Import the FileWriter class
+import java.io.IOException;  // Import the IOException class to handle errors
+import java.io.FileNotFoundException; // Import the FileNotFoundException class to handle errors
+import java.util.Scanner; // Import the Scanner
 public class LongestWord{
   public static void main(String[] args){
 
   }
   public static void readFile(){
     try{
-      File file = newFile("my_text.txt");
+      File file = new File("my_text.txt");
       Scanner input = new Scanner(file);
       String l;
-      while (input.hasnextLine()){
+      while (input.hasnext()){
         String word = input.next();
         if (word.length() > l.length()){
           l = word;
