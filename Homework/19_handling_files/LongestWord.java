@@ -13,7 +13,7 @@ public class LongestWord{
       Scanner input = new Scanner(file);
       String l;
       while (input.next()){
-        String word = input.next();
+        String word = input.hasNext();
         if (word.length() > l.length()){
           l = word;
         }
