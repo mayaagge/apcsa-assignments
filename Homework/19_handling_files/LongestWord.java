@@ -5,7 +5,7 @@ import java.io.FileNotFoundException; // Import the FileNotFoundException class 
 import java.util.Scanner; // Import the Scanner
 public class LongestWord{
   public static void main(String[] args){
-
+    readFile();
   }
   public static void readFile(){
     try{
