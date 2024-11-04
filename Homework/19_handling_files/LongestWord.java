@@ -18,8 +18,8 @@ public class LongestWord{
           l = word;
         }
       }
+      System.out.println("The longest word is" + l);
     input.close();//releases the file from your program
-    System.out.print(l);
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
       e.printStackTrace();
