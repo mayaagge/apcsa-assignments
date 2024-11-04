@@ -23,8 +23,8 @@ public class ReadFile{
       Scanner input = new Scanner(file);
       while (input.hasNextLine()){
         String line = input.nextLine();
-        while(line.hasNextInt()){
-          int numy = line.nextInt();
+        while(input.hasNextInt()){
+          int numy = input.nextInt();
           for (int i = 0; i<4; i++){
             for(int j = 0; j<4; j++)
               nums[i][j] = numy;
