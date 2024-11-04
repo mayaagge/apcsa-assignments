@@ -7,18 +7,29 @@ public class LongestWord{
   public static void main(String[] args){
     readFile();
   }
+   public static void print(int[][] array){
+      String[] b = new String[array.length];
+      for (int i=0; i< array.length; i++)
+      {
+        b[i] = Arrays.toString(array[i]);
+      }
+      System.out.println(Arrays.toString(b));
+    }
   public static void readFile(){
     try{
-      String l = "";
+      int[][] nums = new int [4][4];
       File file = new File("2d.txt");
       Scanner input = new Scanner(file);
-      while (input.hasNext()){
-        String word = input.next();
-        if (word.length() > l.length()){
-          l = word;
+      while (input.hasNextLine()){
+        String line = input.nextLine();
+        for (int i = 0; i<line.length(); i++){
+          int numy = line.nextInt();
+          for(int j = 0; j< line.length(); j++)
+            nums[i][j] = numy;
         }
       }
-      System.out.println("The longest word is" + l);
+      System.out.println("The 2d array is");
+      print(nums);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
