@@ -35,7 +35,6 @@ public class ReadFile{
         i++;
         System.out.println(i);
         }
-      }
       System.out.println("The 2d array is");
       print(nums);
     input.close();//releases the file from your program
