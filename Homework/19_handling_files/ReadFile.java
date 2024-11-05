@@ -22,15 +22,15 @@ public class ReadFile{
       int j = 0;
       File file = new File("2d.txt");
       Scanner input = new Scanner(file);
-      int[][] nums = new int [(input.nextLine).length()][(input.nextLine).length()];
+      int[][] nums = new int [(input.nextLine()).length()][(input.nextLine()).length()];
       while(input.hasNextInt()){
         int numy = input.nextInt();
         System.out.println(numy);
         nums[i][j] = numy;
         j++;
-        if (j==(input.nextLine).length()){
+        if (j==(input.nextLine()).length()){
           i++;
-          if(i == (input.nextLine).length()){
+          if(i == (input.nextLine()).length()){
             break;
           }
           j = 0;
