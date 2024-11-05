@@ -30,10 +30,8 @@ public class ReadFile{
           System.out.println(numy);
           nums[i][j] = numy;
           j++;
-          System.out.println(j);
           }
         i++;
-        System.out.println(i);
         }
       System.out.println("The 2d array is");
       print(nums);
