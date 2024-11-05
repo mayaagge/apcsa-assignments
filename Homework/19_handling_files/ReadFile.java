@@ -18,14 +18,14 @@ public class ReadFile{
     }
   public static void readFile(){
     try{
-      int i = 0;
-      int j = 0;
+      int i = -1;
+      int j = -1;
       int[][] nums = new int [4][4];
       File file = new File("2d.txt");
       Scanner input = new Scanner(file);
-      while (input.hasNextLine()-1){
+      while (input.hasNextLine()){
         String line = input.nextLine();
-        while(input.hasNextInt()-1){
+        while(input.hasNextInt()){
           int numy = input.nextInt();
           System.out.println(numy);
           nums[i][j] = numy;
