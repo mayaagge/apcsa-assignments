@@ -23,16 +23,17 @@ public class ReadFile{
       int[][] nums = new int [4][4];
       File file = new File("2d.txt");
       Scanner input = new Scanner(file);
-      while (input.hasNextLine()){
-        String line = input.nextLine();
-        System.out.println(line);
-        while(input.hasNextInt()){
-          int numy = input.nextInt();
-          System.out.println(numy);
-          nums[i][j] = numy;
-          j++;
+      while(input.hasNextInt()){
+        int numy = input.nextInt();
+        System.out.println(numy);
+        nums[i][j] = numy;
+        j++;
+        if (j==4){
+          i++;
+          if(i == 4){
+            break;
           }
-        i++;
+          j = 0;
         }
       System.out.println("The 2d array is");
       print(nums);
