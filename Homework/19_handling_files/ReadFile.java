@@ -23,9 +23,9 @@ public class ReadFile{
       int[][] nums = new int [4][4];
       File file = new File("2d.txt");
       Scanner input = new Scanner(file);
-      while (input.hasNextLine()){
+      while (input.hasNextLine()-1){
         String line = input.nextLine();
-        while(input.hasNextInt()){
+        while(input.hasNextInt()-1){
           int numy = input.nextInt();
           System.out.println(numy);
           nums[i][j] = numy;
