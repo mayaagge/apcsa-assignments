@@ -27,10 +27,13 @@ public class ReadFile{
         String line = input.nextLine();
         while(input.hasNextInt()){
           int numy = input.nextInt();
+          System.out.printlnn(numy);
           nums[i][j] = numy;
           j++;
+          System.out.println(j);
           }
         i++;
+        System.out.println(i);
         }
       }
       System.out.println("The 2d array is");
