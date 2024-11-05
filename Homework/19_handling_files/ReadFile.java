@@ -22,6 +22,7 @@ public class ReadFile{
       int j = 0;
       File file = new File("2d.txt");
       Scanner input = new Scanner(file);
+      System.out.println((input.nextLine()).length());
       int[][] nums = new int [(input.nextLine()).length()][(input.nextLine()).length()];
       while(input.hasNextInt()){
         int numy = input.nextInt();
