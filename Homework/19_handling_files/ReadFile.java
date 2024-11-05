@@ -20,17 +20,17 @@ public class ReadFile{
     try{
       int i = 0;
       int j = 0;
-      int[][] nums = new int [4][4];
       File file = new File("2d.txt");
       Scanner input = new Scanner(file);
+      int[][] nums = new int [(input.nextLine).length()][(input.nextLine).length()];
       while(input.hasNextInt()){
         int numy = input.nextInt();
         System.out.println(numy);
         nums[i][j] = numy;
         j++;
-        if (j==4){
+        if (j==(input.nextLine).length()){
           i++;
-          if(i == 4){
+          if(i == (input.nextLine).length()){
             break;
           }
           j = 0;
