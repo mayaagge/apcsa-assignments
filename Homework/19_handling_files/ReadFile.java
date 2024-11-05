@@ -27,7 +27,7 @@ public class ReadFile{
         String line = input.nextLine();
         while(input.hasNextInt()){
           int numy = input.nextInt();
-          System.out.printlnn(numy);
+          System.out.println(numy);
           nums[i][j] = numy;
           j++;
           System.out.println(j);
