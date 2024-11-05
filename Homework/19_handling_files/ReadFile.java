@@ -18,6 +18,8 @@ public class ReadFile{
     }
   public static void readFile(){
     try{
+      int i = 0;
+      int j = 0;
       int[][] nums = new int [4][4];
       File file = new File("2d.txt");
       Scanner input = new Scanner(file);
@@ -25,10 +27,10 @@ public class ReadFile{
         String line = input.nextLine();
         while(input.hasNextInt()){
           int numy = input.nextInt();
-          for (int i = 0; i<4; i++){
-            for(int j = 0; j<4; j++)
-              nums[i][j] = numy;
+          nums[i][j] = numy;
+          j++;
           }
+        i++;
         }
       }
       System.out.println("The 2d array is");
