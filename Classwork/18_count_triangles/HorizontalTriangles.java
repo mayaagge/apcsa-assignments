@@ -43,7 +43,7 @@ public class HorizontalTriangles{
       }
       System.out.println("The 2d array is");
       print(nums);
-      System.out.println("The solution is" + count);
+      System.out.println("The solution is " + count);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
