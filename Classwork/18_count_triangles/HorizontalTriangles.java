@@ -32,7 +32,6 @@ public class HorizontalTriangles{
             if (((nums[i][0]+nums[i][1])>nums[i][2]) && ((nums[i][1]+nums[i][2])>nums[i][0]) && ((nums[i][0]+nums[i][2])>nums[i][1])){
             count++;
             }
-          }
           i++;
           if(i == 1914){
             break;
