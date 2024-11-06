@@ -30,7 +30,7 @@ public class HorizontalTriangles{
         j++;
         if (j== 3){
           for (int z = 0; z < j; z++){
-              if (((nums[i][0]+nums[i][1])>nums[i][2]) && ((nums[0]+nums[i][1])>nums[2]) && ((nums[i][0]+nums[i][1])>nums[i][2])){
+              if (((nums[i][0]+nums[i][1])>nums[i][2]) && ((nums[i][0]+nums[i][1])>nums[i][2]) && ((nums[i][0]+nums[i][1])>nums[i][2])){
               count++;
             }
           }
