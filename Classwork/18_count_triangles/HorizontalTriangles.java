@@ -18,18 +18,24 @@ public class ReadFile{
     }
   public static void readFile(){
     try{
+      int count = 0;
       int i = 0;
       int j = 0;
-      File file = new File("2d.txt");
+      File file = new File("input.txt");
       Scanner input = new Scanner(file);
-      int[][] nums = new int [4][4];
+      int[][] nums = new int [1914][3];
       while(input.hasNextInt()){
         int numy = input.nextInt();
         nums[i][j] = numy;
         j++;
-        if (j== 4){
+        if (j== 3){
+          for (int z = 0; z < j; z++){
+              if (((nums[i][0]+nums[i][1])>nums[i][2]) && ((nums[0]+nums[i][1])>nums[2]) && ((nums[i][0]+nums[i][1])>nums[i][2])){
+              count++;
+            }
+          }
           i++;
-          if(i == 4){
+          if(i == 1914){
             break;
           }
           j = 0;
@@ -37,6 +43,7 @@ public class ReadFile{
       }
       System.out.println("The 2d array is");
       print(nums);
+      System.out.println("The solution is" + count);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
