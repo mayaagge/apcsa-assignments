@@ -39,7 +39,7 @@ public class VerticalTriangles{
             }
           }
           else{
-            i = 0;
+            i = k;
           }
         }
       }
