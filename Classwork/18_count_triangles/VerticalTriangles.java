@@ -32,6 +32,7 @@ public class VerticalTriangles{
           j++;
           if(j == 3){
             j=0;
+            j++;
             k++;
             i=k;
             if (i >=1914/3){
