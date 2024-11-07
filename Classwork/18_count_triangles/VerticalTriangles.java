@@ -49,8 +49,6 @@ public class VerticalTriangles{
             count++;
           }
       }
-      System.out.println("The 2d array is");
-      print(nums);
       System.out.println("The solution is " + count);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
