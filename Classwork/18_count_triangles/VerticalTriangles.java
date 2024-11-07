@@ -20,19 +20,27 @@ public class VerticalTriangles{
     try{
       int i = 0;
       int j = 0;
+      int k = 0;
       File file = new File("input.txt");
       Scanner input = new Scanner(file);
-      int[][] nums = new int [3][1914];
+      int[][] nums = new int [1914][3];
       while(input.hasNextInt()){
         int numy = input.nextInt();
         nums[i][j] = numy;
-        j++;
-        if (j==1914){
-          i++;
-          if(i == 3){
-            break;
+        i+=1914/3;
+        if (i==1914){
+          j++;
+          if(j == 3){
+            j=0;
+            k++;
+            i=k;
+            if (i > 1914/3){
+              break;
+            }
           }
-          j = 0;
+          else{
+            i = 0;
+          }
         }
       }
       System.out.println("The 2d array is");
