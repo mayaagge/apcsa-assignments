@@ -34,7 +34,7 @@ public class VerticalTriangles{
             j=0;
             k++;
             i=k;
-            if (i > 1914/3){
+            if (i >= 1914/3){
               break;
             }
           }
