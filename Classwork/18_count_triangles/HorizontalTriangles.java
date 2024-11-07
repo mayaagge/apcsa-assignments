@@ -39,8 +39,6 @@ public class HorizontalTriangles{
           j = 0;
         }
       }
-      System.out.println("The 2d array is");
-      print(nums);
       System.out.println("The solution is " + count);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
