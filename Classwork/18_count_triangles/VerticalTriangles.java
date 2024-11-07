@@ -18,7 +18,6 @@ public class VerticalTriangles{
     }
   public static void readFile(){
     try{
-      int count = 0;
       int i = 0;
       int j = 0;
       int k = 0;
@@ -32,9 +31,6 @@ public class VerticalTriangles{
         if (i>=1914){
           j++;
           if(j == 3){
-            if (((nums[k][0]+nums[k][1])>nums[k][2]) && ((nums[k][1]+nums[k][2])>nums[k][0]) && ((nums[k][0]+nums[k][2])>nums[k][1])){
-              count++;
-            }
             j=0;
             k++;
             i=k;
@@ -46,6 +42,12 @@ public class VerticalTriangles{
             i = k;
           }
         }
+      }
+      int count = 0;
+      for (int x = 0; x<nums.length;x++){
+          if (((nums[x][0]+nums[x][1])>nums[x][2]) && ((nums[x][1]+nums[x][2])>nums[x][0]) && ((nums[x][0]+nums[x][2])>nums[x][1])){
+            count++;
+          }
       }
       System.out.println("The 2d array is");
       print(nums);
