@@ -18,6 +18,7 @@ public class VerticalTriangles{
     }
   public static void readFile(){
     try{
+      int count = 0;
       int i = 0;
       int j = 0;
       int k = 0;
@@ -31,6 +32,9 @@ public class VerticalTriangles{
         if (i>=1914){
           j++;
           if(j == 3){
+            if (((nums[i][0]+nums[i][1])>nums[i][2]) && ((nums[i][1]+nums[i][2])>nums[i][0]) && ((nums[i][0]+nums[i][2])>nums[i][1])){
+            count++;
+            }
             j=0;
             k++;
             i=k;
@@ -45,6 +49,7 @@ public class VerticalTriangles{
       }
       System.out.println("The 2d array is");
       print(nums);
+      System.out.println("The solution is " + count);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
