@@ -27,12 +27,11 @@ public class VerticalTriangles{
       while(input.hasNextInt()){
         int numy = input.nextInt();
         nums[i][j] = numy;
-        i+=(1914/3)-1;
+        i+=(1914/3);
         if (i>=1914){
           j++;
           if(j == 3){
             j=0;
-            j++;
             k++;
             i=k;
             if (i >=1914/3){
