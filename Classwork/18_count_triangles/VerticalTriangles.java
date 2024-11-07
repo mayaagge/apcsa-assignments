@@ -22,10 +22,10 @@ public class VerticalTriangles{
       int j = 0;
       File file = new File("input.txt");
       Scanner input = new Scanner(file);
-      int[][] nums = new int [1914][3];
+      int[][] nums = new int [3][1914];
       while(input.hasNextInt()){
         int numy = input.nextInt();
-        nums[j][i] = numy;
+        nums[i][j] = numy;
         j++;
         if (j==1914){
           i++;
