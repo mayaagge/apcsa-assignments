@@ -32,14 +32,14 @@ public class VerticalTriangles{
         if (i>=1914){
           j++;
           if(j == 3){
+            if (((nums[k][0]+nums[k][1])>nums[k][2]) && ((nums[k][1]+nums[k][2])>nums[k][0]) && ((nums[k][0]+nums[k][2])>nums[k][1])){
+              count++;
+            }
             j=0;
             k++;
             i=k;
             if (i >=1914/3){
               break;
-            }
-            if (((nums[i][0]+nums[i][1])>nums[i][2]) && ((nums[i][1]+nums[i][2])>nums[i][0]) && ((nums[i][0]+nums[i][2])>nums[i][1])){
-            count++;
             }
           }
           else{
