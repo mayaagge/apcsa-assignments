@@ -1,0 +1,7 @@
+a)
+
+public int findFreeBlock(int period, int duration){
+  for (int i 
+  if (duration<= isMinuteFree(period, 
+  if(isMinuteFree(period, duration) == true
+}
