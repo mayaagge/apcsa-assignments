@@ -4,7 +4,7 @@ import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileNotFoundException; // Import the FileNotFoundException class to handle errors
 import java.util.Scanner; // Import the Scanner
 import java.util.Arrays;
-public class ReadFile{
+public class VerticalTriangles{
   public static void main(String[] args){
     readFile();
   }
@@ -20,9 +20,9 @@ public class ReadFile{
     try{
       int i = 0;
       int j = 0;
-      File file = new File("2d.txt");
+      File file = new File("input.txt");
       Scanner input = new Scanner(file);
-      int[][] nums = new int [4][4];
+      int[][] nums = new int [1914][4];
       while(input.hasNextInt()){
         int numy = input.nextInt();
         nums[i][j] = numy;
