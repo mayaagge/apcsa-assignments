@@ -9,7 +9,7 @@ public class ElectricCar extends Car {
     // Override getFuelLevel
     // Reinterprets fuelLevel() as a percentage
     // Remember super.getFuelLevel will return fuelLevel!
-    @Override
+    //Override
     public double getFuelLevel(){
       return (super.getFuelLevel())/100.0;
     }
@@ -19,14 +19,14 @@ public class ElectricCar extends Car {
     // gets on a full charge.
     // Computes miles left by interpreting fuelLevel as the
     // battery percentage left in the car
-    @Override
+    //Override
     public double milesLeft(int totalMiles){
       return totalMiles*this.getFuelLevel();
     }
     
     // Override toString
     // Should print: model electric car
-    @Override
+    //Override
     public void toString(){
       System.out.println(super.getModel() + " electric car");
     }
