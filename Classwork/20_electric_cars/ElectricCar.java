@@ -27,8 +27,8 @@ public class ElectricCar extends Car {
     // Override toString
     // Should print: model electric car
     //Override
-    public void toString(){
-      System.out.println(super.getModel() + " electric car");
+    public String toString(){
+      return super.getModel() + " electric car";
     }
     
 }
