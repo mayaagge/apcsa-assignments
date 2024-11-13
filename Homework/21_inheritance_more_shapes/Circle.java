@@ -7,7 +7,7 @@ public class Circle{
     return radius;
   }
   public String toString(){
-    return "This is a circle with radius " + this.getRadius() ;
+    return "Circle " + this.getRadius() ;
   }
   public double getArea(){
     area = Math.PI*this.getRadius()*this.getRadius();
