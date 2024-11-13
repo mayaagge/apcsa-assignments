@@ -21,6 +21,6 @@ public class Driver
         // Print how many miles are left with 400 miles per charge
         System.out.println(myElectricCar.milesLeft(400));
         // Print the object
-        myElectricCar.toString();
+        System.out.println(myElectricCar.toString());
     }
 }
