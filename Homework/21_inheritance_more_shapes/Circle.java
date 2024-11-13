@@ -10,7 +10,7 @@ public class Circle{
     return "Circle " + this.getRadius() ;
   }
   public double getArea(){
-    area = Math.PI*this.getRadius()*this.getRadius();
+    double area = Math.PI*this.getRadius()*this.getRadius();
     return area;
   }
 }
