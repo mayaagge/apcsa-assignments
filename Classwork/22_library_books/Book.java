@@ -5,6 +5,6 @@ public class Book{
     this.author = author;
   }
   public String toString(){
-    return "Book:" + this.title;
+    return "Book: " + this.title;
   }
 }
