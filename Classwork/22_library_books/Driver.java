@@ -16,15 +16,15 @@ public class Driver{
     print(library);
   }
   public static void print(ArrayList<Book> a){
-    if (a.size() == 0){
-      System.out.println("{}");
+  	if (a.size() == 0){
+      	System.out.println("{}");
+	}
+	else{
+		System.out.print("{");
+		for (int i = 0; i< a.size()-1; i++){
+			System.out.print((a.get(i)).toString() + ", ");
 		}
-		else{
-			System.out.print("{");
-			for (int i = 0; i< a.size()-1; i++){
-				System.out.print((a.get(i)).toString() + ", ");
-		   }
-		   System.out.println(a.get(a.size()-1) + "}");
-		  }
+		System.out.println(a.get(a.size()-1) + "}");
+	}
   }
 }
