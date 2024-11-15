@@ -6,7 +6,7 @@ public class Textbook extends Book{
     this.edition = edition;
     this.isEbook = isEbook;
   }
-  public boolean isEbook.get(){
+  public boolean getEbook(){
     return isEbook;
   }
   //Override
