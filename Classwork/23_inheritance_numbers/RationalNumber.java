@@ -13,11 +13,17 @@ public class RationalNumber extends RealNumber
   */
   public RationalNumber(int nume, int deno){
     super(0.0);//this value is ignored!
-    numerator = nume;
-    denominator = deno;
-    if (deno == 0){
+    if (deno == 0 || nume == 0){
       numerator = 0;
       denominator = 1;
+    }
+    else if (deno<0){
+      numerator = -nume;
+      denominator = -deno;
+    }
+    else{
+      numerator = nume;
+      denominator = deno;
     }
     this.reduce();
   }
@@ -43,7 +49,9 @@ public class RationalNumber extends RealNumber
   @Override
   public double getValue(){
     //COMPLETE THIS METHOD
-    return numerator/denominator;
+    double n = Double.valueOf(numerator);
+    double d = Double.valueOf(denominator);
+    return n/d;
   }
 
   /**
@@ -52,7 +60,8 @@ public class RationalNumber extends RealNumber
   */
   public RationalNumber reciprocal(){
     //COMPLETE THIS METHOD
-    return denominator/numerator;
+    RationalNumber r =  new RationalNumber(this.getDenominator(), this.getNumerator());
+    return r;
   }
 
   /**
@@ -89,7 +98,10 @@ public class RationalNumber extends RealNumber
     //COMPLETE THIS METHOD
     /*use euclids method or a better one*/
     // http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
-    if (a < b){
+    if (a == 0){
+      return b;
+    }
+    else if (a < b){
       int temp = a;
       a = b;
       b=temp;
@@ -97,7 +109,7 @@ public class RationalNumber extends RealNumber
     while (true){
       int r = a%b;
       if (r == 0){
-        return b;
+        return Math.abs(b);
       }
       else{
         a = b;
@@ -112,8 +124,9 @@ public class RationalNumber extends RealNumber
   *reduced upon construction.
   */
   public void reduce(){
-    this.numerator = this.numerator/(gcd(numerator, denominator));
-    this.denominator = this.denominator/(gcd(numerator, denominator));
+    int x = gcd(numerator, denominator);
+    this.numerator = this.numerator/x;
+    this.denominator = this.denominator/x;
   }
 
   /******************new math operations Return a new RationalNumber!!!!****************/
@@ -124,7 +137,8 @@ public class RationalNumber extends RealNumber
   */
   public RationalNumber multiply(RationalNumber other){
     //COMPLETE THIS METHOD
-    return null;
+    RationalNumber r = new RationalNumber(this.getNumerator()*other.getNumerator(), this.getDenominator()*other.getDenominator());
+    return r;
   }
 
   /**
@@ -132,7 +146,8 @@ public class RationalNumber extends RealNumber
   */
   public RationalNumber divide(RationalNumber other){
     //COMPLETE THIS METHOD
-    return null;
+    RationalNumber r = new RationalNumber(this.getNumerator()*other.getDenominator(), this.getDenominator()*other.getNumerator());
+    return r;
   }
 
   /**
@@ -140,13 +155,15 @@ public class RationalNumber extends RealNumber
   */
   public RationalNumber add(RationalNumber other){
     //COMPLETE THIS METHOD
-    return null;
+    RationalNumber r = new RationalNumber(this.getNumerator()*other.getDenominator()+other.getNumerator()*this.getDenominator(), this.getDenominator()*other.getDenominator());
+    return r;
   }
   /**
   *@return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
     //COMPLETE THIS METHOD
-    return null;
+    RationalNumber r = new RationalNumber(this.getNumerator()*other.getDenominator()-other.getNumerator()*this.getDenominator(), this.getDenominator()*other.getDenominator());
+    return r;
   }
 }

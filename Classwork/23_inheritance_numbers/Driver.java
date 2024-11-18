@@ -1,7 +1,78 @@
 public class Driver {
 	public static void main(String[] args) {
-
     // Write your test cases here
-
+    RationalNumber a = new RationalNumber(3,4);
+    RationalNumber b = new RationalNumber(6,8);
+    RationalNumber c = new RationalNumber(-12,10);
+    RationalNumber a1 = new RationalNumber(0,0);
+    RationalNumber b1 = new RationalNumber(4,0);
+    RationalNumber c1 = new RationalNumber(0,3);
+    RealNumber d = new RealNumber(0.79);
+    RealNumber f = new RealNumber(0.79);
+    RealNumber g = new RealNumber(0.12);
+    System.out.println("a is " + a.toString());
+    System.out.println("b is " + b.toString());
+    System.out.println("c is " + c.toString());
+    System.out.println("a1 is " + a1.toString());
+    System.out.println("b1 is " + b1.toString());
+    System.out.println("c1 is " + c1.toString());
+    System.out.println("a's value is " + a.getValue());
+    System.out.println("b's value is " + b.getValue());
+    System.out.println("c's value is " + c.getValue());
+    System.out.println("a1's value is " + a1.getValue());
+    System.out.println("b1's value is " + b1.getValue());
+    System.out.println("c1's value is " + c1.getValue());
+    System.out.println("a's numerator is " + a.getNumerator());
+    System.out.println("a's denominator is " + a.getDenominator());
+    System.out.println("b's numerator is " + b.getNumerator());
+    System.out.println("b's denominator is " + b.getDenominator());
+    System.out.println("c's numerator is " + c.getNumerator());
+    System.out.println("c's denominator is " + c.getDenominator());
+    System.out.println("a1's numerator is " + a1.getNumerator());
+    System.out.println("a1's denominator is " + a1.getDenominator());
+    System.out.println("b1's numerator is " + b1.getNumerator());
+    System.out.println("b1's denominator is " + b1.getDenominator());
+    System.out.println("c1's numerator is " + c1.getNumerator());
+    System.out.println("c1's denominator is " + c1.getDenominator());
+    System.out.println("a equals to b: " + a.equals(b));
+    System.out.println("a equals to c: " + a.equals(c));
+    System.out.println("b equals to c: " + b.equals(c));
+    System.out.println("a times c: " + a.multiply(c));
+    System.out.println("a times b: " + a.multiply(b));
+    System.out.println("b times c: " + b.multiply(c));
+    System.out.println("a divided by c: " + a.divide(c));
+    System.out.println("a divided by b: " + a.divide(b));
+    System.out.println("b divided by c: " + b.divide(c));
+    System.out.println("a1 divided by c1: " + a1.divide(c1));
+    System.out.println("a plus c: " + a.add(c));
+    System.out.println("a plus b: " + a.add(b));
+    System.out.println("b plus c: " + b.add(c));
+    System.out.println("a minus c: " + a.subtract(c));
+    System.out.println("a minus b: " + a.subtract(b));
+    System.out.println("b minus c: " + b.subtract(c));
+    System.out.println("d is " + d.toString());
+    System.out.println("f is " + f.toString());
+    System.out.println("g is " + g.toString());
+    System.out.println("d's value is " + d.getValue());
+    System.out.println("f's value is " + f.getValue());
+    System.out.println("g's value is " + g.getValue());
+    System.out.println("d is greater, less than, or equal to f: " + d.compareTo(f));
+    System.out.println("d is greater, less than, or equal to g: " + d.compareTo(g));
+    System.out.println("g is greater, less than, or equal to f: " + g.compareTo(f));
+    System.out.println("d equals to f: " + d.equals(f));
+    System.out.println("d equals to g: " + d.equals(g));
+    System.out.println("f equals to g: " + f.equals(g));
+    System.out.println("d times f: " + d.multiply(f));
+    System.out.println("d times g: " + d.multiply(g));
+    System.out.println("f times g: " + f.multiply(g));
+    System.out.println("d divided by f: " + d.divide(f));
+    System.out.println("d divided by g: " + d.divide(g));
+    System.out.println("f divided by g: " + f.divide(g));
+    System.out.println("d plus f: " + d.add(f));
+    System.out.println("d plus g: " + d.add(g));
+    System.out.println("f plus g: " + f.add(g));
+    System.out.println("d minus f: " + d.subtract(f));
+    System.out.println("d minus g: " + d.subtract(g));
+    System.out.println("f minus g: " + f.subtract(g));
   }
 }

@@ -24,11 +24,11 @@ public class RealNumber{
     {
       return 0;
     }
-    if (this.value > other.getValue())
+    else if (this.value > other.getValue())
     {
       return 1;
     }
-    if (this.value < other.getValue())
+    else
     {
       return -1;
     }
