@@ -9,6 +9,7 @@ System.out.println("Expected 2/9: "+q.multiply(r).multiply(s));
 System.out.println("Expected 81/50: "+q.divide(r).divide(s));
 System.out.println("Expected 1: "+q.divide(r).divide(s).multiply(t));
 RealNumber two  = new RealNumber(2.0);
+System.out.println("test : "+q.divide(r).divide(s));
 System.out.println("Expected 0.81 : "+q.divide(r).divide(s).divide(two));
     RationalNumber a = new RationalNumber(3,4);
     RationalNumber b = new RationalNumber(6,8);
