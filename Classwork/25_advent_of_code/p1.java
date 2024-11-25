@@ -18,10 +18,10 @@ public class p1{
       Scanner input = new Scanner(file);
       while (input.hasNext()){
         String direction = input.next();
-        if ((direction.charAt(0)) == ("L")){
+        if ((direction.charAt(0)) == ('L')){
           directioning --;
         }
-        else if ((direction.charAt(0)) == ("R")){
+        else if ((direction.charAt(0)) == ('R')){
           directioning ++;
         }
         while (directioning<0){
