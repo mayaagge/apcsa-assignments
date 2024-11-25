@@ -18,6 +18,7 @@ public class p1{
       Scanner input = new Scanner(file);
       while (input.hasNext()){
         String direction = input.next();
+        direction = direction.replaceAll(",", "");
         if ((direction.charAt(0)) == ('L')){
           directioning --;
         }
@@ -27,7 +28,7 @@ public class p1{
         while (directioning<0){
           directioning += 4;
         }
-        distance = Integer.valueOf(direction.substring(1, direction.length()-1));
+        distance = Integer.valueOf(direction.substring(1, direction.length()));
         if(directioning%4 == 0){
           y += distance;
         }
