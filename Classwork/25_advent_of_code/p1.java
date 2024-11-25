@@ -4,6 +4,8 @@ import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileNotFoundException; // Import the FileNotFoundException class to handle errors
 import java.util.Scanner; // Import the Scanner
 import java.util.Arrays;
+import java.util.ArrayList;
+
 public class p1{
   public static void main(String[] args){
     readFile();
@@ -12,6 +14,9 @@ public class p1{
     try{
       int distance = 0;
       int directioning = 0;
+      int r = 0;
+      ArrayList<Integer> a = new ArrayList<Integer>();
+      ArrayList<Integer> b = new ArrayList<Integer>();
       int x = 0;
       int y = 0;
       File file = new File("directions.txt");
@@ -41,11 +46,22 @@ public class p1{
         if(directioning%4 == 3){
           x-=distance;
         }
+        a.add(x);
+        b.add(y);
+        System.out.println(a.get(a.size()-1));
+        System.out.println(b.get(b.size()-1));
+        for (int i = 0; i<a.size()-1; i++){
+          if((a.get(a.size()-1) == a.get(i)) && (b.get(b.size()-1) == b.get(i))){
+            r = x+y;
+            System.out.println(r);
+          }
+        }
       }
       System.out.println("The steps in x direction is " + x);
       System.out.println("The steps in y direction is " + y);
       int z = x+y;
       System.out.println("The distance is " + z);
+      System.out.println("The first location you visit twice is " + r + " units away");
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
