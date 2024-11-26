@@ -22,6 +22,15 @@ public class p6{
       String b7 = "";
       String b8 = "";
       String b9 = "";
+      String max1 = "";
+      String max2 = "";
+      String max3 = "";
+      String max4 = "";
+      String max5 = "";
+      String max6 = "";
+      String max7 = "";
+      String max8 = "";
+      String max9 = "";
       ArrayList<Integer> a1 = new ArrayList<Integer>();
       ArrayList<Integer> a2 = new ArrayList<Integer>();
       ArrayList<Integer> a3 = new ArrayList<Integer>();
@@ -53,15 +62,15 @@ public class p6{
         Collections.sort(a7);
         Collections.sort(a8);
         Collections.sort(a9); 
-        String max1 = arr.get(a1.size() - 1); 
-        String max2 = arr.get(a2.size() - 1); 
-        String max3 = arr.get(a3.size() - 1); 
-        String max4 = arr.get(a4.size() - 1); 
-        String max5 = arr.get(a5.size() - 1); 
-        String max6 = arr.get(a6.size() - 1); 
-        String max7 = arr.get(a7.size() - 1); 
-        String max8 = arr.get(a8.size() - 1); 
-        String max9 = arr.get(a9.size() - 1); 
+        max1 = arr.get(a1.size() - 1); 
+        max2 = arr.get(a2.size() - 1); 
+        max3 = arr.get(a3.size() - 1); 
+        max4 = arr.get(a4.size() - 1); 
+        max5 = arr.get(a5.size() - 1); 
+        max6 = arr.get(a6.size() - 1); 
+        max7 = arr.get(a7.size() - 1); 
+        max8 = arr.get(a8.size() - 1); 
+        max9 = arr.get(a9.size() - 1); 
       }  
     System.out.println("The code is " + max1 + max2 + max3 + max4 + max5 + max6 + max7 + max8 +max9);
     input.close();//releases the file from your program
