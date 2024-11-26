@@ -23,25 +23,21 @@ public class p2{
           if ((direction.charAt(i)) == ('L')){
             if (directioning != 1 && directioning != 4 && directioning != 7){
               directioning --;
-              System.out.println(directioning);
             }
           }
           else if ((direction.charAt(i)) == ('R')){
             if (directioning != 3 && directioning != 6 && directioning != 9){
               directioning ++;
-              System.out.println(directioning);
             }
           }
           else if ((direction.charAt(i)) == ('U')){
             if (directioning != 1 && directioning != 2 && directioning != 3){
               directioning -= 3;
-              System.out.println(directioning);
             }
           }
           else if ((direction.charAt(i)) == ('D')){
             if (directioning != 7 && directioning != 8 && directioning != 9){
               directioning += 3;
-              System.out.println(directioning);
             }
           }
         }
