@@ -62,15 +62,15 @@ public class p6{
         Collections.sort(a7);
         Collections.sort(a8);
         Collections.sort(a9); 
-        max1 = arr.get(a1.size() - 1); 
-        max2 = arr.get(a2.size() - 1); 
-        max3 = arr.get(a3.size() - 1); 
-        max4 = arr.get(a4.size() - 1); 
-        max5 = arr.get(a5.size() - 1); 
-        max6 = arr.get(a6.size() - 1); 
-        max7 = arr.get(a7.size() - 1); 
-        max8 = arr.get(a8.size() - 1); 
-        max9 = arr.get(a9.size() - 1); 
+        max1 = a1.get(a1.size() - 1); 
+        max2 = a2.get(a2.size() - 1); 
+        max3 = a3.get(a3.size() - 1); 
+        max4 = a4.get(a4.size() - 1); 
+        max5 = a5.get(a5.size() - 1); 
+        max6 = a6.get(a6.size() - 1); 
+        max7 = a7.get(a7.size() - 1); 
+        max8 = a8.get(a8.size() - 1); 
+        max9 = a9.get(a9.size() - 1); 
       }  
     System.out.println("The code is " + max1 + max2 + max3 + max4 + max5 + max6 + max7 + max8 +max9);
     input.close();//releases the file from your program
