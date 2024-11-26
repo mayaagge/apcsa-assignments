@@ -31,15 +31,15 @@ public class p6{
       String max7 = "";
       String max8 = "";
       String max9 = "";
-      ArrayList<Integer> a1 = new ArrayList<Integer>();
-      ArrayList<Integer> a2 = new ArrayList<Integer>();
-      ArrayList<Integer> a3 = new ArrayList<Integer>();
-      ArrayList<Integer> a4 = new ArrayList<Integer>();
-      ArrayList<Integer> a5 = new ArrayList<Integer>();
-      ArrayList<Integer> a6 = new ArrayList<Integer>();
-      ArrayList<Integer> a7 = new ArrayList<Integer>();
-      ArrayList<Integer> a8 = new ArrayList<Integer>();
-      ArrayList<Integer> a9 = new ArrayList<Integer>();
+      ArrayList<String> a1 = new ArrayList<String>();
+      ArrayList<String> a2 = new ArrayList<String>();
+      ArrayList<String> a3 = new ArrayList<String>();
+      ArrayList<String> a4 = new ArrayList<String>();
+      ArrayList<String> a5 = new ArrayList<String>();
+      ArrayList<String> a6 = new ArrayList<String>();
+      ArrayList<String> a7 = new ArrayList<String>();
+      ArrayList<String> a8 = new ArrayList<String>();
+      ArrayList<String> a9 = new ArrayList<String>();
       File file = new File("words.txt");
       Scanner input = new Scanner(file);
       while (input.hasNext()){
