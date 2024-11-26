@@ -5,6 +5,7 @@ import java.io.FileNotFoundException; // Import the FileNotFoundException class 
 import java.util.Scanner; // Import the Scanner
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Collections; 
 
 public class p6{
   public static void main(String[] args){
@@ -43,107 +44,28 @@ public class p6{
         a7.add(word[6]);
         a8.add(word[7]);
         a9.add(word[8]);
-      int max = Integer.MIN_VALUE;
-      int count = 0;
-      for (String a : a1) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b1 = count;
+        Collections.sort(a1);
+        Collections.sort(a2);
+        Collections.sort(a3);
+        Collections.sort(a4);
+        Collections.sort(a5);
+        Collections.sort(a6);
+        Collections.sort(a7);
+        Collections.sort(a8);
+        Collections.sort(a9); 
+        String max1 = arr.get(a1.size() - 1); 
+        String max2 = arr.get(a2.size() - 1); 
+        String max3 = arr.get(a3.size() - 1); 
+        String max4 = arr.get(a4.size() - 1); 
+        String max5 = arr.get(a5.size() - 1); 
+        String max6 = arr.get(a6.size() - 1); 
+        String max7 = arr.get(a7.size() - 1); 
+        String max8 = arr.get(a8.size() - 1); 
+        String max9 = arr.get(a9.size() - 1); 
       }
-      max = Integer.MIN_VALUE;
-      count = 0;
-      for (String a : a2) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b2 = count;
-      }
-      max = Integer.MIN_VALUE;
-      count = 0;
-      for (String a : a3) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b3 = count;
-      }
-      max = Integer.MIN_VALUE;
-      count = 0;
-      for (String a : a4) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b4 = count;
-      }
-      max = Integer.MIN_VALUE;
-      count = 0;
-      for (String a : a5) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b5 = count;
-      }
-      max = Integer.MIN_VALUE;
-      count = 0;
-      for (String a : a6) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b6 = count;
-      }
-      max = Integer.MIN_VALUE;
-      count = 0;
-      for (String a : a7) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b7 = count;
-      }
-      max = Integer.MIN_VALUE;
-      count = 0;
-      for (String a : a8) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b8 = count;
-      }
-      max = Integer.MIN_VALUE;
-      count = 0;
-      for (String a : a9) {
-        if (a.compareTo(max) > 0) {
-            max = a;
-            count = 1;
-        } else if (a == max) {
-            ++count;
-        }
-        b9 = count;
-      }
+        
     }
-      System.out.println("The code is " + b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 +b9);
+      System.out.println("The code is " + max1 + max2 + max3 + max4 + max5 + max6 + max7 + max8 +max9);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
