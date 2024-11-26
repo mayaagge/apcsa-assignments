@@ -34,7 +34,7 @@ public class p6{
       Scanner input = new Scanner(file);
       while (input.hasNext()){
         String word = input.next();
-        a1.add(word[0]));
+        a1.add(word[0]);
         a2.add(word[1]);
         a3.add(word[2]);
         a4.add(word[3]);
