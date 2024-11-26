@@ -45,14 +45,14 @@ public class p6{
       while (input.hasNext()){
         String word = input.next();
         a1.add(Character.toString(word.charAt(0)));
-        a2.add(Character.toString(word.charAt(1)))
-        a3.add(Character.toString(word.charAt(2)))
-        a4.add(Character.toString(word.charAt(3)))
-        a5.add(Character.toString(word.charAt(4)))
-        a6.add(Character.toString(word.charAt(5)))
-        a7.add(Character.toString(word.charAt(6)))
-        a8.add(Character.toString(word.charAt(7)))
-        a9.add(Character.toString(word.charAt(8)))
+        a2.add(Character.toString(word.charAt(1)));
+        a3.add(Character.toString(word.charAt(2)));
+        a4.add(Character.toString(word.charAt(3)));
+        a5.add(Character.toString(word.charAt(4)));
+        a6.add(Character.toString(word.charAt(5)));
+        a7.add(Character.toString(word.charAt(6)));
+        a8.add(Character.toString(word.charAt(7)));
+        a9.add(Character.toString(word.charAt(8)));
         Collections.sort(a1);
         Collections.sort(a2);
         Collections.sort(a3);
