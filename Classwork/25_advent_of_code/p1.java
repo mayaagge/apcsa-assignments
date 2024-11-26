@@ -46,22 +46,11 @@ public class p1{
         if(directioning%4 == 3){
           x-=distance;
         }
-        a.add(x);
-        b.add(y);
-        System.out.println(a.get(a.size()-1));
-        System.out.println(b.get(b.size()-1));
-        for (int i = 0; i<a.size()-1; i++){
-          if((a.get(a.size()-1) == a.get(i)) && (b.get(b.size()-1) == b.get(i))){
-            r = x+y;
-            System.out.println(r);
-          }
-        }
       }
       System.out.println("The steps in x direction is " + x);
       System.out.println("The steps in y direction is " + y);
       int z = x+y;
       System.out.println("The distance is " + z);
-      System.out.println("The first location you visit twice is " + r + " units away");
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
