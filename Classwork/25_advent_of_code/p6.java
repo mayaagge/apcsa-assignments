@@ -62,10 +62,8 @@ public class p6{
         String max7 = arr.get(a7.size() - 1); 
         String max8 = arr.get(a8.size() - 1); 
         String max9 = arr.get(a9.size() - 1); 
-      }
-        
-    }
-      System.out.println("The code is " + max1 + max2 + max3 + max4 + max5 + max6 + max7 + max8 +max9);
+      }  
+    System.out.println("The code is " + max1 + max2 + max3 + max4 + max5 + max6 + max7 + max8 +max9);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
