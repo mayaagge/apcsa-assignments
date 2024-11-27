@@ -80,10 +80,11 @@ public class p6{
       System.out.println(count);
       System.out.println(max1);
       count =1;
-      System.out.println(a1);
+      System.out.println(a2);
       for (int i = 1; i<a2.size(); i++){
         if (a2.get(i).equals(a2.get(i-1))){
           count += 1;
+          System.out.println(count);
         }
         else{
           if (count > t){
