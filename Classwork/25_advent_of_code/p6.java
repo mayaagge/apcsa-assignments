@@ -90,6 +90,7 @@ public class p6{
           count = 1;
         }
       }
+      System.out.println(max2);
       count =1;
       t = 0;
       for (int i = 1; i<a3.size(); i++){
@@ -104,6 +105,7 @@ public class p6{
           count = 1;
         }
       }
+      System.out.println( max3);
       count =1;
       t = 0;
       for (int i = 1; i<a4.size(); i++){
@@ -118,6 +120,7 @@ public class p6{
           count = 1;
         }
       }
+      System.out.println( max4);
       count =1;
       t = 0;
       for (int i = 1; i<a5.size(); i++){
@@ -132,6 +135,7 @@ public class p6{
           count = 1;
         }
       }
+      System.out.println( max5);
       count =1;
       t = 0;
       for (int i = 1; i<a6.size(); i++){
@@ -146,6 +150,7 @@ public class p6{
           count = 1;
         }
       }
+      System.out.println( max6);
       count =1;
       t = 0;
       for (int i = 1; i<a7.size(); i++){
@@ -160,6 +165,7 @@ public class p6{
           count = 1;
         }
       }
+      System.out.println( max7);
       count =1;
       t = 0;
       for (int i = 1; i<a8.size(); i++){
@@ -174,6 +180,7 @@ public class p6{
           count = 1;
         }
       }
+      System.out.println( max8);
     System.out.println( max1);
     System.out.println( max2);
     System.out.println( max3);
