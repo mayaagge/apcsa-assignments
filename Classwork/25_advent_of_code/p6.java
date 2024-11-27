@@ -62,7 +62,6 @@ public class p6{
         Collections.sort(a8);
 
       }
-      System.out.print(a1);
       for (int i = 1; i<a1.size(); i++){
         if ((a1.get(i)).equals(a1.get(i-1))==true){
           count += 1;
@@ -70,35 +69,25 @@ public class p6{
         else{
           if (count > t){
             t = count;
-            System.out.println(t);
             max1 = a1.get(i-1);
-            System.out.println(max1);
           }
           count = 1;
         }
       }
-      System.out.println(count);
-      System.out.println(max1);
       count =1;
       t = 0;
-      System.out.println(a2);
       for (int i = 1; i<a2.size(); i++){
         if (a2.get(i).equals(a2.get(i-1))){
           count += 1;
-          System.out.println(count);
         }
         else{
           if (count > t){
             t = count;
-            System.out.println(t);
             max2 = a2.get(i-1);
-            System.out.println(max2);
           }
           count = 1;
         }
       }
-      System.out.println(count);
-      System.out.println(max2);
       count =1;
       t = 0;
       for (int i = 1; i<a3.size(); i++){
