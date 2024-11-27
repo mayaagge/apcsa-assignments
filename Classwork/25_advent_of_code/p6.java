@@ -75,6 +75,7 @@ public class p6{
           count = 1;
         }
       }
+      System.out.println( max1);
       count =1;
       t = 0;
       for (int i = 1; i<a2.size(); i++){
