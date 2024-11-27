@@ -80,6 +80,7 @@ public class p6{
       System.out.println(count);
       System.out.println(max1);
       count =1;
+      t = 0;
       System.out.println(a2);
       for (int i = 1; i<a2.size(); i++){
         if (a2.get(i).equals(a2.get(i-1))){
@@ -99,6 +100,7 @@ public class p6{
       System.out.println(count);
       System.out.println(max2);
       count =1;
+      t = 0;
       for (int i = 1; i<a3.size(); i++){
         if (a3.get(i).equals(a3.get(i-1))){
           count += 1;
@@ -112,6 +114,7 @@ public class p6{
         }
       }
       count =1;
+      t = 0;
       for (int i = 1; i<a4.size(); i++){
         if (a4.get(i).equals(a4.get(i-1))){
           count += 1;
@@ -125,6 +128,7 @@ public class p6{
         }
       }
       count =1;
+      t = 0;
       for (int i = 1; i<a5.size(); i++){
         if (a5.get(i).equals(a5.get(i-1))){
           count += 1;
@@ -138,6 +142,7 @@ public class p6{
         }
       }
       count =1;
+      t = 0;
       for (int i = 1; i<a6.size(); i++){
         if (a6.get(i).equals(a6.get(i-1))){
           count += 1;
@@ -151,6 +156,7 @@ public class p6{
         }
       }
       count =1;
+      t = 0;
       for (int i = 1; i<a7.size(); i++){
         if (a7.get(i).equals(a7.get(i-1))){
           count += 1;
@@ -164,6 +170,7 @@ public class p6{
         }
       }
       count =1;
+      t = 0;
       for (int i = 1; i<a8.size(); i++){
         if (a8.get(i).equals(a8.get(i-1))){
           count += 1;
