@@ -60,11 +60,10 @@ public class p6{
         Collections.sort(a6);
         Collections.sort(a7);
         Collections.sort(a8);
-
       }
       t = 0;
       for (int i = 1; i<a1.size(); i++){
-        if ((a1.get(i)).equals(a1.get(i-1))==true){
+        if (a1.get(i).equals(a1.get(i-1))){
           count += 1;
         }
         else{
@@ -111,11 +110,12 @@ public class p6{
       for (int i = 1; i<a4.size(); i++){
         if (a4.get(i).equals(a4.get(i-1))){
           count += 1;
+          System.out.println(count);
         }
         else{
           if (count > t){
             t = count;
-            max1 = a4.get(i-1);
+            max4 = a4.get(i-1);
           }
           count = 1;
         }
@@ -156,11 +156,12 @@ public class p6{
       for (int i = 1; i<a7.size(); i++){
         if (a7.get(i).equals(a7.get(i-1))){
           count += 1;
+          System.out.println(count);
         }
         else{
           if (count > t){
             t = count;
-            max1 = a7.get(i-1);
+            max7 = a7.get(i-1);
           }
           count = 1;
         }
