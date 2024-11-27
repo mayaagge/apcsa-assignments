@@ -62,6 +62,7 @@ public class p6{
         Collections.sort(a8);
 
       }
+      t = 0;
       for (int i = 1; i<a1.size(); i++){
         if ((a1.get(i)).equals(a1.get(i-1))==true){
           count += 1;
