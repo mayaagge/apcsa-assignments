@@ -65,113 +65,145 @@ public class p6{
       for (int i = 1; i<a1.size(); i++){
         if (a1.get(i).equals(a1.get(i-1))){
           count += 1;
+          System.out.print(count);
         }
         else{
           if (count > t){
             t = count;
             max1 = a1.get(i-1);
+            System.out.print(max1);
           }
           count = 1;
+          System.out.println("");
         }
       }
+      System.out.println("");
       count =1;
       t = 0;
       for (int i = 1; i<a2.size(); i++){
         if (a2.get(i).equals(a2.get(i-1))){
           count += 1;
+          System.out.print(count);
         }
         else{
           if (count > t){
             t = count;
             max2 = a2.get(i-1);
+            System.out.print(max2);
           }
           count = 1;
+          System.out.println("");
         }
       }
+      System.out.println("");
       count =1;
       t = 0;
       for (int i = 1; i<a3.size(); i++){
         if (a3.get(i).equals(a3.get(i-1))){
           count += 1;
+          System.out.print(count);
         }
         else{
           if (count > t){
             t = count;
             max3 = a3.get(i-1);
+            System.out.print(max3);
           }
           count = 1;
+          System.out.println("");
         }
       }
+      System.out.println("");
       count =1;
       t = 0;
       for (int i = 1; i<a4.size(); i++){
         if (a4.get(i).equals(a4.get(i-1))){
           count += 1;
+          System.out.print(count);
         }
         else{
           if (count > t){
             t = count;
             max4 = a4.get(i-1);
+            System.out.print(max4);
           }
           count = 1;
+          System.out.println("");
         }
       }
+      System.out.println("");
       count =1;
       t = 0;
       for (int i = 1; i<a5.size(); i++){
         if (a5.get(i).equals(a5.get(i-1))){
           count += 1;
+          System.out.print(count);
         }
         else{
           if (count > t){
             t = count;
             max5 = a5.get(i-1);
+            System.out.print(max5);
           }
           count = 1;
+          System.out.println("");
         }
       }
+      System.out.println("");
       count =1;
       t = 0;
       for (int i = 1; i<a6.size(); i++){
         if (a6.get(i).equals(a6.get(i-1))){
           count += 1;
+          System.out.print(count);
         }
         else{
           if (count > t){
             t = count;
             max6 = a6.get(i-1);
+            System.out.print(max6);
           }
           count = 1;
+          System.out.println("");
         }
       }
+      System.out.println("");
       count =1;
       t = 0;
       for (int i = 1; i<a7.size(); i++){
         if (a7.get(i).equals(a7.get(i-1))){
           count += 1;
+          System.out.print(count);
         }
         else{
           if (count > t){
             t = count;
             max7 = a7.get(i-1);
+            System.out.print(max7);
           }
           count = 1;
+          System.out.println("");
         }
       }
+      System.out.println("");
       count =1;
       t = 0;
       for (int i = 1; i<a8.size(); i++){
         if (a8.get(i).equals(a8.get(i-1))){
           count += 1;
+          System.out.print(count);
         }
         else{
           if (count > t){
             t = count;
             max8 = a8.get(i-1);
+            System.out.print(max8);
           }
           count = 1;
+          System.out.println("");
         }
       }
+      System.out.println("");
     System.out.println( max1);
     System.out.println( max2);
     System.out.println( max3);
