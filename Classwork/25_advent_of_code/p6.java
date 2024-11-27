@@ -5,7 +5,7 @@ import java.io.FileNotFoundException; // Import the FileNotFoundException class 
 import java.util.Scanner; // Import the Scanner
 import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.Collections; 
+import java.util.Collections;
 
 public class p6{
   public static void main(String[] args){
@@ -29,6 +29,9 @@ public class p6{
       String max6 = "";
       String max7 = "";
       String max8 = "";
+      String temp = "";
+      int count = 1;
+      int t = 0;
       ArrayList<String> a1 = new ArrayList<String>();
       ArrayList<String> a2 = new ArrayList<String>();
       ArrayList<String> a3 = new ArrayList<String>();
@@ -57,15 +60,125 @@ public class p6{
         Collections.sort(a6);
         Collections.sort(a7);
         Collections.sort(a8);
-        max1 = a1.get(a1.size() - 1); 
-        max2 = a2.get(a2.size() - 1); 
-        max3 = a3.get(a3.size() - 1); 
-        max4 = a4.get(a4.size() - 1); 
-        max5 = a5.get(a5.size() - 1); 
-        max6 = a6.get(a6.size() - 1); 
-        max7 = a7.get(a7.size() - 1); 
-        max8 = a8.get(a8.size() - 1); 
-      }  
+
+      }
+      System.out.print(a1);
+      for (int i = 1; i<a1.size(); i++){
+        if ((a1.get(i)).equals(a1.get(i-1))==true){
+          count += 1;
+        }
+        else{
+          if (count > t){
+            t = count;
+            max1 = a1.get(i-1);
+          }
+          count = 1;
+        }
+      }
+      System.out.println(count);
+      System.out.println(max1);
+      count =1;
+      System.out.println(a1);
+      for (int i = 1; i<a2.size(); i++){
+        if (a2.get(i).equals(a2.get(i-1))){
+          count += 1;
+        }
+        else{
+          if (count > t){
+            t = count;
+            max2 = a2.get(i-1);
+          }
+          count = 1;
+        }
+      }
+      System.out.println(count);
+      System.out.println(max2);
+      count =1;
+      for (int i = 1; i<a3.size(); i++){
+        if (a3.get(i).equals(a3.get(i-1))){
+          count += 1;
+        }
+        else{
+          if (count > t){
+            t = count;
+            max3 = a3.get(i-1);
+          }
+          count = 1;
+        }
+      }
+      count =1;
+      for (int i = 1; i<a4.size(); i++){
+        if (a4.get(i).equals(a4.get(i-1))){
+          count += 1;
+        }
+        else{
+          if (count > t){
+            t = count;
+            max1 = a4.get(i-1);
+          }
+          count = 1;
+        }
+      }
+      count =1;
+      for (int i = 1; i<a5.size(); i++){
+        if (a5.get(i).equals(a5.get(i-1))){
+          count += 1;
+        }
+        else{
+          if (count > t){
+            t = count;
+            max5 = a5.get(i-1);
+          }
+          count = 1;
+        }
+      }
+      count =1;
+      for (int i = 1; i<a6.size(); i++){
+        if (a6.get(i).equals(a6.get(i-1))){
+          count += 1;
+        }
+        else{
+          if (count > t){
+            t = count;
+            max6 = a6.get(i-1);
+          }
+          count = 1;
+        }
+      }
+      count =1;
+      for (int i = 1; i<a7.size(); i++){
+        if (a7.get(i).equals(a7.get(i-1))){
+          count += 1;
+        }
+        else{
+          if (count > t){
+            t = count;
+            max1 = a7.get(i-1);
+          }
+          count = 1;
+        }
+      }
+      count =1;
+      for (int i = 1; i<a8.size(); i++){
+        if (a8.get(i).equals(a8.get(i-1))){
+          count += 1;
+        }
+        else{
+          if (count > t){
+            t = count;
+            max8 = a8.get(i-1);
+          }
+          count = 1;
+        }
+      }
+    System.out.println( max1);
+    System.out.println( max2);
+    System.out.println( max3);
+    System.out.println( max4);
+    System.out.println( max5);
+    System.out.println( max6);
+    System.out.println( max7);
+    System.out.println( max8);
     System.out.println("The code is " + max1 + max2 + max3 + max4 + max5 + max6 + max7 + max8);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
