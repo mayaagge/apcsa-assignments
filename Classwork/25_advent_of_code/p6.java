@@ -88,7 +88,9 @@ public class p6{
         else{
           if (count > t){
             t = count;
+            System.out.println(t);
             max2 = a2.get(i-1);
+            System.out.println(max2);
           }
           count = 1;
         }
