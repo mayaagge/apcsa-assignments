@@ -70,7 +70,9 @@ public class p6{
         else{
           if (count > t){
             t = count;
+            System.out.println(t);
             max1 = a1.get(i-1);
+            System.out.prinln(max1);
           }
           count = 1;
         }
