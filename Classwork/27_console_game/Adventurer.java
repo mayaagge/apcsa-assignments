@@ -55,7 +55,7 @@ public abstract class Adventurer{
   //heall or buff self
   public abstract String support();
 
-  //hurt or hinder the target adventurer, consume some special resource
+  //hurt or hinder the targetHP +=  adventurer, consume some special resource
   public abstract String specialAttack(Adventurer other);
 
   /*

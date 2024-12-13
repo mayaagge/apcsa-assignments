@@ -1,45 +1,123 @@
 public class Warrior extends Adventurer{
   private String name;
-  private int hp;
+  private int HP, maxHP;
   private int agility;
-  private String powerName;
+  //private String powerName;
   private int willpower;
-  private String movementName
+  //private String movementName;
 
-
+  //default constructor
   public Warrior(String name){
-    this(name, 100, 100, 25, 25, "Willpower", "Agility";
+    this(name, 100, 100, 25, 50);
   }
-  public Warrior(String name, int hp, int maxHP, int agility, int willpower, String powerName, String movementName){
-    super(name, hp);
+
+  public Warrior(String name, int HP, int maxHP, int agility, int willpower){
+    super(name, HP);
     this.maxHP = maxHP;
     this.agility = agility;
-    this.powerName = powerName;
-    this.movementName = movementName;
     this.willpower = willpower;
   }
+
+  /*
+    all adventurers must have a custom special
+    consumable resource (mana/rage/money/witts etc)
+  */
+  //give it a short name (fewer than 13 characters)
   public String getSpecialName(){
-    return powerName;
+    return "Willpower";
   }
+  //accessor methods
   public int getSpecial(){
-    return agility;
+    return willpower;
   }
-  public void setSpecial(int newAgility){
-    agility = newAgility;
+  public void setSpecial(int newSpecial){
+    willpower = newSpecial;
   }
   public int getSpecialMax(){
     return 100;
   }
+
+  /*
+    all adventurers must have a way to attack enemies and
+    support their allys
+  */
+  //hurt or hinder the target adventurer
   public String attack(Adventurer other){
-
+    if (other.getHP <= 0){
+      return "Cannot attack this character because they are dead.";
+    }
+    if (this.getHP <= 0){
+      return "Cannot attack this character because you are dead.";
+    }
+    int dmg = 18 + agility / 5; //should factor in agility otherwise no use
+    other.applyDamage(dmg);
+    this.agility -= 1;
+    if (this.getSpecial() + 5 > this.getSpecialMax()){
+      this.setSpecial(this.getSpecialMax())
+    }
+    else{
+      willpower += 5;
+    }
+    if(other.getHP() <= 0){
+      return other.getName() + " died."
+    }
+    return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. Their HP is now " +other.getHP();
   }
-  public String suport(Adventurer other){
 
+  //heall or buff the target adventurer
+  public String support(Adventurer other){
+    if (other.getHP <= 0){
+      return "Cannot support this character because they are dead.";
+    }
+    if (this.getHP <= 0){
+      return "Cannot support this character because you are dead.";
+    }
+    if (other.getHP() + 10 > other.getmaxHP()){
+      other.setHP(other.getmaxHP());
+    }
+    else{
+      other.setHP(10 + other.getHP());
+    }
+    return this.getName() + " heals " + other.getName() + " by " + 10 + " hp.";
   }
-  public String suport(){
 
+  //heall or buff self
+  public String support(){
+    if (this.getHP <= 0){
+      return "Cannot support because you are dead.";
+    }
+    if (this.getHP() + 15 > this.getmaxHP()){
+      this.setHP(this.getmaxHP());
+    }
+    else{
+      this.HP += 15;
+    }
+    this.agility += 5;
+    return this.getName() + " heals self by " + 15 + " hp.";
   }
+
+  //hurt or hinder the target adventurer, consume some special resource
   public String specialAttack(Adventurer other){
-
+    if (other.getHP <= 0){
+      return "Cannot special attack this character. They are dead.";
+    }
+    if (this.getHP <= 0){
+      return "Cannot special attack this character. You are dead.";
+    }
+    if (willpower < 10){
+      return "Not sufficient willpower to use special attack.";
+    }
+    else{
+      willpower -= 10;
+      int dmg = 25 + agility / 5;
+      other.applyDamage(dmg);
+      if(other.getHP() <= 0){
+        return other.getName() + " died."
+      }
+      return this.getName() + " uses " + this.getSpecialName() + " + other.getName() + " and deals " + dmg + " damage. Their HP is now " +other.getHP();
+    }
+    //implement something with willpower aand needing enough willpower
+    //maybe depletes willpower then other factors bring willpower up
   }
+
 }
