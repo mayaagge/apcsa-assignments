@@ -1,14 +1,14 @@
-public class Warrior extends Adventurer{
+public class Fortress extends Adventurer{
   private String name;
   private int HP, maxHP;
   private int fortitude;
 
   //default constructor
-  public Warrior(String name){
+  public Fortress(String name){
     this(name, 150, 150, 50);
   }
 
-  public Warrior(String name, int HP, int maxHP, int fortitude){
+  public Fortress(String name, int HP, int maxHP, int fortitude){
     super(name, HP);
     this.maxHP = maxHP;
     this.fortitude = fortitude;
