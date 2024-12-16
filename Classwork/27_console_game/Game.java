@@ -17,7 +17,7 @@ public class Game{
         System.out.println("What would you like to name your character?");
         String playerName = scanner.nextLine();
 
-        System.out.println("Hi" + playerName + "Choose your player class: warrior / fortress / barbarian");
+        System.out.println("Hi " + playerName + ". Choose your player class: warrior / fortress / barbarian");
         String playerClass = scanner.nextLine();
 
         //player setup
