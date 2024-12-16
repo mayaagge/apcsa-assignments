@@ -51,8 +51,8 @@ public class Fortress extends Adventurer{
       this.setSpecial(this.getSpecialMax());
     }
     else{
-      fortitude += 5;
-    }
+      this.restoreSpecial(5);
+        }
     if(other.getHP() <= 0){
       return other.getName() + " died.";
     }
@@ -114,3 +114,5 @@ public class Fortress extends Adventurer{
   }
 
 }
+
+	
