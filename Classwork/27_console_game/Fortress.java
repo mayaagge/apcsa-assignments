@@ -114,5 +114,3 @@ public class Fortress extends Adventurer{
   }
 
 }
-
-	
