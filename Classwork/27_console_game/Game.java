@@ -1,118 +1,92 @@
-public class Warrior extends Adventurer{
-  private String name;
-  private int HP, maxHP;
-  private int agility;
-  private int willpower;
+import java.util.Scanner;
+import java.util.Random;
 
-  //default constructor
-  public Warrior(String name){
-    this(name, 100, 100, 25, 50);
-  }
+public class Game{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        Adventurer player;
+        Adventurer enemy;
 
-  public Warrior(String name, int HP, int maxHP, int agility, int willpower){
-    super(name, HP);
-    this.maxHP = maxHP;
-    this.agility = agility;
-    this.willpower = willpower;
-  }
+        System.out.println("What would you like to name your character?");
+        String playerName = scanner.nextLine();
 
-  /*
-    all adventurers must have a custom special
-    consumable resource (mana/rage/money/witts etc)
-  */
-  //give it a short name (fewer than 13 characters)
-  public String getSpecialName(){
-    return "Willpower";
-  }
-  //accessor methods
-  public int getSpecial(){
-    return willpower;
-  }
-  public void setSpecial(int newSpecial){
-    willpower = newSpecial;
-  }
-  public int getSpecialMax(){
-    return 100;
-  }
+        System.out.println("Choose your player class: warrior / fortress / barbarian");
+        String playerClass = scanner.nextLine();
 
-  /*
-    all adventurers must have a way to attack enemies and
-    support their allys
-  */
-  //hurt or hinder the target adventurer
-  public String attack(Adventurer other){
-    if (other.getHP() <= 0){
-      return "Cannot attack this character because they are dead.";
-    }
-    if (this.getHP() <= 0){
-      return "Cannot attack this character because you are dead.";
-    }
-    int dmg = 18 + agility / 5;
-    other.applyDamage(dmg);
-    this.agility -= 1;
-    if (this.getSpecial() + 5 > this.getSpecialMax()){
-      this.setSpecial(this.getSpecialMax());
-    }
-    else{
-      this.restoreSpecial(5);
-    }
-    if(other.getHP() <= 0){
-      return other.getName() + " died.";
-    }
-    return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. Their HP is now " +other.getHP();
-  }
+        //player setup
+        if (playerClass.equals("fortress")){
+            player = new Fortress("" + playerName);
+        } else if (playerClass.equals("barbarian")){
+            player = new Barbarian("" + playerName);
+        } else {
+            player = new Warrior("" + playerName);
+        }
 
-  //heall or buff the target adventurer
-  public String support(Adventurer other){
-    if (other.getHP() <= 0){
-      return "Cannot support this character because they are dead.";
-    }
-    if (this.getHP() <= 0){
-      return "Cannot support this character because you are dead.";
-    }
-    if (other.getHP() + 5 > other.getmaxHP()){
-      other.setHP(other.getmaxHP());
-    }
-    else{
-      other.setHP(5 + other.getHP());
-    }
-    return this.getName() + " heals " + other.getName() + " by " + 5 + " hp.";
-  }
+        //enemy setup
+        int enemyClass = random.nextInt(3);
+        if (enemyClass == 0){
+            enemy = new Warrior("Enemy");
+        } else if (enemyClass == 1){
+            enemy = new Fortress("Enemy");
+        } else{
+            enemy =  new Barbarian("Enemy");
+        }
 
-  //heall or buff self
-  public String support(){
-    if (this.getHP() <= 0){
-      return "Cannot support because you are dead.";
-    }
-    if (this.getHP() + 10 > this.getmaxHP()){
-      this.setHP(this.getmaxHP());
-    }
-    else{
-      this.HP += 10;
-    }
-    this.agility += 5;
-    return this.getName() + " heals self by " + 10 + " hp.";
-  }
+        //print stats
 
-  //hurt or hinder the target adventurer, consume some special resource
-  public String specialAttack(Adventurer other){
-    if (other.getHP() <= 0){
-      return "Cannot special attack this character. They are dead.";
-    }
-    if (this.getHP() <= 0){
-      return "Cannot special attack this character. You are dead.";
-    }
-    if (willpower < 10){
-      return "Not sufficient willpower to use special attack.";
-    } else{
-      willpower -= 10;
-      int dmg = 25 + agility / 5;
-      other.applyDamage(dmg);
+        //gameplay
+        while (player.getHP() > 0 && enemy.getHP() > 0){ //go thru the actions and check if it equals of the choices and run action
+          System.out.println("Type: attack / special / support / quit");
+          String action = scanner.nextLine();
 
-      if(other.getHP() <= 0){
-        return other.getName() + " died.";
-      }
-      return this.getName() + " uses " + this.getSpecialName() + " against " + other.getName() + " and deals "  + dmg + " damage. Their HP is now " + other.getHP();
+          while(!action.equals("attack") && !action.equals("a") &&
+          !action.equals("special") && !action.equals("sp") &&
+          !action.equals("support") && !action.equals("su") &&
+          !action.equals("quit")){
+            System.out.println("Invalid action. Type: attack / special / support / quit");
+            action = scanner.nextLine();
+          }
+
+          if (action.equals("attack") || action.equals("a")){
+            player.attack(enemy);
+          } else if (action.equals("special") || action.equals("sp")){
+            player.specialAttack(enemy);
+          } else if (action.equals("support") || action.equals("su")){
+            System.out.println("self / enemy"); //diff options of who to heal
+            String decision = scanner.nextLine();
+            
+            if (decision.equals("enemy")){
+              player.support(enemy);
+            } else{
+              player.support(player);
+            }
+          } else if (action.equals("quit")){
+            System.out.println("You quit the game.");
+            return;
+          }
+
+          if (enemy.getHP() <= 0){
+            System.out.println("You have defeated the enemy!");
+            break;
+          }
+
+          int enemyAction = random.nextInt(3);
+          if (enemyAction == 0){
+            enemy.attack(player);
+          } else if (enemyAction == 1){
+            enemy.specialAttack(player);
+          } else{
+            enemy.support();
+          }
+
+          if (player.getHP() <= 0){
+            System.out.println("You have been defeated!");
+            break;
+          }
+        }
+
+        scanner.close();
+
     }
-  }
 }
