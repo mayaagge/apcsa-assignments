@@ -20,7 +20,7 @@ public class Game{
         System.out.println("Hi " + playerName + ". Choose your player class: warrior / fortress / barbarian");
         String playerClass = scanner.nextLine();
         while(!playerClass.equals("warrior") && !playerClass.equals("fortress") &&
-          !playerClass.equals("barbarian"){
+          !playerClass.equals("barbarian")){
 
             //player setup
             if (playerClass.equals("fortress")){
