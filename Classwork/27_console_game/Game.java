@@ -2,6 +2,12 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Game{
+    public static void printStats(Adventurer x){
+        String s1 = x.getName() + " has " + x.getHP() + " left.";
+        String s2 = x.getName() + " has " + x.getSpecial() + " of " + x.getSpecialName() + " left.";
+        System.out.println(s1);
+        System.out.println(s2);
+    }
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -11,7 +17,7 @@ public class Game{
         System.out.println("What would you like to name your character?");
         String playerName = scanner.nextLine();
 
-        System.out.println("Choose your player class: warrior / fortress / barbarian");
+        System.out.println("Hi" + playerName + "Choose your player class: warrior / fortress / barbarian");
         String playerClass = scanner.nextLine();
 
         //player setup
@@ -34,12 +40,11 @@ public class Game{
         }
 
         //print stats
-
+        printStats(player);
         //gameplay
         while (player.getHP() > 0 && enemy.getHP() > 0){ //go thru the actions and check if it equals of the choices and run action
           System.out.println("Type: attack / special / support / quit");
           String action = scanner.nextLine();
-
           while(!action.equals("attack") && !action.equals("a") &&
           !action.equals("special") && !action.equals("sp") &&
           !action.equals("support") && !action.equals("su") &&
@@ -65,7 +70,7 @@ public class Game{
             System.out.println("You quit the game.");
             return;
           }
-
+        
           if (enemy.getHP() <= 0){
             System.out.println("You have defeated the enemy!");
             break;
@@ -84,6 +89,8 @@ public class Game{
             System.out.println("You have been defeated!");
             break;
           }
+        printStats(player);
+            printStats(enemy);
         }
 
         scanner.close();
