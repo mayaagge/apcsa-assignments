@@ -75,6 +75,8 @@ public class Game{
             System.out.println("You have defeated the enemy!");
             break;
           }
+        printStats(player);
+        printStats(enemy);
 
           int enemyAction = random.nextInt(3);
           if (enemyAction == 0){
