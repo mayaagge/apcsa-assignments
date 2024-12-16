@@ -14,7 +14,7 @@ public class Game{
         System.out.println("Choose your player class: warrior / fortress / barbarian");
         String playerClass = scanner.nextLine();
 
-        //designate correct classes
+        //player setup
         if (playerClass.equals("fortress")){
             player = new Fortress("" + playerName);
         } else if (playerClass.equals("barbarian")){
@@ -23,6 +23,7 @@ public class Game{
             player = new Warrior("" + playerName);
         }
 
+        //enemy setup
         int enemyClass = random.nextInt(3);
         if (enemyClass == 0){
             enemy = new Warrior("Enemy");
@@ -34,30 +35,58 @@ public class Game{
 
         //print stats
 
-
         //gameplay
-        while (player.getHP() > 0 && enemy.getHP() > 0){
-            System.out.println("Type: attack / special / support / quit");
-            String action = scanner.nextLine();
-            //go thru the actions and check if it equals of the choices and run action
+        while (player.getHP() > 0 && enemy.getHP() > 0){ //go thru the actions and check if it equals of the choices and run action
+          System.out.println("Type: attack / special / support / quit");
+          String action = scanner.nextLine();
 
-            if (action.equals("quit")){
-                System.out.println("You quit the game.");
-                return;
+          while(!action.equals("attack") && !action.equals("a") &&
+          !action.equals("special") && !action.equals("sp") &&
+          !action.equals("support") && !action.equals("su") &&
+          !action.equals("quit")){
+            System.out.println("Invalid action. Type: attack / special / support / quit");
+            action = scanner.nextLine();
+          }
+
+          if (action.equals("attack") || action.equals("a")){
+            player.attack(enemy);
+          } else if (action.equals("special") || action.equals("sp")){
+            player.specialAttack(enemy);
+          } else if (action.equals("support") || action.equals("su")){
+            System.out.println("self / enemy"); //diff options of who to heal
+            String decision = scanner.nextLine();
+            
+            if (decision.equals("enemy")){
+              player.support(enemy);
+            } else{
+              player.support(player);
             }
+          } else if (action.equals("quit")){
+            System.out.println("You quit the game.");
+            return;
+          }
+
+          if (enemy.getHP() <= 0){
+            System.out.println("You have defeated the enemy!");
+            break;
+          }
+
+          int enemyAction = random.nextInt(3);
+          if (enemyAction == 0){
+            enemy.attack(player);
+          } else if (enemyAction == 1){
+            enemy.specialAttack(player);
+          } else{
+            enemy.support();
+          }
+
+          if (player.getHP() <= 0){
+            System.out.println("You have been defeated!");
+            break;
+          }
         }
 
-
-        //action of player
-
-        //check enemy defeat
-
-        //action of enemy
-
-        //check player defeat
-
-        //updated stats
-
+        scanner.close();
 
     }
 }
