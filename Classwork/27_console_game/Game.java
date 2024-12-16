@@ -19,16 +19,18 @@ public class Game{
 
         System.out.println("Hi " + playerName + ". Choose your player class: warrior / fortress / barbarian");
         String playerClass = scanner.nextLine();
+        while(!playerClass.equals("warrior") && !playerClass.equals("fortress") &&
+          !playerClass.equals("barbarian"){
 
-        //player setup
-        if (playerClass.equals("fortress")){
-            player = new Fortress("" + playerName);
-        } else if (playerClass.equals("barbarian")){
-            player = new Barbarian("" + playerName);
-        } else {
-            player = new Warrior("" + playerName);
+            //player setup
+            if (playerClass.equals("fortress")){
+                player = new Fortress("" + playerName);
+            } else if (playerClass.equals("barbarian")){
+                player = new Barbarian("" + playerName);
+            } else {
+                player = new Warrior("" + playerName);
+            }
         }
-
         //enemy setup
         int enemyClass = random.nextInt(3);
         if (enemyClass == 0){
