@@ -47,14 +47,14 @@ public class Warrior extends Adventurer{
     if (this.getHP() <= 0){
       return "Cannot attack this character because you are dead.";
     }
-    int dmg = 18 + agility / 5; 
+    int dmg = 18 + agility / 5;
     other.applyDamage(dmg);
     this.agility -= 1;
     if (this.getSpecial() + 5 > this.getSpecialMax()){
       this.setSpecial(this.getSpecialMax());
     }
     else{
-      willpower += 5;
+      this.restoreSpecial(5);
     }
     if(other.getHP() <= 0){
       return other.getName() + " died.";
@@ -116,3 +116,4 @@ public class Warrior extends Adventurer{
     }
   }
 }
+	
