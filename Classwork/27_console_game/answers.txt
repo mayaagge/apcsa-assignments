@@ -1,0 +1,7 @@
+Look at the sample subclass MyWarrior and compare it to your subclass. What is different? What is the same?
+We have different constructors and a different special ability. We have agility instead of preferred language and we also have the concept of a character dying and not being able to perform the functions. We set our specialMax in the function rather than in the constructor. We also did not randomize damage. We have different amounts of HP for damage and support. Otherwise, the code is similar. 
+
+How will your game interact with the user?
+Our game will interact with the user by prompting them for their name and and character then giving them a choice of what method they want to do. We will use Scanner to do this and then keep doing this until one of the characters dies. Each action will be printed and the opponent's actions will be done randomly
+
+
