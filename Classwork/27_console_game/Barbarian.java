@@ -41,7 +41,11 @@ public class Barbarian extends Adventurer{
     public String attack(Adventurer other){
       int dmg = 10 + other.getSpecial() / 2;
       other.applyDamage(dmg);
-    this.restoreSpecial(3);
+       if (this.getSpecial() +3 > this.getSpecialMax()){
+      this.setSpecial(this.getSpecialMax());
+      }else{
+      this.restoreSpecial(3);
+      }
       return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. They also gain " + this.getSpecial() + " XP to their special power.";
     }
 
@@ -73,8 +77,12 @@ public class Barbarian extends Adventurer{
         return "Not sufficient willpower to use special attack.";
       } else{
         int dmg = 20 + insanity / 5;
+        if (this.getSpecial() - 10 > 0){
+         this.setSpecial(0) ;
+      }else{
+      this.restoreSpecial(-10);
+      }
         other.applyDamage(dmg);
-        other.restoreSpecial(-15);
         return this.getName() + " uses " + this.getSpecialName() + " against the enemy and deals "  + dmg + " damage. They also deal " + other.getSpecial() + " XP damage to the enemy's special power.";
       }
     }
