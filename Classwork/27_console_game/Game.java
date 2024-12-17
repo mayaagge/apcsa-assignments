@@ -21,7 +21,9 @@ public class Game{
         String playerClass = scanner.nextLine();
         while(!playerClass.equals("warrior") && !playerClass.equals("fortress") &&
           !playerClass.equals("barbarian")){
-
+            System.out.println("Invalid player class. Choose your player class: warrior / fortress / barbarian");
+            playerClass = scanner.nextLine();
+        }
             //player setup
             if (playerClass.equals("fortress")){
                 player = new Fortress("" + playerName);
@@ -30,7 +32,7 @@ public class Game{
             } else {
                 player = new Warrior("" + playerName);
             }
-        }
+
         //enemy setup
         int enemyClass = random.nextInt(3);
         if (enemyClass == 0){
