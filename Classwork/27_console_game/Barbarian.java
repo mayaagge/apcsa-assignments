@@ -58,11 +58,11 @@ public class Barbarian extends Adventurer{
 
     //heall or buff self
     public String support(){
-         if (other.getHP() + 8 > other.getmaxHP()){
-      other.setHP(other.getmaxHP());
+    if (this.getHP() + 8 > this.getmaxHP()){
+      this.setHP(this.getmaxHP());
     }
     else{
-      other.setHP(8 + other.getHP());
+      this.setHP(8 + this.getHP());
     }
       return this.getName() + " heals self by " + 8 + " HP.";
     }
