@@ -46,7 +46,7 @@ public class Warrior extends Adventurer{
       }else{
       this.restoreSpecial(5);
       }
-      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. They also gain " + this.getSpecial() + " XP to their special power.";
+      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. They also gain 5 XP to their special power.";
   }
 
   //heall or buff the target adventurer
@@ -83,6 +83,6 @@ public class Warrior extends Adventurer{
       this.restoreSpecial(-10);
       }
       other.applyDamage(dmg);
-        return this.getName() + " uses " + this.getSpecialName() + " against the enemy and deals "  + dmg + " damage. They also deal " + other.getSpecial() + " XP damage to the enemy's special power.";    }
+        return this.getName() + " uses " + this.getSpecialName() + " against the enemy and deals "  + dmg + " damage. They also deal 10 XP damage to the enemy's special power.";    }
   }
 }
