@@ -94,13 +94,19 @@ public class Game{
         printStats(enemy);
         System.out.println("----------------");
             System.out.println("Now it's the enemy's turn to make a move!");
-          int enemyAction = random.nextInt(3);
+          int enemyAction = random.nextInt(4);
           if (enemyAction == 0){
             enemy.attack(player);
+              System.out.println("The enemy has attacked!");
           } else if (enemyAction == 1){
             enemy.specialAttack(player);
-          } else{
-            enemy.support();
+            System.out.println("The enemy has special attacked!");
+          } else if (enemyAction == 2{
+            enemy.support(enemy);
+            System.out.println("The enemy has supported themselves!");
+          }else{
+              enemy.support(player);
+            System.out.println("The enemy has supported you!");
           }
 
           if (player.getHP() <= 0){
