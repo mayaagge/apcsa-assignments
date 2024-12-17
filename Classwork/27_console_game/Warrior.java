@@ -41,7 +41,11 @@ public class Warrior extends Adventurer{
   public String attack(Adventurer other){
     int dmg = 18 + other.getSpecial() / 5;
     other.applyDamage(dmg);
-    this.restoreSpecial(5);
+    if (this.getSpecial() + 5 > this.getSpecialMax()){
+      this.setSpecial(this.getSpecialMax());
+      }else{
+      this.restoreSpecial(5);
+      }
       return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. They also gain " + this.getSpecial() + " XP to their special power.";
   }
 
@@ -73,7 +77,11 @@ public class Warrior extends Adventurer{
       return "Not sufficient willpower to use special attack.";
     } else{
       int dmg = 25 + other.getSpecial() / 5;
-      other.restoreSpecial(-10);
+      if (this.getSpecial() - 10 > 0){
+         this.setSpecial(0) ;
+      }else{
+      this.restoreSpecial(-10);
+      }
       other.applyDamage(dmg);
         return this.getName() + " uses " + this.getSpecialName() + " against the enemy and deals "  + dmg + " damage. They also deal " + other.getSpecial() + " XP damage to the enemy's special power.";    }
   }
