@@ -66,7 +66,7 @@ public class Fortress extends Adventurer{
       this.setHP(this.getmaxHP());
     }
     else{
-      this.HP += 15;
+      this.setHP(15 + this.getHP());
     }
     return this.getName() + " heals self by " + 15 + " HP.";
   }
