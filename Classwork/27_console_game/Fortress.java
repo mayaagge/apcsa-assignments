@@ -46,7 +46,7 @@ public class Fortress extends Adventurer{
       }else{
       this.restoreSpecial(5);
       }
-    return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage to. You gain 5 XP to your special power.";
+      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage." + this.getName() + " gain 5 XP to your special power.";
   }
 
   //heall or buff the target adventurer
