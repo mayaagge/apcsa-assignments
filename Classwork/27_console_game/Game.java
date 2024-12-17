@@ -27,24 +27,31 @@ public class Game{
             //player setup
             if (playerClass.equals("fortress")){
                 player = new Fortress("" + playerName);
+                System.out.println(playerName + "is a fortress.");
             } else if (playerClass.equals("barbarian")){
                 player = new Barbarian("" + playerName);
+                System.out.println(playerName + "is a barbarian.");
             } else {
                 player = new Warrior("" + playerName);
+                System.out.println(playerName + "is a warrior.");
             }
-
+        printStats(player);
         //enemy setup
         int enemyClass = random.nextInt(3);
         if (enemyClass == 0){
             enemy = new Warrior("Enemy");
+            System.out.println("Enemy is a warrior.");
         } else if (enemyClass == 1){
             enemy = new Fortress("Enemy");
+            System.out.println("Enemy is a fortress.");
         } else{
             enemy =  new Barbarian("Enemy");
+            System.out.println("Enemy is a barbarian.");
         }
 
         //print stats
-        printStats(player);
+        
+        printStats(enemy);
         //gameplay
         while (player.getHP() > 0 && enemy.getHP() > 0){ //go thru the actions and check if it equals of the choices and run action
           System.out.println("Type: attack / special / support / quit");
