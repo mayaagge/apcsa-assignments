@@ -47,7 +47,12 @@ public class Warrior extends Adventurer{
 
   //heall or buff the target adventurer
   public String support(Adventurer other){
-      other.restoreSpecial(5);
+         if (other.getHP() + 5 > other.getmaxHP()){
+      other.setHP(other.getmaxHP());
+    }
+    else{
+      other.setHP(5 + other.getHP());
+    }
     return this.getName() + " heals " + other.getName() + " by " + 5 + " HP.";
   }
 
