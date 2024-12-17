@@ -30,7 +30,7 @@ public class Fortress extends Adventurer{
     fortitude = newSpecial;
   }
   public int getSpecialMax(){
-    return 100;
+    return 50;
   }
 
   /*
