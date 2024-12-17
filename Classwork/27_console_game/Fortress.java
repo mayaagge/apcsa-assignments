@@ -57,7 +57,7 @@ public class Fortress extends Adventurer{
     else{
       other.setHP(10 + other.getHP());
     }
-    return this.getName() + " heals " + other.getName() + " by " + 10 + " hp.";
+    return this.getName() + " heals " + other.getName() + " by " + 10 + " HP.";
   }
 
   //heall or buff self
@@ -68,7 +68,7 @@ public class Fortress extends Adventurer{
     else{
       this.HP += 15;
     }
-    return this.getName() + " heals self by " + 15 + " hp.";
+    return this.getName() + " heals self by " + 15 + " HP.";
   }
 
   //hurt or hinder the target adventurer, consume some special resource
