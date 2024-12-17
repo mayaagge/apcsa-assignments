@@ -78,7 +78,7 @@ public class Game{
             if (decision.equals("enemy")){
               System.out.println(player.support(enemy));
             } else{
-              System.out.println(player.support(player));
+              System.out.println(player.support());
             }
           } else if (action.equals("quit")){
             System.out.println("You quit the game.");
@@ -102,18 +102,25 @@ public class Game{
             System.out.println("Now it's the enemy's turn to make a move!");
           int enemyAction = random.nextInt(4);
           if (enemyAction == 0){
-            System.out.println(enemy.attack(player));
               System.out.println("The enemy has attacked!");
+            System.out.println(enemy.attack(player));
+              
           } else if (enemyAction == 1){
+              System.out.println("The enemy has special attacked!");
             System.out.println(enemy.specialAttack(player));
-            System.out.println("The enemy has special attacked!");
+            
           } else if (enemyAction == 2){
+              System.out.println("The enemy has supported themselves!");
             System.out.println(enemy.support(enemy));
-            System.out.println("The enemy has supported themselves!");
           }else{
-              enemy.support(player);
-            System.out.println("The enemy has supported you!");
+             System.out.println("The enemy has supported you!");
+              enemy.support();
           }
+            System.out.println("");
+            printStats(player);
+            System.out.println("");
+            printStats(enemy);
+              System.out.println("");
 
           if (player.getHP() <= 0){
             System.out.println("");
