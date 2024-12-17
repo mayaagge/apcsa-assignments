@@ -39,64 +39,22 @@ public class Barbarian extends Adventurer{
     */
     //hurt or hinder the target adventurer
     public String attack(Adventurer other){
-        /* if (other.getHP() <= 0){
-        return "Cannot attack this character because they are dead.";
-      }
-      if (this.getHP() <= 0){
-        return "Cannot attack this character because you are dead.";
-      }
-            */
-      int dmg = 10 + insanity / 2;
+      int dmg = 10 + other.getSpecial() / 2;
       other.applyDamage(dmg);
-
-      if (this.getSpecial() + 3 > this.getSpecialMax()){
-        this.setSpecial(this.getSpecialMax());
-      }
-      else{
-        insanity += 3;
-      }
-        /*
-      if(other.getHP() <= 0){
-        return other.getName() + " died.";
-      }
-         */
-      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. Their HP is now " +other.getHP();
+    this.restoreSpecial(3);
+      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage.";
     }
 
     //heall or buff the target adventurer
     public String support(Adventurer other){
-        /*
-      if (other.getHP() <= 0){
-        return "Cannot support this character because they are dead.";
-      }
-      if (this.getHP() <= 0){
-        return "Cannot support this character because you are dead.";
-      }
-         */
-      if (other.getHP() + 8 > other.getmaxHP()){
-        other.setHP(other.getmaxHP());
-      }
-      else{
-        other.setHP(8 + other.getHP());
-      }
-      return this.getName() + " heals " + other.getName() + " by " + 8 + " hp.";
+        other.restoreSpecial(8)
+      return this.getName() + " heals " + other.getName() + " by " + 8 + " HP.";
     }
 
     //heall or buff self
     public String support(){
-        /*
-      if (this.getHP() <= 0){
-        return "Cannot support because you are dead.";
-      }
-         */
-      if (this.getHP() + 8 > this.getmaxHP()){
-        this.setHP(this.getmaxHP());
-      }
-      else{
-        this.HP += 8;
-      }
-      this.restoreSpecial(5);
-      return this.getName() + " heals self by " + 8 + " hp.";
+      this.restoreSpecial(8);
+      return this.getName() + " heals self by " + 8 + " HP.";
     }
 
     //hurt or hinder the target adventurer, consume some special resource
