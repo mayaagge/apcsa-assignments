@@ -27,13 +27,13 @@ public class Game{
             //player setup
             if (playerClass.equals("fortress")){
                 player = new Fortress("" + playerName);
-                System.out.println(playerName + "is a fortress.");
+                System.out.println(playerName + " is a fortress.");
             } else if (playerClass.equals("barbarian")){
                 player = new Barbarian("" + playerName);
-                System.out.println(playerName + "is a barbarian.");
+                System.out.println(playerName + " is a barbarian.");
             } else {
                 player = new Warrior("" + playerName);
-                System.out.println(playerName + "is a warrior.");
+                System.out.println(playerName + " is a warrior.");
             }
         printStats(player);
         //enemy setup
