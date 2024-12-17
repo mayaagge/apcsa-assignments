@@ -77,7 +77,7 @@ public class Warrior extends Adventurer{
       return "Not sufficient willpower to use special attack.";
     } else{
       int dmg = 25 + other.getSpecial() / 5;
-      if (this.getSpecial() - 10 > 0){
+      if (this.getSpecial() - 10 < 0){
          this.setSpecial(0) ;
       }else{
       this.restoreSpecial(-10);
