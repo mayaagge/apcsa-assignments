@@ -47,38 +47,35 @@ public class Barbarian extends Adventurer{
 
     //heall or buff the target adventurer
     public String support(Adventurer other){
-        other.restoreSpecial(8)
+            if (other.getHP() + 8 > other.getmaxHP()){
+      other.setHP(other.getmaxHP());
+    }
+    else{
+      other.setHP(8 + other.getHP());
+    }
       return this.getName() + " heals " + other.getName() + " by " + 8 + " HP.";
     }
 
     //heall or buff self
     public String support(){
-      this.restoreSpecial(8);
+         if (other.getHP() + 8 > other.getmaxHP()){
+      other.setHP(other.getmaxHP());
+    }
+    else{
+      other.setHP(8 + other.getHP());
+    }
       return this.getName() + " heals self by " + 8 + " HP.";
     }
 
     //hurt or hinder the target adventurer, consume some special resource
     public String specialAttack(Adventurer other){
-        /*
-      if (other.getHP() <= 0){
-        return "Cannot special attack this character. They are dead.";
-      }
-      if (this.getHP() <= 0){
-        return "Cannot special attack this character. You are dead.";
-      }
-        */
       if (insanity < 15){
         return "Not sufficient willpower to use special attack.";
       } else{
-        other.setSpecial(other.getSpecial() -  15);
         int dmg = 20 + insanity / 5;
         other.applyDamage(dmg);
-        /*
-        if(other.getHP() <= 0){
-          return other.getName() + " died.";
-        }
-          */
-        return this.getName() + " uses " + this.getSpecialName() + " against " + other.getName() + " and deals "  + dmg + " damage. Their HP is now " + other.getHP();
+        other.restoreSpecial(-15);
+        return this.getName() + " uses " + this.getSpecialName() + " against " + other.getName() + " and deals "  + dmg + " damage.";
       }
     }
   }
