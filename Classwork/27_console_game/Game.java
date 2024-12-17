@@ -25,6 +25,7 @@ public class Game{
             playerClass = scanner.nextLine();
         }
             //player setup
+              System.out.println("");
             if (playerClass.equals("fortress")){
                 player = new Fortress("" + playerName);
                 System.out.println(playerName + " is a fortress.");
@@ -35,7 +36,6 @@ public class Game{
                 player = new Warrior("" + playerName);
                 System.out.println(playerName + " is a warrior.");
             }
-      System.out.println("");
         printStats(player);
         //enemy setup
         System.out.println("");
