@@ -30,7 +30,7 @@ public class Warrior extends Adventurer{
     willpower = newSpecial;
   }
   public int getSpecialMax(){
-    return 100;
+    return 50;
   }
 
   /*
