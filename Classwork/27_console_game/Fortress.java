@@ -41,7 +41,7 @@ public class Fortress extends Adventurer{
   public String attack(Adventurer other){
     int dmg = 15;
     other.applyDamage(dmg);
-    this.restoreSpecial(5)
+    this.restoreSpecial(5);
     return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage to. They also gain " + this.getSpecial() + " XP.";
   }
 
