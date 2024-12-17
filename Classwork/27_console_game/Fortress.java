@@ -77,10 +77,14 @@ public class Fortress extends Adventurer{
       return "Not sufficient fortitude to use special attack.";
     }
     else{
-      fortitude -= 10;
-      int dmg = 25;
+      if (other.getSpecial() - 10 < 0){
+         other.setSpecial(0) ;
+      }else{
+      other.restoreSpecial(-10);
+      }
+      int dmg = 25 + other.getSpecial()/3;
       other.applyDamage(dmg);
-      return this.getName() + " uses " + this.getSpecialName() + " and deals " + dmg + " damage.";
+      return this.getName() + " uses " + this.getSpecialName() + " against " + other.getName() + " and deals "  + dmg + " damage also dealing 10 XP damage the special power.";
     }
   }
 
