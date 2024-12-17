@@ -66,7 +66,7 @@ public class Warrior extends Adventurer{
       this.setHP(this.getmaxHP());
     }
     else{
-      this.HP += 10;
+      this.setHP(10 + this.getHP());
     }
     return this.getName() + " heals self by " + 10 + " HP.";
   }
