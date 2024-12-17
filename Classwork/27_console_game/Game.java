@@ -37,6 +37,7 @@ public class Game{
             }
         printStats(player);
         //enemy setup
+        System.out.println("");
         int enemyClass = random.nextInt(3);
         if (enemyClass == 0){
             enemy = new Warrior("Enemy");
@@ -52,6 +53,7 @@ public class Game{
         //print stats
         
         printStats(enemy);
+        System.out.println("----------------");
         //gameplay
         while (player.getHP() > 0 && enemy.getHP() > 0){ //go thru the actions and check if it equals of the choices and run action
           System.out.println("Type: attack / special / support / quit");
@@ -86,9 +88,12 @@ public class Game{
             System.out.println("You have defeated the enemy!");
             break;
           }
+            System.out.println("");
         printStats(player);
+            System.out.println("");
         printStats(enemy);
-
+        System.out.println("----------------");
+            System.out.println("Now it's the enemy's turn to make a move!");
           int enemyAction = random.nextInt(3);
           if (enemyAction == 0){
             enemy.attack(player);
@@ -103,7 +108,9 @@ public class Game{
             break;
           }
         printStats(player);
+            System.out.println("");
             printStats(enemy);
+            System.out.println("----------------");
         }
 
         scanner.close();
