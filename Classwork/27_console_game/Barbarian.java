@@ -46,7 +46,7 @@ public class Barbarian extends Adventurer{
       }else{
       this.restoreSpecial(3);
       }
-      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. " + this.getName() + " gain 5 XP to the special power.";
+      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. " + this.getName() + " gains 3 XP to the special power.";
     }
 
     //heall or buff the target adventurer
@@ -77,7 +77,7 @@ public class Barbarian extends Adventurer{
         return "Not sufficient willpower to use special attack.";
       } else{
         int dmg = 20 + insanity / 5;
-        if (this.getSpecial() - 10 > 0){
+        if (this.getSpecial() - 10 < 0){
          this.setSpecial(0) ;
       }else{
       this.restoreSpecial(-10);
