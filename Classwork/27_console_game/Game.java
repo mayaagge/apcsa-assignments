@@ -113,6 +113,7 @@ public class Game{
             System.out.println("You have been defeated!");
             break;
           }
+            System.out.println("");
         printStats(player);
             System.out.println("");
             printStats(enemy);
