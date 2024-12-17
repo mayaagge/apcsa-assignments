@@ -111,7 +111,7 @@ public class Game{
             
           } else if (enemyAction == 2){
               System.out.println("The enemy has supported themselves!");
-            System.out.println(enemy.support(enemy));
+            System.out.println(enemy.support());
           }else{
              System.out.println("The enemy has supported you!");
               enemy.support();
