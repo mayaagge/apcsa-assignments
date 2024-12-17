@@ -101,7 +101,7 @@ public class Game{
           } else if (enemyAction == 1){
             enemy.specialAttack(player);
             System.out.println("The enemy has special attacked!");
-          } else if (enemyAction == 2{
+          } else if (enemyAction == 2){
             enemy.support(enemy);
             System.out.println("The enemy has supported themselves!");
           }else{
