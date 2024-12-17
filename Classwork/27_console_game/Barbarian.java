@@ -46,7 +46,7 @@ public class Barbarian extends Adventurer{
       }else{
       this.restoreSpecial(3);
       }
-      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage." + this.getName() + " gain 5 XP to the special power.";
+      return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage. " + this.getName() + " gain 5 XP to the special power.";
     }
 
     //heall or buff the target adventurer
