@@ -83,6 +83,7 @@ public class Warrior extends Adventurer{
       this.restoreSpecial(-10);
       }
       other.applyDamage(dmg);
-        return this.getName() + " uses " + this.getSpecialName() + " against" + other.getName() + and deals "  + dmg + " damage also dealing 10 XP damage the special power.";    }
+        return this.getName() + " uses " + this.getSpecialName() + " against" + other.getName() + and deals "  + dmg + " damage also dealing 10 XP damage the special power.";
+    }
   }
 }
