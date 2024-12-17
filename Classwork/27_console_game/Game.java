@@ -68,17 +68,17 @@ public class Game{
           }
 
           if (action.equals("attack") || action.equals("a")){
-            player.attack(enemy);
+            System.out.println(player.attack(enemy));
           } else if (action.equals("special") || action.equals("sp")){
-            player.specialAttack(enemy);
+            System.out.println(player.specialAttack(enemy));
           } else if (action.equals("support") || action.equals("su")){
             System.out.println("self / enemy"); //diff options of who to heal
             String decision = scanner.nextLine();
             
             if (decision.equals("enemy")){
-              player.support(enemy);
+              System.out.println(player.support(enemy));
             } else{
-              player.support(player);
+              System.out.println(player.support(player));
             }
           } else if (action.equals("quit")){
             System.out.println("You quit the game.");
@@ -86,6 +86,11 @@ public class Game{
           }
         
           if (enemy.getHP() <= 0){
+            System.out.println("");
+            printStats(player);
+            System.out.println("");
+            printStats(enemy);
+              System.out.println("");
             System.out.println("You have defeated the enemy!");
             break;
           }
@@ -97,13 +102,13 @@ public class Game{
             System.out.println("Now it's the enemy's turn to make a move!");
           int enemyAction = random.nextInt(4);
           if (enemyAction == 0){
-            enemy.attack(player);
+            System.out.println(enemy.attack(player));
               System.out.println("The enemy has attacked!");
           } else if (enemyAction == 1){
-            enemy.specialAttack(player);
+            System.out.println(enemy.specialAttack(player));
             System.out.println("The enemy has special attacked!");
           } else if (enemyAction == 2){
-            enemy.support(enemy);
+            System.out.println(enemy.support(enemy));
             System.out.println("The enemy has supported themselves!");
           }else{
               enemy.support(player);
@@ -111,14 +116,14 @@ public class Game{
           }
 
           if (player.getHP() <= 0){
+            System.out.println("");
+            printStats(player);
+            System.out.println("");
+            printStats(enemy);
+              System.out.println("");
             System.out.println("You have been defeated!");
             break;
           }
-            System.out.println("");
-        printStats(player);
-            System.out.println("");
-            printStats(enemy);
-            System.out.println("----------------");
         }
 
         scanner.close();
