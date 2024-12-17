@@ -39,34 +39,14 @@ public class Fortress extends Adventurer{
   */
   //hurt or hinder the target adventurer
   public String attack(Adventurer other){
-    if (other.getHP() <= 0){
-      return "Cannot attack this character because they are dead.";
-    }
-    if (this.getHP() <= 0){
-      return "Cannot attack this character because you are dead.";
-    }
     int dmg = 15;
     other.applyDamage(dmg);
-    if (this.getSpecial() + 5 > this.getSpecialMax()){
-      this.setSpecial(this.getSpecialMax());
-    }
-    else{
-      this.restoreSpecial(5);
-        }
-    if(other.getHP() <= 0){
-      return other.getName() + " died.";
-    }
-    return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage to. Their HP is now " + other.getHP();
+    this.restoreSpecial(5)
+    return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage to. They also gain " + this.getSpecial() + " XP.";
   }
 
   //heall or buff the target adventurer
   public String support(Adventurer other){
-    if (other.getHP() <= 0){
-      return "Cannot support this character because they are dead.";
-    }
-    if (this.getHP() <= 0){
-      return "Cannot support this character because you are dead.";
-    }
     if (other.getHP() + 10 > other.getmaxHP()){
       other.setHP(other.getmaxHP());
     }
@@ -78,9 +58,6 @@ public class Fortress extends Adventurer{
 
   //heall or buff self
   public String support(){
-    if (this.getHP() <= 0){
-      return "Cannot support because you are dead.";
-    }
     if (this.getHP() + 15 > this.getmaxHP()){
       this.setHP(this.getmaxHP());
     }
@@ -92,12 +69,6 @@ public class Fortress extends Adventurer{
 
   //hurt or hinder the target adventurer, consume some special resource
   public String specialAttack(Adventurer other){
-    if (other.getHP() <= 0){
-      return "Cannot special attack this character. They are dead.";
-    }
-    if (this.getHP() <= 0){
-      return "Cannot special attack this character. You are dead.";
-    }
     if (fortitude < 10){
       return "Not sufficient fortitude to use special attack.";
     }
@@ -105,11 +76,7 @@ public class Fortress extends Adventurer{
       fortitude -= 10;
       int dmg = 25;
       other.applyDamage(dmg);
-
-      if(other.getHP() <= 0){
-        return other.getName() + " died.";
-      }
-      return this.getName() + " uses " + this.getSpecialName() + " and deals " + dmg + " damage to "  + other.getName() + ". Their HP is now " + other.getHP();
+      return this.getName() + " uses " + this.getSpecialName() + " and deals " + dmg + " damage.";
     }
   }
 
