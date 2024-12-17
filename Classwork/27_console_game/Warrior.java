@@ -43,7 +43,7 @@ public class Warrior extends Adventurer{
     other.applyDamage(dmg);
     this.agility -= 1;
     this.restoreSpecial(5);
-    return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage.;
+    return this.getName() + " attacks " + other.getName() + " and deals " + dmg + " damage.";
   }
 
   //heall or buff the target adventurer
@@ -72,7 +72,7 @@ public class Warrior extends Adventurer{
       other.restoreSpecial(-10);
       int dmg = 25 + agility / 5;
       other.applyDamage(dmg);
-      return this.getName() + " uses " + this.getSpecialName() + " against " + other.getName() + " and deals "  + dmg + " damage;
+      return this.getName() + " uses " + this.getSpecialName() + " against " + other.getName() + " and deals "  + dmg + " damage.";
     }
   }
 }
