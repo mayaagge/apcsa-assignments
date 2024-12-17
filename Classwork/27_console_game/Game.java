@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class Game{
     public static void printStats(Adventurer x){
-        String s1 = x.getName() + " has " + x.getHP() + " left.";
-        String s2 = x.getName() + " has " + x.getSpecial() + " of " + x.getSpecialName() + " left.";
+        String s1 = x.getName() + " has " + x.getHP() + " XP left.";
+        String s2 = x.getName() + " has " + x.getSpecial() + " XP of " + x.getSpecialName() + " left.";
         System.out.println(s1);
         System.out.println(s2);
     }
