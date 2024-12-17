@@ -35,6 +35,7 @@ public class Game{
                 player = new Warrior("" + playerName);
                 System.out.println(playerName + " is a warrior.");
             }
+      System.out.println("");
         printStats(player);
         //enemy setup
         System.out.println("");
