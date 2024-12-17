@@ -112,7 +112,7 @@ public class Barbarian extends Adventurer{
       if (insanity < 15){
         return "Not sufficient willpower to use special attack.";
       } else{
-        other.setSpecial(other.getSepcial() -  15);
+        other.setSpecial(other.getSpecial() -  15);
         int dmg = 20 + insanity / 5;
         other.applyDamage(dmg);
         /*
