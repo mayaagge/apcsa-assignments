@@ -77,10 +77,10 @@ public class Warrior extends Adventurer{
       return "Not sufficient willpower to use special attack.";
     } else{
       int dmg = 25 + other.getSpecial() / 5;
-      if (this.getSpecial() - 10 < 0){
-         this.setSpecial(0) ;
+      if (other.getSpecial() - 10 < 0){
+         other.setSpecial(0) ;
       }else{
-      this.restoreSpecial(-10);
+      other.restoreSpecial(-10);
       }
       other.applyDamage(dmg);
         return this.getName() + " uses " + this.getSpecialName() + " against " + other.getName() + " and deals "  + dmg + " damage also dealing 10 XP damage the special power.";
