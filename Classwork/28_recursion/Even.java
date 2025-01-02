@@ -13,4 +13,5 @@ public class Even{
     int n2 = 10;
     System.out.println(isEven(n1));
     System.out.println(isEven(n2));
+  }
 }
