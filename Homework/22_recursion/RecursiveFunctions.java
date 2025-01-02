@@ -25,6 +25,8 @@ public class RecursiveFunctions{
      System.out.println(fibonacci(25));
      System.out.println(fibonacci(30));
      System.out.println(fibonacci(35));
+     System.out.println(fibonacci(40));
+     System.out.println(fibonacci(45));
   } 
 }
 
