@@ -21,12 +21,11 @@ public class RecursiveFunctions{
     int[] n2 = new int[] {1};
     System.out.println(sumDigits(12945));
      System.out.println(fibonacci(10));
-     System.out.println(fibonacci(20));
-     System.out.println(fibonacci(25));
-     System.out.println(fibonacci(30));
-     System.out.println(fibonacci(35));
-     System.out.println(fibonacci(40));
-     System.out.println(fibonacci(45));
+     System.out.println(fibonacci(46));
+     System.out.println(fibonacci(47));
+     System.out.println(fibonacci(48));
+     System.out.println(fibonacci(49));
+     System.out.println(fibonacci(50));
   } 
 }
 
