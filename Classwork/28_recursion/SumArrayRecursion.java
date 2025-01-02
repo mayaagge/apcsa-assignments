@@ -8,7 +8,7 @@ public class SumArrayRecursion{
   public static void main(String[] args){
     int[] n1 = new int[] {1,2,3};
     int[] n2 = new int[] {1};
-    System.out.println(sumArray(n1,4));
+    System.out.println(sumArray(n1,2));
     System.out.println(sumArray(n2, 0));
   }
 }
