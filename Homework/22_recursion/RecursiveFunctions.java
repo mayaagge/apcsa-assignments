@@ -21,7 +21,7 @@ public class RecursiveFunctions{
     int[] n2 = new int[] {1};
     System.out.println(sumDigits(12945));
      System.out.println(fibonacci(10));
-     System.out.println(fibonacci(15));
+     System.out.println(fibonacci(20));
   } 
 }
 
