@@ -21,13 +21,8 @@ public class RecursiveFunctions{
     int[] n2 = new int[] {1};
     System.out.println(sumDigits(12945));
      System.out.println(fibonacci(10));
-     System.out.println(fibonacci(46));
-     System.out.println(fibonacci(47));
-     System.out.println(fibonacci(48));
-     System.out.println(fibonacci(49));
-     System.out.println(fibonacci(50));
   } 
 }
 
-//1. take 0.084s to run
-//2. 
+//1. it takes 0.084s to run
+//2. n = 46 is the largest number that fits in an int
