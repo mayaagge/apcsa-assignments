@@ -22,7 +22,7 @@ public class RecursiveFunctions{
     System.out.println(sumDigits(12945));
      System.out.println(fibonacci(3));
     System.out.println(fibonacci(4));
-     System.out.println(fibonacci(55));
-     System.out.println(fibonacci(56));
+     System.out.println(fibonacci(5));
+     System.out.println(fibonacci(7));
   } 
 }
