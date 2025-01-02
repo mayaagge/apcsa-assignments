@@ -10,6 +10,6 @@ public class Even{
   }
   public static void main(String[] args){
     System.out.println(isEven(3));
-    System.out.println(isEven(2));
+    System.out.println(isEven(4));
   }
 }
