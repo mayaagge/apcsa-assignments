@@ -23,6 +23,6 @@ public class RecursiveFunctions{
      System.out.println(fibonacci(3));
     System.out.println(fibonacci(6));
      System.out.println(fibonacci(5));
-     System.out.println(fibonacci(7));
+     System.out.println(fibonacci(10));
   } 
 }
