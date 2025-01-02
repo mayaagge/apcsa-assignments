@@ -6,7 +6,7 @@ public class Even{
     if (n==1){
       return false;
     }
-    isEven(n-2);
+    return isEven(n-2);
   }
   public static void main(String[] args){
     int n1 = 5;
