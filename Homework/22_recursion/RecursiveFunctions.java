@@ -20,6 +20,6 @@ public class RecursiveFunctions{
     int[] n1 = new int[] {1,2,3,4,5};
     int[] n2 = new int[] {1};
     System.out.println(sumDigits(12945));
-    System.out.println(fibonacci(3));
+    System.out.println(fibonacci(4));
   } 
 }
