@@ -11,7 +11,7 @@ public class Strings{
       System.out.println(word.charAt(0));
     }
     System.out.println(word.charAt(word.length()-1));
-    printReverse(word.substring(0,word.length()-1);
+    printReverse(word.substring(0,word.length()-1));
   }
   public static int countChar(String word, char ch){
     if(word.length()<1){
