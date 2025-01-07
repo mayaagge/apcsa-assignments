@@ -4,7 +4,7 @@ public class Strings{
       System.out.println(word);
     }
     System.out.println(word.charAt(0));
-    printString(word.substring(1)));
+    printString(word.substring(1));
   }
   public static void main (String[] args){
     printString("maya");
