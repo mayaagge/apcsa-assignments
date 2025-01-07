@@ -22,7 +22,7 @@ public class Strings{
     }
     return countChar(word.substring(1), ch);
   }
-  public static void main (String args[]){
+  public static void main (String[] args){
     printString("maya");
     printReverse("maya");
     countChar("maya", 'a');
