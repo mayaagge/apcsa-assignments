@@ -10,7 +10,7 @@ public class Strings{
   }
   public static void printReverse(String word){
     if (word.length()<1){
-      System.out.println(word.charAt(0));
+      System.out.println("");
     }
     else{
       System.out.println(word.charAt(word.length()-1));
