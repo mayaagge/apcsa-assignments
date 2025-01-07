@@ -1,7 +1,7 @@
 public class Strings{
   public static void printString(String word){
-    if (word.length() < 2){
-      System.out.println(word);
+    if (word.equals(""){
+     ;
     }
     System.out.println(word.charAt(0));
     printString(word.substring(1));
