@@ -29,6 +29,6 @@ public class Strings{
   public static void main (String[] args){
     printString("maya");
     printReverse("maya");
-    countChar("maya", 'a');
+    System.out.println(countChar("maya", 'a'));
   }
 }
