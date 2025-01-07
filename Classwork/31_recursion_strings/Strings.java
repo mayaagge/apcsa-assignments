@@ -1,6 +1,6 @@
 public class Strings{
   public static void printString(String word){
-    if (word.length() < 0){
+    if (word.length() < 2){
       System.out.println(word);
     }
     System.out.println(word.charAt(0));
