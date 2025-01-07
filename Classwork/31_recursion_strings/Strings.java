@@ -1,6 +1,6 @@
 public class Strings{
   public static void printString(String word){
-    if (word.equals(""){
+    if (word.equals("")){
      ;
     }
     System.out.println(word.charAt(0));
