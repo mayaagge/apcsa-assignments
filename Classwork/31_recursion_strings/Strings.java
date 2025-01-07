@@ -3,8 +3,10 @@ public class Strings{
     if (word.length()<1){
      System.out.println(word);
     }
-    System.out.println(word.charAt(0));
-    printString(word.substring(1));
+    else{ 
+      System.out.println(word.charAt(0));
+      printString(word.substring(1));
+    }
   }
   public static void printReverse(String word){
     if (word.length()<1){
