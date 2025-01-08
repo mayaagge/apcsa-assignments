@@ -18,6 +18,7 @@ public class NumberLetter{
   public static void main(String[] args){
     int a = 0;
     for(int i = 0; i<=1000; i++){
+      System.out.println(numberToWords(i));
       a += numberToWords(i).length();
     }
     System.out.println(a);
