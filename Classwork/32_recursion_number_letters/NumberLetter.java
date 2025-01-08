@@ -5,6 +5,9 @@ public class NumberLetter{
       return "onethousand";
     }
     if(number>=100){
+      if(number%100 == 0){
+        return words[number/100] + words[28];
+      }
       return words[number/100] + words[28] + words[0] + numberToWords(number%100);
     }
     if(number>=20){
