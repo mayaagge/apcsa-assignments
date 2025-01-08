@@ -5,13 +5,13 @@ public class NumberLetter{
       return "onethousand";
     }
     if(number>=100){
-      return words[number/100] + "" + words[28] + "" + words[0] + "" + numbertoWords(number%100);
+      return words[number/100] + "" + words[28] + "" + words[0] + "" + numberToWords(number%100);
     }
     if(number>=20){
         if (number%10 == 0){
           return words[20+(number/10-2)];
         }
-        return words[20+(number/10-2)] + "" + numbertoWords(number%10);
+        return words[20+(number/10-2)] + "" + numberToWords(number%10);
     }
     return words[number];
   }
