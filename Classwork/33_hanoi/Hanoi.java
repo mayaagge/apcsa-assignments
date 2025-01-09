@@ -5,7 +5,7 @@ public class Hanoi{
     }
     else{
       hanoiMild(n-1, source_rod, aux_rod, destination_rod);
-      System.out.println(source_rod + "to" + destionation_rod);
+      System.out.println(source_rod + "to" + destination_rod);
       hanoiMild(n-1, aux_rod, source_rod, destination_rod);
     }
   }
