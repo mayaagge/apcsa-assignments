@@ -5,10 +5,15 @@ public class Hanoi{
       return;
     }
     hanoiMild(n-1, source_rod, aux_rod, destination_rod);
-    System.out.println("Move disk " + n + " from rod " + source_rod + " to rod " + destination_rod);
+    System.out.println("Move ring " + n + " from source " + source_rod + " to destination " + destination_rod);
     hanoiMild(n-1, aux_rod, destination_rod, source_rod);
-    }
+  }
+  public static void hanoiMedium(int n, char source_rod, char destination_rod, char aux_rod){
+    hanoiMild(n, source_rod, destination_rod, aux_rod);
+    System.out.println("Total number of moves: " + 2**n-1);
+  }
   public static void main (String[] args){
     hanoiMild(4, 'A', 'C', 'B');
+    hanoiMedium(3, 'A', 'B', 'C');
   }
 }
