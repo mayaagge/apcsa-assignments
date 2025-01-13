@@ -13,6 +13,15 @@ public class Hanoi{
     double a = Math.pow(2,n)-1;
     System.out.println("Total number of moves: " + a);
   }
+  public static void hanoiSpicy(int n, char source_rod, char destination_rod, char aux_rod){
+    if (n==1){
+      System.out.println("Move ring 1 from source " +  source_rod + " to destination " + destination_rod);
+      return;
+    }
+    hanoiMild(n-1, source_rod, aux_rod, destination_rod);
+    System.out.println("Move ring " + n + " from source " + source_rod + " to destination " + destination_rod);
+    hanoiMild(n-1, aux_rod, destination_rod, source_rod);
+  }
   public static void main (String[] args){
     hanoiMild(4, 'A', 'C', 'B');
     hanoiMedium(3, 'A', 'B', 'C');
