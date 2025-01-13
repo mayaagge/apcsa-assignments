@@ -1,7 +1,7 @@
 public class Hanoi{
   public static void hanoiMild(int n, char source_rod, char destination_rod, char aux_rod){
     if (n==1){
-      System.out.println("Move disk 1 from rod " +  source_rod + " to rod " + destination_rod);
+      System.out.println("Move ring 1 from source " +  source_rod + " to destination " + destination_rod);
       return;
     }
     hanoiMild(n-1, source_rod, aux_rod, destination_rod);
