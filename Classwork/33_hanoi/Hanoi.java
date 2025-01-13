@@ -7,7 +7,6 @@ public class Hanoi{
     System.out.println("Move disk " + n + " from rod " + source_rod + " to rod " + destination_rod);
     hanoiMild(n-1, aux_rod, destination_rod, source_rod);
     }
-  }
   public static void main (String[] args){
     hanoiMild(3, 'A', 'B', 'C');
   }
