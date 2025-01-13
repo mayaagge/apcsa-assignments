@@ -9,6 +9,6 @@ public class Hanoi{
     hanoiMild(n-1, aux_rod, destination_rod, source_rod);
     }
   public static void main (String[] args){
-    hanoiMild(3, 'A', 'C', 'B');
+    hanoiMild(4, 'A', 'C', 'B');
   }
 }
