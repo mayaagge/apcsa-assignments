@@ -10,7 +10,7 @@ public class Hanoi{
   }
   public static void hanoiMedium(int n, char source_rod, char destination_rod, char aux_rod){
     hanoiMild(n, source_rod, destination_rod, aux_rod);
-    int a = 2**n-1
+    int a = Math.pow(2,n)-1;
     System.out.println("Total number of moves: " + a);
   }
   public static void main (String[] args){
