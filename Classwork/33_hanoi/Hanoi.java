@@ -14,9 +14,9 @@ public class Hanoi{
     double a = Math.pow(2,n)-1;
     System.out.println("Total number of moves: " + a);
   }
-  ArrayList<Integer>[] rod1 = new Arraylist<Integer>();
-  ArrayList<Integer>[] rod2 = new Arraylist<Integer>();
-  ArrayList<Integer>[] rod3 = new Arraylist<Integer>();
+  ArrayList<Integer> rod1 = new Arraylist<Integer>();
+  ArrayList<Integer> rod2 = new Arraylist<Integer>();
+  ArrayList<Integer> rod3 = new Arraylist<Integer>();
   rod1.add(3);
   rod1.add(2);
   rod1.add(1);
