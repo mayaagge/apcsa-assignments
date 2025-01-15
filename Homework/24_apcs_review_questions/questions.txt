@@ -17,7 +17,7 @@ B
 C
 2.0 2.0
 
-D
+D 
 2.25 2
 
 E
@@ -43,7 +43,7 @@ B
 II only
 
 C
-III only
+III only <<<<<<<
 
 D
 I and III only
@@ -105,7 +105,7 @@ D
 super();
 System.out.print(" by " + artist);
 
-E
+E 
 super.printInfo();
 System.out.print(" by " + artist);
 
@@ -133,7 +133,7 @@ EBike eB = new EBike(4);
 Which of the following best describes the effect of executing the code segment?
 
 Responses
-A
+A 
 An implicit call to the zero-parameter Bike constructor initializes the instance variable numWheels. The instance variable numBatteries is initialized using the value of the parameter batteries.
 
 B
@@ -184,10 +184,10 @@ Responses
 A
 I only
 
-B
+B	
 I and II only
 
-C
+C 
 I and III only
 
 D
@@ -196,5 +196,7 @@ II and III only
 E
 I, II, and III
 
+
+Answers: B, D, E, A, C
 
 
