@@ -1,1 +1,200 @@
+1)
+Consider the following code segment.
+
+double num = 9 / 4;
+System.out.print(num);
+System.out.print(" ");
+System.out.print((int) num);
+What is printed as a result of executing the code segment?
+
+Responses
+A
+2 2
+
+B
+2.0 2
+
+C
+2.0 2.0
+
+D
+2.25 2
+
+E
+2.25 2.0
+
+2)
+
+Consider the following statement, which is intended to create an ArrayList named values that can be used to store Integer elements.
+
+/* missing code */ = new ArrayList<>();
+
+Which of the following can be used to replace /* missing code */ so that the statement compiles without error?
+
+ArrayList values
+ArrayList<int> values
+ArrayList<Integer> values
+
+Responses
+A
+I only
+
+B
+II only
+
+C
+III only
+
+D
+I and III only
+
+E
+II and III only
+
+3)
+
+public class Artifact
+{
+private String title;
+private int year;
+public Artifact(String t, int y)
+{
+title = t;
+year = y;
+}
+public void printInfo()
+{
+System.out.print(title + " (" + year + ")");
+}
+}
+public class Artwork extends Artifact
+{
+private String artist;
+public Artwork(String t, int y, String a)
+{
+super(t, y);
+artist = a;
+}
+public void printInfo()
+{
+/* missing implementation */
+}
+}
+The following code segment appears in a method in another class.
+
+Artwork starry = new Artwork("The Starry Night", 1889, "Van Gogh");
+starry.printInfo();
+The code segment is intended to produce the following output.
+
+The Starry Night (1889) by Van Gogh
+Which of the following can be used to replace /* missing implementation */ in the printInfo method in the 
+
+Artwork class so that the code segment produces the intended output?
+
+Responses
+A
+System.out.print(title + " (" + year + ") by " + artist);
+
+B
+super.printInfo(artist);
+
+C
+System.out.print(super.printInfo() + " by " + artist);
+
+D
+super();
+System.out.print(" by " + artist);
+
+E
+super.printInfo();
+System.out.print(" by " + artist);
+
+4)
+
+Consider the following class definitions.
+
+public class Bike
+{
+private int numWheels = 2;
+// No constructor defined
+}
+public class EBike extends Bike
+{
+private int numBatteries;
+public EBike(int batteries)
+{
+numBatteries = batteries;
+}
+}
+The following code segment appears in a method in a class other than Bike or EBike.
+
+EBike eB = new EBike(4);
+
+Which of the following best describes the effect of executing the code segment?
+
+Responses
+A
+An implicit call to the zero-parameter Bike constructor initializes the instance variable numWheels. The instance variable numBatteries is initialized using the value of the parameter batteries.
+
+B
+An implicit call to the one-parameter Bike constructor with the parameter passed to the EBike constructor initializes the instance variable numWheels. The instance variable numBatteries is initialized using the value of the parameter batteries.
+
+C
+Because super is not explicitly called from the EBike constructor, the instance variable numWheels is not initialized. The instance variable numBatteries is initialized using the value of the parameter batteries.
+
+D
+The code segment will not execute because the Bike class is a superclass and must have a constructor.
+
+E
+The code segment will not execute because the constructor of the EBike class is missing a second parameter to use to initialize the numWheels instance variable.
+
+5)
+
+Consider the following class definitions.
+
+public class Apple
+{
+public void printColor()
+{
+System.out.print("Red");
+}
+}
+public class GrannySmith extends Apple
+{
+public void printColor()
+{
+System.out.print("Green");
+}
+}
+public class Jonagold extends Apple
+{
+// no methods defined
+}
+The following statement appears in a method in another class.
+
+someApple.printColor();
+
+Under which of the following conditions will the statement print "Red" ?
+
+When someApple is an object of type Apple
+When someApple is an object of type GrannySmith
+When someApple is an object of type Jonagold
+
+Responses
+A
+I only
+
+B
+I and II only
+
+C
+I and III only
+
+D
+II and III only
+
+E
+I, II, and III
+
+
 
