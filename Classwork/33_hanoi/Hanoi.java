@@ -35,7 +35,7 @@ public class Hanoi{
     System.out.println("Rod C: " + rod3.toString());
     hanoiSpicy(n-1, aux_rod, destination_rod, source_rod);
   }    
-public static void helper(char source_rod, char destination_rod, char aux_rod){
+public void helper(char source_rod, char destination_rod, char aux_rod){
     if(destination_rod == 'C'){
       if(source_rod == 'A'){
         int a = rod1.remove(2);
