@@ -1,5 +1,8 @@
 import java.util.*;
 public class Hanoi{
+  ArrayList<Integer> rod1 = new Arraylist<Integer>();
+  ArrayList<Integer> rod2 = new Arraylist<Integer>();
+  ArrayList<Integer> rod3 = new Arraylist<Integer>();
   public static void hanoiMild(int n, char source_rod, char destination_rod, char aux_rod){
     if (n==1){
       System.out.println("Move ring 1 from source " +  source_rod + " to destination " + destination_rod);
@@ -65,9 +68,6 @@ public static void helper(char source_rod, char destination_rod, char aux_rod){
     }
 }
   public static void main (String[] args){
-    ArrayList<Integer> rod1 = new Arraylist<Integer>();
-    ArrayList<Integer> rod2 = new Arraylist<Integer>();
-    ArrayList<Integer> rod3 = new Arraylist<Integer>();
     rod1.add(3);
     rod1.add(2);
     rod1.add(1);
