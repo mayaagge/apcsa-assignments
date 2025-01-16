@@ -4,7 +4,7 @@ public class BinarySearch{
       return binarySearch(arr, (low+high)/2 + 1, high, target);
     }
     else if (arr[(low+high)/2] > target){
-      return binarySearch(arr, low, (low+high)/2-1], target);
+      return binarySearch(arr, low, (low+high)/2-1, target);
     }
     return (low+high)/2;
   }
