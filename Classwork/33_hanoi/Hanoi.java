@@ -38,31 +38,31 @@ public class Hanoi{
 public static void helper(char source_rod, char destination_rod, char aux_rod, ArrayList<Integer> rod1, ArrayList<Integer> rod2, ArrayList<Integer> rod3){
     if(destination_rod == 'C'){
       if(source_rod == 'A'){
-        int a = rod1.remove(2);
+        int a = rod1.remove(rod1.size()-1);
         rod3.add(a);
       }
       if(source_rod == 'B'){
-        int b = rod2.remove(2);
+        int b = rod2.remove(rod1.size()-1);
         rod3.add(b);
       }
     }
     if(destination_rod == 'B'){
       if(source_rod == 'A'){
-        int a = rod1.remove(2);
+        int a = rod1.remove(rod1.size()-1);
         rod2.add(a);
       }
       if(source_rod == 'C'){
-        int c = rod3.remove(2);
+        int c = rod3.remove(rod1.size()-1);
         rod2.add(c);
       }
     }
     if(destination_rod == 'A'){
       if(source_rod == 'C'){
-        int c = rod3.remove(2);
+        int c = rod3.remove(rod1.size()-1);
         rod1.add(c);
       }
       if(source_rod == 'B'){
-        int b = rod2.remove(2);
+        int b = rod2.remove(rod1.size()-1);
         rod1.add(b);
       }
     }
