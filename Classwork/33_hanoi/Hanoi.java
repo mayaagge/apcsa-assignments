@@ -1,9 +1,9 @@
 import java.util.*;
  import java.util.ArrayList;
 public class Hanoi{
-   static ArrayList<Integer> rod1 = new Arraylist<Integer>();
-   static ArrayList<Integer> rod2 = new Arraylist<Integer>();
-   static ArrayList<Integer> rod3 = new Arraylist<Integer>();
+   static ArrayList<Integer> rod1 = new ArrayList<Integer>();
+   static ArrayList<Integer> rod2 = new ArrayList<Integer>();
+   static ArrayList<Integer> rod3 = new ArrayList<Integer>();
   public static void hanoiMild(int n, char source_rod, char destination_rod, char aux_rod){
     if (n==1){
       System.out.println("Move ring 1 from source " +  source_rod + " to destination " + destination_rod);
