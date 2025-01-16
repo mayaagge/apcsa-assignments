@@ -1,9 +1,6 @@
 import java.util.*;
  import java.util.ArrayList;
 public class Hanoi{
-   static ArrayList<Integer> rod1 = new ArrayList<Integer>();
-   static ArrayList<Integer> rod2 = new ArrayList<Integer>();
-   static ArrayList<Integer> rod3 = new ArrayList<Integer>();
   public static void hanoiMild(int n, char source_rod, char destination_rod, char aux_rod){
     if (n==1){
       System.out.println("Move ring 1 from source " +  source_rod + " to destination " + destination_rod);
@@ -19,8 +16,8 @@ public class Hanoi{
     System.out.println("Total number of moves: " + a);
   }
 
-  public static void hanoiSpicy(int n, char source_rod, char destination_rod, char aux_rod){
-    if (n==1){
+  public static void hanoiSpicy(int n, char source_rod, char destination_rod, char aux_rod, ArrayList<Integer> rod1, ArrayList<Integer>, rod2, ArrayList<Integer> rod3){
+   if (n==1){
       System.out.println("Move ring 1 from source " +  source_rod + " to destination " + destination_rod);
       helper(source_rod, destination_rod, aux_rod);
         System.out.println("Rod A: " + rod1.toString());
@@ -69,6 +66,9 @@ public static void helper(char source_rod, char destination_rod, char aux_rod){
     }
 }
   public static void main (String[] args){
+    ArrayList<Integer> rod1 = new ArrayList<Integer>();
+    ArrayList<Integer> rod2 = new ArrayList<Integer>();
+    ArrayList<Integer> rod3 = new ArrayList<Integer>(); 
     rod1.add(3);
     rod1.add(2);
     rod1.add(1);
