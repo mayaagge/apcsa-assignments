@@ -42,7 +42,7 @@ public static void helper(char source_rod, char destination_rod, char aux_rod, A
         rod3.add(a);
       }
       if(source_rod == 'B'){
-        int b = rod2.remove(rod1.size()-1);
+        int b = rod2.remove(rod2.size()-1);
         rod3.add(b);
       }
     }
@@ -52,17 +52,17 @@ public static void helper(char source_rod, char destination_rod, char aux_rod, A
         rod2.add(a);
       }
       if(source_rod == 'C'){
-        int c = rod3.remove(rod1.size()-1);
+        int c = rod3.remove(rod3.size()-1);
         rod2.add(c);
       }
     }
     if(destination_rod == 'A'){
       if(source_rod == 'C'){
-        int c = rod3.remove(rod1.size()-1);
+        int c = rod3.remove(rod3.size()-1);
         rod1.add(c);
       }
       if(source_rod == 'B'){
-        int b = rod2.remove(rod1.size()-1);
+        int b = rod2.remove(rod2.size()-1);
         rod1.add(b);
       }
     }
