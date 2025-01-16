@@ -19,12 +19,12 @@ public class Hanoi{
   public static void hanoiSpicy(int n, char source_rod, char destination_rod, char aux_rod, ArrayList<Integer> rod1, ArrayList<Integer> rod2, ArrayList<Integer> rod3){
    if (n==1){
       System.out.println("Move ring 1 from source " +  source_rod + " to destination " + destination_rod);
-      helper(source_rod, destination_rod, aux_rod);
+      helper(source_rod, destination_rod, aux_rod, rod1, rod2, rod3);
         System.out.println("Rod A: " + rod1.toString());
       System.out.println("Rod B: " + rod2.toString());
       System.out.println("Rod C: " + rod3.toString());
     }
-    hanoiSpicy(n-1, source_rod, aux_rod, destination_rod);
+    hanoiSpicy(n-1, source_rod, aux_rod, destination_rod, rod1, rod2, rod3);
     System.out.println("Move ring " + n + " from source " + source_rod + " to destination " + destination_rod);
     helper(source_rod, destination_rod, aux_rod);
     System.out.println("Current state of rods");
