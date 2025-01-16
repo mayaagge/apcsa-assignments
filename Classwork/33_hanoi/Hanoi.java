@@ -24,6 +24,7 @@ public class Hanoi{
       System.out.println("Rod B: " + rod2.toString());
       System.out.println("Rod C: " + rod3.toString());
     }
+   else{
     hanoiSpicy(n-1, source_rod, aux_rod, destination_rod, rod1, rod2, rod3);
     System.out.println("Move ring " + n + " from source " + source_rod + " to destination " + destination_rod);
     helper(source_rod, destination_rod, aux_rod, rod1, rod2, rod3);
@@ -32,6 +33,7 @@ public class Hanoi{
     System.out.println("Rod B: " + rod2.toString());
     System.out.println("Rod C: " + rod3.toString());
     hanoiSpicy(n-1, aux_rod, destination_rod, source_rod, rod1, rod2, rod3);
+   }
   }    
 public static void helper(char source_rod, char destination_rod, char aux_rod, ArrayList<Integer> rod1, ArrayList<Integer> rod2, ArrayList<Integer> rod3){
     if(destination_rod == 'C'){
