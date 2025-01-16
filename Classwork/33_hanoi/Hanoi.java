@@ -73,6 +73,7 @@ public static void helper(char source_rod, char destination_rod, char aux_rod, A
     rod1.add(2);
     rod1.add(1);
     hanoiMild(4, 'A', 'C', 'B');
+   System.out.println("");
     hanoiMedium(3, 'A', 'B', 'C');
     hanoiSpicy(3, 'A', 'C', 'B', rod1, rod2, rod3);
   }
