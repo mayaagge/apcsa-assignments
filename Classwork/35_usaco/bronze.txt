@@ -1,2 +1,10 @@
 1. Description
+
+Farmer John's cows can help build his lake by "stomping" on the land, lowering the elevation in specific 3×3 areas. Each stomping operation lowers the highest elevation in the chosen area by a given amount, but only the tallest parts are affected (lower areas won’t be stomped until the higher ones are leveled). After following the instructions for stomping, water filles areas lower than the water level. The goal is to find the total volume of that the lake can hold after all the stomping.
+
 2. Solution
+Read the grid of elevations.
+1. Follow the stomping instructions: lower the highest ground in the chosen 3×3 area.
+2. Determine how much water each square can hold based on the final water level
+3. Compute the total water volume in cubic inches.
+(Basically simulate the stomping based on the given instructions and find the volume)
