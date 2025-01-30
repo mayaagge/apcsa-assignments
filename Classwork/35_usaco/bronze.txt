@@ -15,7 +15,11 @@ Open file and read it
 Based on the numbers in the first row, figure out how many lines to read.
 Make a 2d array using the rows R and columns C
 Read the instructions line by line
-Edit the values in the array based on the highest number in the 3x3 array that it is a part of (lower all the other numbers to that number if they are higher)
+Find the 3x3 grid that the value is a part of 
+Find the highest number in the 3x3 array by looping through it
+Edit the values in that array based on the highest number in the 3x3 array 
+  Lower all the other numbers to that number if they are higher than the highest number-the amount subtracted
+Read the next set of instructions and redo this process until there are no more
 Subtract all the values in the 2d array from the final elevation if they are lower than it
 Add all the values in the 2d array
 Multiply that value with 6x6 to get the final volume
