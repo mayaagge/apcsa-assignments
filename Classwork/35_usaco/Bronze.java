@@ -37,8 +37,8 @@ public class Bronze{
       System.out.println("The 2d array is ");
       print(nums);
       long n = 1039203;
+      input.close();//releases the file from your program
       return n;
-    input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
       e.printStackTrace();
