@@ -15,8 +15,14 @@ public class Bronze{
         int C = file.nextInt();
         int E = file.nextInt();
         int N = file.nextInt();
-        
-        int[][] nums = new int [4][4];
+        int[][] nums = new int [R][C];
+        for (int i = 0; i<R; i++){
+          for(int j = 0; j<C; j++){
+            nums[i][j] = input.nextInt();
+          }
+        }
+        print(nums);
+        /*
         while(input.hasNextInt()){
           int numy = input.nextInt();
           nums[i][j] = numy;
@@ -29,8 +35,8 @@ public class Bronze{
             j = 0;
           }
         }
-      }
-      System.out.println("The 2d array is");
+        */
+      System.out.println("The 2d array is ");
       print(nums);
     input.close();//releases the file from your program
     } catch (FileNotFoundException e) {
