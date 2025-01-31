@@ -19,7 +19,6 @@ public class Bronze{
             nums[i][j] = input.nextInt();
           }
         }
-        print(nums);
         /*
         while(input.hasNextInt()){
           int numy = input.nextInt();
@@ -34,8 +33,6 @@ public class Bronze{
           }
         }
         */
-      System.out.println("The 2d array is ");
-      print(nums);
       long n = 1039203;
       input.close();//releases the file from your program
       return n;
