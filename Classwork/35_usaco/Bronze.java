@@ -5,6 +5,9 @@ import java.io.FileNotFoundException; // Import the FileNotFoundException class 
 import java.util.Scanner; // Import the Scanner
 import java.util.Arrays;
 public class Bronze{
+  public static void main (String[] args){
+    solve(makelake_input.txt);
+  }
   public static long solve(String input_filename){
       try{
         File file = new File(input_filename);
@@ -33,6 +36,7 @@ public class Bronze{
           }
         }
         */
+      print(nums);
       long n = 1039203;
       input.close();//releases the file from your program
       return n;
