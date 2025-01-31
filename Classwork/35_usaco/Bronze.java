@@ -22,21 +22,13 @@ public class Bronze{
             nums[i][j] = input.nextInt();
           }
         }
-        /*
-        while(input.hasNextInt()){
-          int numy = input.nextInt();
-          nums[i][j] = numy;
-          j++;
-          if (j== 4){
-            i++;
-            if(i == 4){
-              break;
-            }
-            j = 0;
-          }
-        }
-        */
       print(nums);
+      while(input.hasNextLine()){
+        int row = input.nextInt();
+        int column = input.nextInt();
+        int stomp = input.nextInt();
+      }
+      int [][] smallArray = new int[3][3];
       long n = 1039203;
       input.close();//releases the file from your program
       return n;
