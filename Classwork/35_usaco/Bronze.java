@@ -6,7 +6,7 @@ import java.util.Scanner; // Import the Scanner
 import java.util.Arrays;
 public class Bronze{
   public static void main (String[] args){
-    solve(makelake_input.txt);
+    solve("makelake_input.txt");
   }
   public static long solve(String input_filename){
       try{
