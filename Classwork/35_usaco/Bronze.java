@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Bronze{
   public static long solve(String input_filename){
       try{
-        File file = new File("makelake_input.txt");
+        File file = new File("input_filename");
         Scanner input = new Scanner(file);
         int R = input.nextInt();
         int C = input.nextInt();
