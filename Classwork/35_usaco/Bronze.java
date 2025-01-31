@@ -7,14 +7,12 @@ import java.util.Arrays;
 public class Bronze{
   public static long solve(String input_filename){
       try{
-        int i = 0;
-        int j = 0;
         File file = new File("makelake_input.txt");
         Scanner input = new Scanner(file);
-        int R = file.nextInt();
-        int C = file.nextInt();
-        int E = file.nextInt();
-        int N = file.nextInt();
+        int R = input.nextInt();
+        int C = input.nextInt();
+        int E = input.nextInt();
+        int N = input.nextInt();
         int[][] nums = new int [R][C];
         for (int i = 0; i<R; i++){
           for(int j = 0; j<C; j++){
