@@ -40,6 +40,7 @@ public class Bronze{
       System.out.println("File not found.");
       e.printStackTrace();
     }
+    return -1;
   }
 
   public static void print(int[][] array){
