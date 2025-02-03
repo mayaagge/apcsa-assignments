@@ -6,7 +6,7 @@ import java.util.Scanner; // Import the Scanner
 import java.util.Arrays;
 public class Bronze{
   public static void main (String[] args){
-    solve("makelake_input.txt");
+    System.out.println(solve("makelake_input.txt"));
   }
   public static long solve(String input_filename){
       try{
@@ -16,6 +16,7 @@ public class Bronze{
         int C = input.nextInt();
         int E = input.nextInt();
         int N = input.nextInt();
+
         int[][] nums = new int [R][C];
         for (int i = 0; i<R; i++){
           for(int j = 0; j<C; j++){
@@ -23,15 +24,17 @@ public class Bronze{
           }
         }
       print(nums);
-      while(input.hasNextLine()){
-        int row = input.nextInt();
-        int column = input.nextInt();
-        int stomp = input.nextInt();
-        int [][] smallArray = new int[3][3];
+      //while(input.hasNextLine()){
+        for (int i = 0; i < N; i++){
+        int row = input.nextInt()-1;
+        int column = input.nextInt()-1;
+        int depth = input.nextInt();
+        stomp(nums, row, column, depth);
       }
-      long n = 1039203;
+      long volume = volume(nums, E);
       input.close();//releases the file from your program
-      return n;
+      return volume;
+
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
       e.printStackTrace();
@@ -46,5 +49,34 @@ public class Bronze{
       b[i] = Arrays.toString(array[i]);
     }
     System.out.println(Arrays.toString(b));
+  }
+  public static void stomp(int[][] n, int r, int c, int d) {
+    int max = Integer.MIN_VALUE;
+    for (int i = r; i < r + 3; i++) {
+        for (int j = c; j < c + 3; j++) {
+          if (n[i][j] > max){
+              max = n[i][j];
+          }
+        }
+    }
+    int d1 = max - d;
+    for (int i = r; i < r + 3; i++) {
+        for (int j = c; j < c + 3; j++) {
+            if (n[i][j] > d1) {
+                n[i][j] = d1;
+            }
+        }
+    }
+  }
+  public static long volume(int[][] n, int elevation) {
+    long volumeTotal = 0;
+    for (int i = 0; i < n.length; i++) {
+        for (int j = 0; j < n[0].length; j++) {
+            if (elevation > n[i][j]) {
+                volumeTotal += (elevation - n[i][j]);
+            }
+        }
+    }
+    return volumeTotal * 72 * 72;
   }
 }
