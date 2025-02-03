@@ -1,0 +1,2 @@
+1. Open and read file
+2. 
