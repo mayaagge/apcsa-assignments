@@ -1,2 +1,8 @@
-1. Open and read file
-2. 
+Open file and read it
+Make a 2d array using the rows R and columns C by going through the dots marking the stars as -1
+Based on the numbers figure out from where to where to go
+Find the starting point and make that 1
+Iterate the through the 2d array until reaching the destination
+  In each iteration change the values such that all spots with numbers become 0 when looped through again and the adjacent spots become the addition of the numbers in the spots       adjacent to it
+  Be sure to not go to any spot with -1
+Upon reaching the destination add the numbers in the adjacent spots to it to get the number of ways
