@@ -24,8 +24,7 @@ public class Bronze{
           }
         }
       print(nums);
-      //while(input.hasNextLine()){
-        for (int i = 0; i < N; i++){
+      for (int i = 0; i < N; i++){
         int row = input.nextInt()-1;
         int column = input.nextInt()-1;
         int depth = input.nextInt();
