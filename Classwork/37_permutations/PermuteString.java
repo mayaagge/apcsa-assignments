@@ -15,9 +15,9 @@ public class PermuteString{
       }
     }
   }
-  public static void swap(String str, int l1, int l2) {
+  public static String swap(String str, int l1, int l2) {
     char[] a = str.toCharArray();
-    char temp = chars[l1];
+    char temp = a[l1];
     a[l1] = a[l2];
     a[l2] = temp;
     String b = new String(a);
