@@ -16,11 +16,16 @@ public class PermuteString{
     }
   }
   public static String swap(String str, int l1, int l2) {
+    return str.substring(0, l1) + str.charAt(l2) +
+    str.substring(l1 + 1, l2) + str.charAt(l1) +
+     str.substring(l2 + 1);
+    /*
     char[] a = str.toCharArray();
     char temp = a[l1];
     a[l1] = a[l2];
     a[l2] = temp;
     String b = new String(a);
     return b;
+    */
   }
 }
