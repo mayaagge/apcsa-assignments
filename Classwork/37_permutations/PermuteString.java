@@ -4,7 +4,7 @@ public class PermuteString{
     permute(str, 0);
   }
   public static void permute(String str, int l){
-    if (l = str.length()-1){
+    if (l == str.length()-1){
       System.out.println(str);
     }
     else{
