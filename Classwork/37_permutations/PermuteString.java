@@ -8,7 +8,7 @@ public class PermuteString{
       System.out.println(str);
     }
     else{
-      for(int i = 1; i < str.length();i++){
+      for(int i = 0; i < str.length();i++){
         str = swap(str, l, i);
         permute(str, l+1);
         str = swap(str, l, i);
