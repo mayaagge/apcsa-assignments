@@ -9,12 +9,13 @@ public class PermuteString{
     }
     else{
       for(int i = 1; i < str.length();i++){
-        String temp = "";
-        if (i + 1 < str.length()){
-          temp = str.substring(0,1) + str.charAt(i) + str.substring(l+1,i) + str.charAt(1) + str.substring(i);
+        String temp = str.substring(0, l) + str.charAt(i);
+        if (l + 1 < i) {
+          temp += str.substring(l + 1, i);
         }
-        else{
-          temp = str.substring(0,1) + str.charAt(i) + str.substring(l+1,i) + str.charAt(1);
+        temp += str.charAt(l);
+        if (i + 1 < str.length()) {
+          temp += str.substring(i + 1);
         }
         permute(temp, l+1);
       }
