@@ -8,7 +8,7 @@ public class PermuteString{
     }
     else{
       for(int i = 0; i < str.length();i++){
-        permute(str + str.substring(i,i+1)), l-1);
+        permute(str.substring(l+1) + str.charAt(i), l+1);
       }
     }
   }
