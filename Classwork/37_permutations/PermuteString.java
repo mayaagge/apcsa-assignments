@@ -9,9 +9,9 @@ public class PermuteString{
     }
     else{
       for(int i = 1; i < str.length();i++){
-        swap(str, l, i);
+        str = swap(str, l, i);
         permute(str, l+1);
-        swap(str, l, i);
+        str = swap(str, l, i);
       }
     }
   }
