@@ -8,17 +8,16 @@ public class PermuteString{
       System.out.println(str);
     }
     else{
-      for(int i = 1; i < str.length();i++){
-        String temp = str.substring(0, l) + str.charAt(i);
-        if (l + 1 < i) {
-          temp += str.substring(l + 1, i);
-        }
-        temp += str.charAt(l);
-        if (i + 1 < str.length()) {
-          temp += str.substring(i + 1);
-        }
-        permute(temp, l+1);
+      for(int i = 0; i < str.length();i++){
+        swap(str, l, i);
+        permute(str, l+1);
+        swap(str, l, i);
       }
     }
+  }
+  public static void swap(String str, int l1, int l2) {
+    char temp = str.charAt(l1);
+    str.charAt(l1) = str.charAt(l2);
+     str.charAt(l2) = temp;
   }
 }
