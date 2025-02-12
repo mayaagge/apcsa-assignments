@@ -1,7 +1,6 @@
 Write a detailed pseudocode for the methods addQueen(...) and removeQueen(...)
 
 addQueen(...)
-1. make a 2d array with all 0s
 2. loop through the indices in the row, column, and then diagonals based on the index where we are adding the queen
       add 1 to all of them
 3. make the index of the queen -1
