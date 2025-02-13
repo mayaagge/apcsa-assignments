@@ -8,6 +8,7 @@
 public static void main (String[] args){
   int[][] arr = new int[4][4];
   addQueen(arr, 2, 3);
+  print(arr);
 }
 
 public static boolean addQueen(int[][] n, int r, int c){
