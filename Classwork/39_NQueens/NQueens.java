@@ -65,6 +65,6 @@ private void removeQueen(int[][] n, int r, int c){
       b[i] = Arrays.toString(array[i]);
      System.out.println(b[i]);
     }
-   System.out.print();
+   System.out.println(/n);
   }
 }
