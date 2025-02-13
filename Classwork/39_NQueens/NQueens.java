@@ -27,7 +27,7 @@ public class NQueens{
         if (((r + i)< n.length) && ((c + i)< n.length)){
           n[r+i][c+i] += 1;
         }
-        if (((r - i) >= 0) && ((c - i) >= 0){
+        if (((r - i) >= 0) && ((c - i) >= 0)){
           n[r-i][c-i] += 1;
         }
       }
@@ -54,7 +54,7 @@ public class NQueens{
         if (((r + i)< n.length) && ((c + i)< n.length)){
           n[r+i][c+i] -= 1;
         }
-        if (((r - i) >= 0) && ((c - i) >= 0){
+        if (((r - i) >= 0) && ((c - i) >= 0)){
           n[r-i][c-i] -= 1;
         }
       }
