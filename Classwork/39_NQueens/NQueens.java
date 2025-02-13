@@ -8,6 +8,7 @@ import java.util.Arrays;
 */
   
  private boolean addQueen(int[][] n, int r, int c){
+   boolean a = false;
     if (c >=0 && c < n.length && r >=0 && r < n.length){
       for (int i = 0; i < n.length; i++){
         n[r-1][i] += 1;
@@ -24,9 +25,9 @@ import java.util.Arrays;
         }
       }
       n[r-1][c-1] = -1;
-      return true;
+      a = true;
     }  
-    return false;
+    return a;
   }
   
   /**Remove the queen that was added to r,c
@@ -35,6 +36,7 @@ import java.util.Arrays;
   *threatened positions are decremented
   */
 private void removeQueen(int[][] n, int r, int c){
+  boolean a = false;
     if (c >=0 && c < n.length && r >=0 && r < n.length){
       for (int i = 0; i < n.length; i++){
         n[r-1][i] -= 1;
@@ -51,9 +53,9 @@ private void removeQueen(int[][] n, int r, int c){
         }
       }
       n[r-1][c-1] = 0;
-      return true;
+      a = true;
     }  
-    return false;
+    return a;
   }
   public static void print(int[][] array){
     String[] b = new String[array.length];
