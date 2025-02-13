@@ -11,33 +11,31 @@ public class NQueens{
   NQueens n = new NQueens();
   int [][] board = new int[4][4];
   print(board);
-  System.out.println(n.addQueen(board, 1, 1));
+  System.out.println(n.addQueen(board, 0, 0));
   print(board);
-  n.removeQueen(board, 1, 1);
+  n.removeQueen(board, 0, 0);
   print(board);
  }
   
  private boolean addQueen(int[][] n, int r, int c){
-   boolean a = false;
-    if (c >=0 && c < n.length && r >=0 && r < n.length){
-      for (int i = 0; i < n.length; i++){
-        n[r-1][i] += 1;
-      }
-      for (int i = 0; i < n.length; i++){
-        n[i][c-1] += 1;
-      }
-      for (int i = 0; i < n.length/2; i++){
+  if (n[r][c] != 0){
+   return false;
+  }
+  else{
+    for (int i = r + 1; i < n.length; i++){
+       n[i][c] += 1;
+     }
+      for (int i = 1; i < n.length/2; i++){
         if (((r + i)< n.length) && ((c + i)< n.length)){
           n[r+i][c+i] += 1;
         }
-        if (((r - i) >= 0) && ((c - i) >= 0)){
-          n[r-i][c-i] += 1;
+        if (((r + i) >= 0) && ((c - i) >= 0)){
+          n[r+i][c-i] += 1;
         }
       }
-      n[r-1][c-1] = -1;
-      a = true;
+      n[r][c] = -1;
+       return true;
     }  
-    return a;
   }
   
   /**Remove the queen that was added to r,c
@@ -47,24 +45,19 @@ public class NQueens{
   */
  
 private void removeQueen(int[][] n, int r, int c){
-    if (c >=0 && c < n.length && r >=0 && r < n.length){
-      for (int i = 0; i < n.length; i++){
-        n[r-1][i] -= 1;
-      }
-      for (int i = 0; i < n.length; i++){
-        n[i][c-1] -= 1;
-      }
-      for (int i = 0; i < n.length/2; i++){
+    for (int i = r + 1; i < n.length; i++){
+       n[i][c] -= 1;
+     }
+      for (int i = 1; i < n.length/2; i++){
         if (((r + i)< n.length) && ((c + i)< n.length)){
           n[r+i][c+i] -= 1;
         }
-        if (((r - i) >= 0) && ((c - i) >= 0)){
-          n[r-i][c-i] -= 1;
+        if (((r + i) >= 0) && ((c - i) >= 0)){
+          n[r+i][c-i] -= 1;
         }
       }
-      n[r-1][c-1] = 0;
-    }
-  }
+      n[r][c] = 0;
+    }  
   public static void print(int[][] array){
     String[] b = new String[array.length];
     for (int i=0; i< array.length; i++)
