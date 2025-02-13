@@ -16,7 +16,7 @@ public class NQueens{
   }
   
   public static boolean addQueen(int[][] n, int r, int c){
-    if (c >=0 && n < n.length && r >=0 && r < n.length){
+    if (c >=0 && c < n.length && r >=0 && r < n.length){
       for (int i = 0; i < n.length; i++){
         n[r-1][i] += 1;
       }
@@ -43,7 +43,7 @@ public class NQueens{
   *threatened positions are decremented
   */
   public static void removeQueen(int[][] n, int r, int c){
-    if (c >=0 && n < n.length && r >=0 && r < n.length){
+    if (c >=0 && c < n.length && r >=0 && r < n.length){
       for (int i = 0; i < n.length; i++){
         n[r-1][i] -= 1;
       }
