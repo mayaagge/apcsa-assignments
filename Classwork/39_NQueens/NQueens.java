@@ -36,7 +36,6 @@ public class NQueens{
   *threatened positions are decremented
   */
 private void removeQueen(int[][] n, int r, int c){
-  boolean a = false;
     if (c >=0 && c < n.length && r >=0 && r < n.length){
       for (int i = 0; i < n.length; i++){
         n[r-1][i] -= 1;
@@ -53,9 +52,7 @@ private void removeQueen(int[][] n, int r, int c){
         }
       }
       n[r-1][c-1] = 0;
-      a = true;
-    }  
-    return a;
+    }
   }
   public static void print(int[][] array){
     String[] b = new String[array.length];
