@@ -7,6 +7,16 @@ import java.util.Arrays;
 * in which case the queen is added and all it's threatened positions are incremented.
 */
 public class NQueens{
+ public static void main (String[] args){
+  NQueens n = new NQueens();
+  int [][] board = new int[4][4];
+  print(board);
+  System.out.println(n.addQueen(board, 1, 1));
+  print(board);
+  n.removeQueen(board, 1, 1);
+  print(board);
+ }
+  
  private boolean addQueen(int[][] n, int r, int c){
    boolean a = false;
     if (c >=0 && c < n.length && r >=0 && r < n.length){
@@ -35,6 +45,7 @@ public class NQueens{
   *@postcondition the board is modified to remove that queen and all it's
   *threatened positions are decremented
   */
+ 
 private void removeQueen(int[][] n, int r, int c){
     if (c >=0 && c < n.length && r >=0 && r < n.length){
       for (int i = 0; i < n.length; i++){
