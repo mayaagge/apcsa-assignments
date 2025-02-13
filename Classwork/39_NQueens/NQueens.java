@@ -1,3 +1,5 @@
+import java.util.Scanner;
+import java.util.Arrays;
 /**
 *@return true when the queen added correctly, false Otherwise
 *@precondition r and c are valid indices of the board array
