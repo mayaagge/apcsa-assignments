@@ -25,7 +25,7 @@ public class NQueens{
     for (int i = r + 1; i < n.length; i++){
        n[i][c] += 1;
      }
-      for (int i = 1; i < n.length/2; i++){
+      for (int i = 1; i < n.length; i++){
         if (((r + i)< n.length) && ((c + i)< n.length)){
           n[r+i][c+i] += 1;
         }
@@ -48,7 +48,7 @@ private void removeQueen(int[][] n, int r, int c){
     for (int i = r + 1; i < n.length; i++){
        n[i][c] -= 1;
      }
-      for (int i = 1; i < n.length/2; i++){
+      for (int i = 1; i < n.length; i++){
         if (((r + i)< n.length) && ((c + i)< n.length)){
           n[r+i][c+i] -= 1;
         }
