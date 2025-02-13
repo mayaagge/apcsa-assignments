@@ -6,7 +6,7 @@ import java.util.Arrays;
 *@postcondition the board is only changed when the function returns true
 * in which case the queen is added and all it's threatened positions are incremented.
 */
-  
+public class NQueens{
  private boolean addQueen(int[][] n, int r, int c){
    boolean a = false;
     if (c >=0 && c < n.length && r >=0 && r < n.length){
