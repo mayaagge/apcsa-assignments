@@ -8,8 +8,8 @@ import java.util.Arrays;
 */
 public class NQueens{
  private int[][] board;
- public NQueens(int[][] b){
-  board = b;
+ public NQueens(int queens){
+  int[][] board = new int[queens][queens];
  }
  private boolean addQueen(int r, int c){
   if (board[r][c] != 0){
