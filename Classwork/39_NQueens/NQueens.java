@@ -68,8 +68,8 @@ private void removeQueen(int r, int c){
  public int countSolutions(int row){
  }
  public String toString(){
+  String row = "";
   for (int i = 0; i< board.length; i++){
-   String row = "";
    for (int j = 0; j<board.length; j++){
     if (board[i][j] == -1){
      row += "Q";
