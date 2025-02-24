@@ -58,6 +58,7 @@ private void removeQueen(int r, int c){
     }
    System.out.println();
   }
+ /*
  public void solve(){
   solve(0);
  }
@@ -67,6 +68,7 @@ private void removeQueen(int r, int c){
  }
  public int countSolutions(int row){
  }
+ */
  public String toString(){
   String row = "";
   for (int i = 0; i< board.length; i++){
