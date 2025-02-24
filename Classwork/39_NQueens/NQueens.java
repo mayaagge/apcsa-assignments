@@ -11,7 +11,7 @@ public class NQueens{
  public NQueens(int queens){
   int[][] board = new int[queens][queens];
  }
- private boolean addQueen(int r, int c){
+ public boolean addQueen(int r, int c){
   if (board[r][c] != 0){
    return false;
   }
@@ -38,7 +38,7 @@ public class NQueens{
   *threatened positions are decremented
   */
  
-private void removeQueen(int r, int c){
+public void removeQueen(int r, int c){
     for (int i = r + 1; i < board.length; i++){
        board[i][c] -= 1;
      }
