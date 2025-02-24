@@ -3,7 +3,7 @@ public class Driver{
       NQueens n = new NQueens(4);
       n.toString();
       n.addQueen(0, 0);
-      print(board);
+      n.toString();
       n.removeQueen(0, 0);
       n.toString();
    }
