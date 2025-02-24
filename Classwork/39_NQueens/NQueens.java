@@ -8,7 +8,9 @@ import java.util.Arrays;
 */
 public class NQueens{
  private int[][] board;
+ private int queens;
  public NQueens(int queens){
+  this.queens = queens;
   int[][] board = new int[queens][queens];
  }
  public boolean addQueen(int r, int c){
