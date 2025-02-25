@@ -10,18 +10,23 @@ public class Driver{
    }
    */
     public static void main(String[] args) {
-        testNQueens(new NQueens(4));
-        testNQueens(new NQueens(6));
-        testNQueens(new NQueens(8));
+        testNQueens(4);
+        testNQueens(6);
+        testNQueens(8);
     }
 
-    private static void testNQueens(NQueens nq) {
-        int size = nq.getBoardSize();
+    private static void testNQueens(int size) {
         System.out.println("Testing " + size + "-Queens Problem:");
+        NQueens nq = new NQueens(size);
         
         System.out.println("Solving...");
-        nq.solve();
-        System.out.println(nq);
+        boolean solved = nq.solve();
+        if (solved) {
+            System.out.println("Solution found:");
+            System.out.println(nq);
+        } else {
+            System.out.println("No solution found.");
+        }
         
         System.out.println("Counting total solutions...");
         nq.countSolutions();
