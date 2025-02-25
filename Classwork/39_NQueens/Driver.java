@@ -18,17 +18,7 @@ public class Driver{
     private static void testNQueens(int size) {
         System.out.println("Testing " + size + "-Queens Problem:");
         NQueens nq = new NQueens(size);
-        
-        System.out.println("Solving...");
-        boolean solved = nq.solve();
-        if (solved) {
-            System.out.println("Solution found:");
-            System.out.println(nq);
-        } else {
-            System.out.println("No solution found.");
-        }
-        
-        System.out.println("Counting total solutions...");
+        nq.solve(); 
         nq.countSolutions();
         System.out.println("-------------------------------");
     }
