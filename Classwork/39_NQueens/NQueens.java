@@ -19,7 +19,7 @@ public class NQueens{
   for (int i = r + 1; i < board.length; i++){
      board[i][c] += 1;
      if ((c + (i-r))< board.length){
-        board[r+i][c+(i-r)] += 1;
+        board[i][c+(i-r)] += 1;
       }
       if ((c - (i-r)) >= 0){
         board[i][c-(i-r)] += 1;
@@ -39,7 +39,7 @@ public void removeQueen(int r, int c){
   for (int i = r + 1; i < board.length; i++){
      board[i][c] -= 1;
      if ((c + (i-r))< board.length){
-        board[r+i][c+(i-r)] -= 1;
+        board[i][c+(i-r)] -= 1;
       }
       if ((c - (i-r)) >= 0){
         board[i][c-(i-r)] -= 1;
