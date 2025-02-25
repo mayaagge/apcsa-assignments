@@ -24,8 +24,7 @@ public class Driver{
         System.out.println(nq);
         
         System.out.println("Counting total solutions...");
-        int totalSolutions = nq.countSolutions();
-        System.out.println("Total solutions for " + size + "-Queens: " + totalSolutions);
+        nq.countSolutions();
         System.out.println("-------------------------------");
     }
 }
