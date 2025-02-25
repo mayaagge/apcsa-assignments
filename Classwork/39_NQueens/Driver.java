@@ -1,14 +1,4 @@
 public class Driver{
-   /*
-   public static void main (String[] args){
-      NQueens n = new NQueens(4);
-      n.toString();
-      n.addQueen(0, 0);
-      n.toString();
-      n.removeQueen(0, 0);
-      n.toString();
-   }
-   */
     public static void main(String[] args) {
         testNQueens(4);
         testNQueens(6);
@@ -16,10 +6,10 @@ public class Driver{
     }
 
     private static void testNQueens(int size) {
-        System.out.println("Testing " + size + "-Queens Problem:");
-        NQueens nq = new NQueens(size);
-        nq.solve(); 
-        nq.countSolutions();
+        System.out.println("Testing " + size + " queens");
+        NQueens queen = new NQueens(size);
+        queen.solve(); 
+        queen.countSolutions();
         System.out.println("-------------------------------");
     }
 }
