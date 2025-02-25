@@ -8,31 +8,25 @@ import java.util.Arrays;
 */
 public class NQueens{
  private int[][] board;
- private int queens;
- public NQueens(int queens){
-  this.queens = queens;
-  int[][] board = new int[queens][queens];
+ public NQueens(int size){
+  this.board = new int[size][size];
  }
  public boolean addQueen(int r, int c){
   if (board[r][c] != 0){
    return false;
   }
-  else{
-    for (int i = r + 1; i < board.length; i++){
-       board[i][c] += 1;
-     }
-      for (int i = 1; i < board.length; i++){
-        if (((r + i)< board.length) && ((c + i)< board.length)){
-          board[r+i][c+i] += 1;
-        }
-        if (((r + i) >= 0) && ((c - i) >= 0)){
-          board[r+i][c-i] += 1;
-        }
+  board[r][c] = -1;
+  for (int i = r + 1; i < board.length; i++){
+     board[i][c] += 1;
+     if ((c + (i-r))< board.length){
+        board[r+i][c+(i-r)] += 1;
       }
-      board[r][c] = -1;
-       return true;
-    }  
-  }
+      if ((c - (i-r)) >= 0){
+        board[i][c-(i-r)] += 1;
+      }
+    }
+    return true;
+  }  
   
   /**Remove the queen that was added to r,c
   *@precondition r and c are valid indices of the board array and there is a queen at position r,c
@@ -41,18 +35,16 @@ public class NQueens{
   */
  
 public void removeQueen(int r, int c){
-    for (int i = r + 1; i < board.length; i++){
-       board[i][c] -= 1;
-     }
-      for (int i = 1; i < board.length; i++){
-        if (((r + i)< board.length) && ((c + i)< board.length)){
-          board[r+i][c+i] -= 1;
-        }
-        if (((r + i) >= 0) && ((c - i) >= 0)){
-          board[r+i][c-i] -= 1;
-        }
+  board[r][c] = 0;
+  for (int i = r + 1; i < board.length; i++){
+     board[i][c] -= 1;
+     if ((c + (i-r))< board.length){
+        board[r+i][c+(i-r)] -= 1;
       }
-      board[r][c] = 0;
+      if ((c - (i-r)) >= 0){
+        board[i][c-(i-r)] -= 1;
+      }
+    }
     }  
   public static void print(int[][] array){
     String[] b = new String[array.length];
@@ -65,14 +57,14 @@ public void removeQueen(int r, int c){
   }
  
  public void solve(){
-     board = new int[queens][queens];
+     board = new int[board.length][board.length];
      solve(0);
  }
  public boolean solve(int row){
-    if (row == queens){
+    if (row == board.length){
      return true;
     }
-    for (int i = 0; i < queens; i++) {
+    for (int i = 0; i < board.length; i++) {
        if (addQueen(row, i)) {
           if (solve(row + 1)){
            return true;
@@ -81,18 +73,18 @@ public void removeQueen(int r, int c){
         }
       }
     if(row==0){
-    board = new int[queens][queens];
+    board = new int[board.length][board.length];
    }
    return false;
  }
  public void countSolutions(){
-  board = new int[queens][queens];
+  board = new int[board.length][board.length];
   System.out.println("Total solutions: " + countSolutions(0));
  }
  public int countSolutions(int row){
-    if (row == queens) return 1;
+    if (row == board.length) return 1;
       int solutions = 0;
-      for (int i = 0; i < queens; i++) {
+      for (int i = 0; i < board.length; i++) {
          if (addQueen(row, i)) {
             solutions += countSolutions(row + 1);
             removeQueen(row, i);
