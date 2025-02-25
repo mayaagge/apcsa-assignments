@@ -9,22 +9,23 @@ public class Driver{
       n.toString();
    }
    */
-   public static void main(String[] args) {
-        testNQueens(4);
-        testNQueens(6);
-        testNQueens(8);
+    public static void main(String[] args) {
+        testNQueens(new NQueens(4));
+        testNQueens(new NQueens(6));
+        testNQueens(new NQueens(8));
     }
 
-    private static void testNQueens(int size) {
+    private static void testNQueens(NQueens nq) {
+        int size = nq.getBoardSize();
         System.out.println("Testing " + size + "-Queens Problem:");
-        NQueens nq = new NQueens(size);
         
         System.out.println("Solving...");
         nq.solve();
         System.out.println(nq);
         
         System.out.println("Counting total solutions...");
-        nq.countSolutions();
+        int totalSolutions = nq.countSolutions();
+        System.out.println("Total solutions for " + size + "-Queens: " + totalSolutions);
         System.out.println("-------------------------------");
     }
 }
