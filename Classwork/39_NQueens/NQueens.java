@@ -63,30 +63,57 @@ public void removeQueen(int r, int c){
     }
    System.out.println();
   }
- /*
+ 
  public void solve(){
-  solve(0);
+     board = new int[queens][queens];
+     solve(0);
  }
  public boolean solve(int row){
+    if (row == size){
+     return true;
+    }
+    for (int i = 0; i < queens; i++) {
+       if (addQueen(row, i)) {
+          if (solve(row + 1)){
+           return true;
+          }
+          removeQueen(row, i);
+        }
+      }
+    if(row==0){
+    board = new int[queens][queens];
+   }
+   return false;
  }
  public void countSolutions(){
+  board = new int[size][size];
+  System.out.println("Total solutions: " + countSolutions(0));
  }
  public int countSolutions(int row){
+    if (row == size) return 1;
+      int solutions = 0;
+      for (int i = 0; i < queens; col++) {
+         if (addQueen(row, i)) {
+            solutions += countSolutions(row + 1);
+            removeQueen(row, i);
+          }
+      }
+    return solutions;
  }
- */
+
  public String toString(){
-  String row = "";
+  String result = "";
   for (int i = 0; i< board.length; i++){
    for (int j = 0; j<board.length; j++){
     if (board[i][j] == -1){
-     row += "Q";
+     result += "Q";
     }
     else{
-     row += "_";
+     result += "_";
     }
    }
-   row += "\n";
+   result += "\n";
 }
-  return row;
+  return result;
  }
 }
