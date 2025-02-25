@@ -69,7 +69,7 @@ public void removeQueen(int r, int c){
      solve(0);
  }
  public boolean solve(int row){
-    if (row == size){
+    if (row == queens){
      return true;
     }
     for (int i = 0; i < queens; i++) {
@@ -86,13 +86,13 @@ public void removeQueen(int r, int c){
    return false;
  }
  public void countSolutions(){
-  board = new int[size][size];
+  board = new int[queens][queens];
   System.out.println("Total solutions: " + countSolutions(0));
  }
  public int countSolutions(int row){
-    if (row == size) return 1;
+    if (row == queens) return 1;
       int solutions = 0;
-      for (int i = 0; i < queens; col++) {
+      for (int i = 0; i < queens; i++) {
          if (addQueen(row, i)) {
             solutions += countSolutions(row + 1);
             removeQueen(row, i);
