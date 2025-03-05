@@ -7,32 +7,60 @@ import java.util.Arrays;
 public class Maze{
   //public static void main (String[] args){
   //}
-  public static int[][] convert(String input_filename){
+  public static char[][] convertMaze(String input_filename){
       try{
         File file = new File(input_filename);
         Scanner input = new Scanner(file);
-        int r = 0;
+        int rows = 0;
+        int columns = 0;
         while (input.hasNextLine()){
-          rows++;
           String line = input.nextLine();
-          char [] a = new char[] {line.split("")};
-          int columns = a.length;
+          columns = line.length();
+          rows++
         }
+        input.close();
+        char[][] maze = new char[rows][columns]
         Scanner input2 = new Scanner(file);
-        int [][] arr = new int[rows][columns];
-        for (int i = 0; i < arr.length; i++){
-          for (int j = 0; j< arr[i].length; j++){
-            arr[i][j] = input.next();
-          }
+        int row = 0;
+        while (scanner.hasNextLine()) {
+          String line = input2.nextLine();
+          maze[row] = line.toCharArray();
+          row++;
         }
-      input.close();//releases the file from your program
-      return arr;
-
+        input2.close();
+        return maze;
     } catch (FileNotFoundException e) {
       System.out.println("File not found.");
       e.printStackTrace();
     }
     return -1;
+  }
+  public static void printMaze(char[][] maze) {
+      if (maze == null) {
+          System.out.println("No maze loaded.");
+          return;
+      }
+      for (char[] row : maze) {
+          System.out.println(Arrays.toString(row));
+      }
+  }
+  public static String mazeToString(char[][] maze) {
+      if (maze == null) {
+          return "";
+      }
+      String result = "";
+      for (char[] row : maze) {
+          result += new String(row) + "\n"; 
+      }
+      return result;
+  }
+  public static void main(String[] args) {
+      String filename = "maze1.txt"; 
+      char[][] maze = convertMaze(filename);
+      System.out.println("Maze as 1D arrays:");
+      printMaze(maze);
+      System.out.println("\nMaze as a String:");
+      System.out.println(mazeToString(maze));
   }
 }
 
