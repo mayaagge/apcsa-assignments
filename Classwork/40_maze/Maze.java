@@ -5,18 +5,17 @@ import java.io.FileNotFoundException; // Import the FileNotFoundException class 
 import java.util.Scanner; // Import the Scanner
 import java.util.Arrays;
 public class Maze{
-  public static void main (String[] args){
-    System.out.println(solve("makelake_input.txt"));
-  }
+  //public static void main (String[] args){
+  //}
   public static int[][] convert(String input_filename){
       try{
         File file = new File(input_filename);
         Scanner input = new Scanner(file);
         int r = 0;
         while (input.hasNextLine()){
-          rows++
+          rows++;
           String line = input.nextLine();
-          char[] a = new char[] (line.split(""));
+          char[] a = new char[] line.split("");
           int columns = a.length;
         }
         Scanner input2 = new Scanner(file);
@@ -35,4 +34,5 @@ public class Maze{
     }
     return -1;
   }
+}
 
