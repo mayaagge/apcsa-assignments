@@ -15,7 +15,7 @@ public class Maze{
         while (input.hasNextLine()){
           rows++;
           String line = input.nextLine();
-          char[] a = new char[] line.split("");
+          char [] a = new char[] {line.split("")};
           int columns = a.length;
         }
         Scanner input2 = new Scanner(file);
