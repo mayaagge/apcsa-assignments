@@ -16,10 +16,10 @@ public class Maze{
         while (input.hasNextLine()){
           String line = input.nextLine();
           columns = line.length();
-          rows++
+          rows++;
         }
         input.close();
-        char[][] maze = new char[rows][columns]
+        char[][] maze = new char[rows][columns];
         Scanner input2 = new Scanner(file);
         int row = 0;
         while (scanner.hasNextLine()) {
