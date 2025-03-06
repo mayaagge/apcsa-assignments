@@ -15,7 +15,9 @@ public class Maze{
         int columns = 0;
         while (input.hasNextLine()){
           String line = input.nextLine();
-          columns = line.length();
+          if (line.length() > columns){
+            columns = line.length();
+          }
           rows++;
         }
         input.close();
@@ -24,7 +26,9 @@ public class Maze{
         int row = 0;
         while (input2.hasNextLine()) {
           String line = input2.nextLine();
-          maze[row] = line.toCharArray();
+          for (int c = 0; c < line.length(); c++){
+            maze[row][c] = line.charAt(c);
+          }
           row++;
         }
         input2.close();
@@ -57,7 +61,6 @@ public class Maze{
   public static void main(String[] args) {
       String filename = "maze1.txt"; 
       char[][] maze = convertMaze(filename);
-      System.out.println(maze);
       System.out.println("Maze as 1D arrays:");
       printMaze(maze);
       System.out.println("\nMaze as a String:");
