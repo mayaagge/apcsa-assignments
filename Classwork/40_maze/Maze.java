@@ -22,7 +22,7 @@ public class Maze{
         char[][] maze = new char[rows][columns];
         Scanner input2 = new Scanner(file);
         int row = 0;
-        while (scanner.hasNextLine()) {
+        while (input2.hasNextLine()) {
           String line = input2.nextLine();
           maze[row] = line.toCharArray();
           row++;
@@ -33,7 +33,7 @@ public class Maze{
       System.out.println("File not found.");
       e.printStackTrace();
     }
-    return -1;
+    return null;
   }
   public static void printMaze(char[][] maze) {
       if (maze == null) {
