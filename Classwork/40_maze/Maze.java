@@ -57,6 +57,7 @@ public class Maze{
   public static void main(String[] args) {
       String filename = "maze1.txt"; 
       char[][] maze = convertMaze(filename);
+      System.out.println(maze);
       System.out.println("Maze as 1D arrays:");
       printMaze(maze);
       System.out.println("\nMaze as a String:");
