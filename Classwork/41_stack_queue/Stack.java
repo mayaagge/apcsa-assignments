@@ -27,7 +27,7 @@ public class Stack{
   // Remove element from stack  
   public int pop(){
     size -= 1;
-    Node curr = head.getData();
+    int curr = head.getData();
     head = head.getNext();
     return curr;
   }
