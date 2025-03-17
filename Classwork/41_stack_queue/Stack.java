@@ -7,37 +7,63 @@ public class Stack{
 
  // Constructor
   public Stack(){
-
+    size = 0;
+    head = new Node(null);
   }   
 
   // Add element to stack
   public void push(int value){
-
+    size += 1;
+    Node a = new Node(value);
+    if (head == null){
+      head = a;
+    }
+    else{
+      a.setNext(head);
+      head = a;
+    }
   }
 
   // Remove element from stack  
   public int pop(){
-
+    size -= 1;
+    curr = head.getData();
+    head = head.getNext();
+    return curr;
   }
 
   // Get top element
   public int peek(){
-
+    return head;
   }
 
   // Check is stack empty
   public boolean isEmpty(){
-
+    if (head == null){
+      return true;
+    }
+    return false;
   }
 
   // Return size stack
   public int size(){
-  
+    return size;
   }
 
   // Print stack
   public String toString(){
-
+    Node a = head;
+    if (a == null){
+      return "[]";
+    }
+    String d = "[" + a.toString(); 
+    a = a.getNext();
+    while(a != null){
+      d += a.toString();
+      a = a.getNext();
+    }
+    d += "]";
+    return d;
   }
 
 
