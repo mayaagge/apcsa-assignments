@@ -80,7 +80,7 @@ public class Stack{
       d += a.toString();
       a = a.getNext();
     }
-    d += "]";
+    d += " null]";
     return d;
   }
 
