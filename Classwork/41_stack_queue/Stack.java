@@ -8,7 +8,7 @@ public class Stack{
  // Constructor
   public Stack(){
     size = 0;
-    head = new Node(null);
+    head = null;
   }   
 
   // Add element to stack
@@ -27,14 +27,14 @@ public class Stack{
   // Remove element from stack  
   public int pop(){
     size -= 1;
-    curr = head.getData();
+    Node curr = head.getData();
     head = head.getNext();
     return curr;
   }
 
   // Get top element
   public int peek(){
-    return head;
+    return head.getData();
   }
 
   // Check is stack empty
