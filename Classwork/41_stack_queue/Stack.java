@@ -1,5 +1,23 @@
 public class Stack{
   // This Stack class is designed for integer values >= 0
+    public static void main(String[] args) {
+        Stack stack = new Stack();
+        System.out.println("Initial stack empty: " + stack.isEmpty()); // Expected: true
+        System.out.println("Initial stack empty: " + stack.toString()); // Expected: []
+        System.out.println("Initial stack size: " + stack.size()); // Expected: 0
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        System.out.println("Stack after pushes: " + stack.toString()); // Expected: 30 -> 20 -> 10 -> null
+        System.out.println("Peek top: " + stack.peek()); // Expected: 30
+        System.out.println("Pop: " + stack.pop()); // Expected: 30
+        System.out.println("Stack after pop: " + stack.toString()); // Expected: 20 -> 10 -> null
+        System.out.println("Stack size: " + stack.size()); // Expected: 2
+        System.out.println("Pop: " + stack.pop()); // Expected: 20
+        System.out.println("Pop: " + stack.pop()); // Expected: 10
+        System.out.println("Stack empty after pops: " + stack.isEmpty()); // Expected: true
+        System.out.println("Stack size after pops: " + stack.size()); // Expected: 0
+    }
 
   // Instance variables here
   private Node head;
