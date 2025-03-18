@@ -8,6 +8,7 @@ public class Queue{
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
+        queue.enqueue(40);
         System.out.println("queue after enqueues: " + queue.toString()); // Expected: 10 -> 20 -> 30 -> null
         System.out.println("Peek top: " + queue.peek()); // Expected: 10
         System.out.println("Dequeue: " + queue.dequeue()); // Expected: 10
@@ -32,7 +33,7 @@ public class Queue{
   // Enqueue a new value to the queue
   public void enqueue(int value){
     Node a = new Node(value);
-    if (head == null || head.getNext() == null){
+    if (head == null){
       head = a;
     }
     else{
