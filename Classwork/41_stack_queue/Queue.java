@@ -49,7 +49,7 @@ public class Queue{
   public int dequeue(){
     size -= 1;
     int curr = head.getData();
-    head.getNext();
+    head = head.getNext();
     return curr;
   }
 
