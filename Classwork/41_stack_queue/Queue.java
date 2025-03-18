@@ -2,6 +2,7 @@ public class Queue{
   // This Queue class is designed for integer values >= 0
     public static void main(String[] args) {
         Queue queue = new Queue();
+        System.out.println("Initial queue empty: " + queue.isEmpty()); // Expected: true
         System.out.println("Initial queue empty: " + queue.toString()); // Expected: []
         System.out.println("Initial queue size: " + queue.size()); // Expected: 0
         queue.enqueue(10);
@@ -58,7 +59,10 @@ public class Queue{
 
   // Check is queue is empty
   public boolean isEmpty(){
-
+    if (head == null){
+      return true;
+    }
+    return false;
   }
 
   // Return queue size
