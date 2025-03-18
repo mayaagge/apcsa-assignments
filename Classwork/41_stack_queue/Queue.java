@@ -36,7 +36,7 @@ public class Queue{
       head = a;
     }
     while (head.getNext() != null){
-      head.getNext();
+      head = head.getNext();
     }
     head.setNext(a);
     size += 1;
