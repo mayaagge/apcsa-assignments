@@ -8,13 +8,13 @@ public class Queue{
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
-        System.out.println("queue after enqueues: " + queue.toString()); // Expected: 30 -> 20 -> 10 -> null
-        System.out.println("Peek top: " + queue.peek()); // Expected: 30
-        System.out.println("Pop: " + queue.dequeue()); // Expected: 30
-        System.out.println("queue after dequeue: " + queue.toString()); // Expected: 20 -> 10 -> null
+        System.out.println("queue after enqueues: " + queue.toString()); // Expected: 10 -> 20 -> 30 -> null
+        System.out.println("Peek top: " + queue.peek()); // Expected: 10
+        System.out.println("Dequeue: " + queue.dequeue()); // Expected: 10
+        System.out.println("queue after dequeue: " + queue.toString()); // Expected: 10 -> 20 -> null
         System.out.println("queue size: " + queue.size()); // Expected: 2
-        System.out.println("Pop: " + queue.dequeue()); // Expected: 20
-        System.out.println("Pop: " + queue.dequeue()); // Expected: 10
+        System.out.println("Dequeue: " + queue.dequeue()); // Expected: 10
+        System.out.println("Dequeue: " + queue.dequeue()); // Expected: 20
         System.out.println("queue empty after dequeues: " + queue.isEmpty()); // Expected: true
         System.out.println("queue size after dequeues: " + queue.size()); // Expected: 0
     }
@@ -36,7 +36,7 @@ public class Queue{
       head = a;
     }
     else{
-      while (head.getNext() != null){
+      while (head != null){
         head = head.getNext();
       }
       head.setNext(a);
