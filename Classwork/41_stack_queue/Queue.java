@@ -35,11 +35,13 @@ public class Queue{
     if (head == null){
       head = a;
     }
-    while (head.getNext() != null){
-      head = head.getNext();
+    else{
+      while (head.getNext() != null){
+        head = head.getNext();
+      }
+      head.setNext(a);
     }
-    head.setNext(a);
-    size += 1;
+    size++;
   }
 
    
