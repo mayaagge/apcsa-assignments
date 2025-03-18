@@ -37,10 +37,11 @@ public class Queue{
       head = a;
     }
     else{
-      while (head.getNext() != null){
-        head = head.getNext();
+      Node curr = head;
+      while (curr.getNext() != null){
+        curr = curr.getNext();
       }
-      head.setNext(a);
+      curr.setNext(a);
     }
     size++;
   }
@@ -48,9 +49,9 @@ public class Queue{
    
   // Dequeue a value from the queue
   public int dequeue(){
-    size -= 1;
     int curr = head.getData();
     head = head.getNext();
+    size -= 1;
     return curr;
   }
 
