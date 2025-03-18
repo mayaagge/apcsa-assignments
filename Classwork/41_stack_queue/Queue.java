@@ -1,7 +1,7 @@
 public class Queue{
   // This Queue class is designed for integer values >= 0
     public static void main(String[] args) {
-        Queue queue = new queue();
+        Queue queue = new Queue();
         System.out.println("Initial queue empty: " + queue.toString()); // Expected: []
         System.out.println("Initial queue size: " + queue.size()); // Expected: 0
         queue.enqueue(10);
@@ -37,7 +37,7 @@ public class Queue{
     while (head.getNext() != null){
       head.getNext();
     }
-    head.setNext() = a;
+    head.setNext(a);
     size += 1;
   }
 
