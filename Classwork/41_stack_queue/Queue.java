@@ -32,7 +32,7 @@ public class Queue{
   // Enqueue a new value to the queue
   public void enqueue(int value){
     Node a = new Node(value);
-    if (head == null){
+    if (head == null || head.getNext() == null){
       head = a;
     }
     else{
@@ -49,12 +49,7 @@ public class Queue{
   public int dequeue(){
     size -= 1;
     int curr = head.getData();
-    if (head.getNext() == null){
-      head = null;
-    }
-    else{
-      head = head.getNext();
-    }
+    head = head.getNext();
     return curr;
   }
 
