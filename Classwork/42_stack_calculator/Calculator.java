@@ -30,7 +30,7 @@ public class Calculator{
           a /= s.pop();
         }
         System.out.println(a);
-        s.push(a);
+        s.push(-a);
         count = 0;
       } 
     }
