@@ -29,6 +29,7 @@ public class Calculator{
         if (arr[i] == "/"){
           a /= s.pop();
         }
+        System.out.println(a);
         count = 0;
       } 
     }
