@@ -5,7 +5,7 @@ public class Calculator{
     String[] arr = expression.split(" ");
     int count = 0;
     for (int i = 0; i < arr.length; i++){
-      if ((Double.parseDouble(arr[i])  != "+") && (Double.parseDouble(arr[i])  != "-") && (Double.parseDouble(arr[i])  != "*") && (Double.parseDouble(arr[i])  != "/")){
+      if ((arr[i]  != "+") && (arr[i]  != "*") && (arr[i]  != "-") && (arr[i]  != "/")){
         s.push(Double.parseDouble(arr[i]));
         count += 1;
       }
