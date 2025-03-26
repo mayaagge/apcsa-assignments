@@ -7,7 +7,7 @@ public class Calculator{
     for (int i = 0; i < arr.length; i++){
       if (Double.parseDouble(arr[i])  != ("+" && "-" && "*" && "/")){
         s.push(Double.parseDouble(arr[i]));
-        count += 1
+        count += 1;
       }
       else{
         for (int j = i; j < count; j--){
