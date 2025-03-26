@@ -2,7 +2,7 @@ import java.util.ArrayDeque;
 public class Calculator{
   public static void main (String[] args){
     String c = "11 3 - 4 + 2.5 *";
-    eval(c);
+    System.out.println(eval(c));
   }
   public static double eval(String expression){
     ArrayDeque<Double> s = new ArrayDeque<>();
