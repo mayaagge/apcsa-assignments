@@ -1,6 +1,6 @@
 import java.util.ArrayDeque;
 public class Calculator{
-  public static main void (String[] args){
+  public static void main (String[] args){
     String c = "11 3 - 4 + 2.5 *";
     eval(c);
   }
