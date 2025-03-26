@@ -17,19 +17,20 @@ public class Calculator{
       }
       else{
         double a = s.pop();
-        if (arr[i] == "+"){
+        if (arr[i].equals("+")){
           a += s.pop();
         }
-        if (arr[i] == "-"){
+        if (arr[i].equals("-")){
           a -= s.pop();
         }
-        if (arr[i] == "*"){
+        if (arr[i].equals("*")){
           a *= s.pop();
         }
-        if (arr[i] == "/"){
+        if (arr[i].equals("/")){
           a /= s.pop();
         }
         System.out.println(a);
+        s.push(a);
         count = 0;
       } 
     }
