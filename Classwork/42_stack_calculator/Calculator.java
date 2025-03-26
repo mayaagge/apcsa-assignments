@@ -17,16 +17,16 @@ public class Calculator{
       }
       else{
         double a = s.pop();
-        if (arr[j] == "+"){
+        if (arr[i] == "+"){
           a += s.pop();
         }
-        if (arr[j] == "-"){
+        if (arr[i] == "-"){
           a -= s.pop();
         }
-        if (arr[j] == "*"){
+        if (arr[i] == "*"){
           a *= s.pop();
         }
-        if (arr[j] == "/"){
+        if (arr[i] == "/"){
           a /= s.pop();
         }
         count = 0;
