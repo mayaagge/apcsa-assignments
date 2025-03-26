@@ -12,6 +12,7 @@ public class Calculator{
       if ((arr[i]  != "+") && (arr[i]  != "*") && (arr[i]  != "-") && (arr[i]  != "/")){
         s.push(Double.parseDouble(arr[i]));
         count += 1;
+        s.toString();
       }
       else{
         for (int j = i; j < count; j--){
