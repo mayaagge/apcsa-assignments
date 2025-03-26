@@ -11,7 +11,7 @@ public class Calculator{
       }
       else{
         for (int j = i; j < count; j--){
-          s.pop(Double.parseDouble(arr[j]));
+          s.pop();
         }
       } 
     }
