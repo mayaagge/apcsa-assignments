@@ -16,9 +16,20 @@ public class Calculator{
         s.toString();
       }
       else{
-        for (int j = i; j < count; j--){
-          s.pop();
+        double a = s.pop();
+        if (arr[j] == "+"){
+          a += s.pop()
         }
+        if (arr[j] == "-"){
+          a -= s.pop()
+        }
+        if (arr[j] == "*"){
+          a *= s.pop()
+        }
+        if (arr[j] == "/"){
+          a /= s.pop()
+        }
+        count = 0;
       } 
     }
     return s.pop();
