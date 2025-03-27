@@ -67,7 +67,7 @@ public class Calculator{
     }
     return s.pop();
   }
-  pubic static String infixToPostfix(String infix){
+  public static String infixToPostfix(String infix){
     ArrayDeque<String> s = new ArrayDeque<>();
     String[] arr = infix.split(" ");
     String postfix = "";
@@ -89,4 +89,5 @@ public class Calculator{
       }
     }
     return postfix;
+  }
 }
