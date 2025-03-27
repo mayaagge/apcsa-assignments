@@ -73,10 +73,10 @@ public class Calculator{
     String postfix = "";
     for (int i = 0; i < arr.length; i++){
        if ((arr[i].equals("+")) || (arr[i].equals("*")) || (arr[i].equals("-")) || (arr[i].equals("/")) || arr[i].equals("%")){
-         if (arr[i].substring(0,1).equals("(")){
+         if ((arr[i].substring(0,1)).equals("(")){
            s.push(arr[i].substring(0,1));
          }
-         else if (arr[i].substring(0,1).equals(")")){
+         else if ((arr[i].substring(0,1)).equals(")")){
            postfix += s.pop();
            s.pop();
          }  
