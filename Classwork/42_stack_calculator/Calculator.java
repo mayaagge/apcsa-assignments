@@ -86,6 +86,7 @@ public class Calculator{
        }
       else{
         postfix += infix.substring(i, i+1);
+        System.out.println(postfix);
       }
     }
     for (int i = 0; i < s.size(); i++){
