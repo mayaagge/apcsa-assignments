@@ -87,7 +87,7 @@ public class Calculator{
          }
        }
        else{
-         while (!s.isEmpty() && !s.peek().equals("(") && ((arr[i].equals("+") || arr[i].equals("-")) && (s.peek().equals("+") || s.peek().equals("-") || s.peek().equals("*") || s.peek().equals("/") || s.peek().equals("%"))) || ((arr[i].equals("*") || arr[i].equals("/") || arr[i].equals("%")) && (s.peek().equals("*") || s.peek().equals("/") || s.peek().equals("%")))){
+         while (!s.isEmpty() && !s.peek().equals("(") && (((arr[i].equals("+") || arr[i].equals("-")) && (s.peek().equals("+") || s.peek().equals("-") || s.peek().equals("*") || s.peek().equals("/") || s.peek().equals("%"))) || ((arr[i].equals("*") || arr[i].equals("/") || arr[i].equals("%")) && (s.peek().equals("*") || s.peek().equals("/") || s.peek().equals("%"))))){
                 postfix += s.pop() + " ";
          }
          s.push(arr[i]);
