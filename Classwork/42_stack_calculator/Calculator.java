@@ -81,6 +81,7 @@ public class Calculator{
            s.pop();
          }  
          else if ((arr[i].equals("*") || arr[i].equals("/") || arr[i].equals("%"))){
+           s.push(arr[i]);
           postfix += s.pop();
          }
          else{
