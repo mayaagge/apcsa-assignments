@@ -92,10 +92,12 @@ public class Calculator{
          }
          s.push(arr[i]);
        }
-       while (!s.isEmpty()){
-        postfix += s.pop() + " ";
+    }
+    while (!s.isEmpty()){
+      postfix += s.pop() + " ";
     }
     return postfix;
   }
 }
-}
+
+
