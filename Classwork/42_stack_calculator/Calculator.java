@@ -72,14 +72,14 @@ public class Calculator{
     String[] arr = infix.split(" ");
     String postfix = "";
     for (int i = 0; i < arr.length; i++){
-       if (!((arr[i].equals("+")) || (arr[i].equals("*")) || (arr[i].equals("-")) || (arr[i].equals("/")) || arr[i].equals("%"))){
+       if (!((arr[i].equals("+")) || (arr[i].equals("*")) || (arr[i].equals("-")) || (arr[i].equals("/")) || arr[i].equals("%") || (arr[i].substring(0,1)).equals("(") || (arr[i].substring(0,1)).equals(")"))){
          postfix += arr[i] + " ";
        }
        else if ((arr[i].substring(0,1)).equals("(")){
          s.push(arr[i].substring(0,1));
        }
        else if ((arr[i].substring(0,1)).equals(")")){
-         while (s.isEmpty() && s.peek().equals("(")){
+         while (!s.isEmpty() && !s.peek().equals("(")){
            postfix += s.pop() + " ";
          }
          if (!s.isEmpty() && s.peek().equals("(")){
