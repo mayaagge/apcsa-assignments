@@ -72,31 +72,28 @@ public class Calculator{
     String[] arr = infix.split(" ");
     String postfix = "";
     for (int i = 0; i < arr.length; i++){
-       if ((arr[i].equals("+")) || (arr[i].equals("*")) || (arr[i].equals("-")) || (arr[i].equals("/")) || arr[i].equals("%")){
-         if ((arr[i].substring(0,1)).equals("(")){
-           s.push(arr[i].substring(0,1));
+       if (!((arr[i].equals("+")) || (arr[i].equals("*")) || (arr[i].equals("-")) || (arr[i].equals("/")) || arr[i].equals("%"))){
+         postfix += arr[i] + " ";
+       }
+       else if ((arr[i].substring(0,1)).equals("(")){
+         s.push(arr[i].substring(0,1));
+       }
+       else if ((arr[i].substring(0,1)).equals(")")){
+         while (s.isEmpty() && s.peek().equals("(")){
+           postfix += s.pop() + " ";
          }
-         else if ((arr[i].substring(0,1)).equals(")")){
-           postfix += s.pop();
+         if (!s.isEmpty() && s.peek().equals("(")){
            s.pop();
-         }  
-         else if ((arr[i].equals("*") || arr[i].equals("/") || arr[i].equals("%"))){
-           s.push(arr[i]);
-          //postfix += s.pop();
-         }
-         else{
-          s.push(arr[i]);
          }
        }
-      else{
-        postfix += arr[i];
-        System.out.println(postfix);
-      }
-    }
-    System.out.println(s.toString());
-    for (int i = 0; i < s.size(); i++){
-      postfix += s.pop();
-      System.out.println(postfix);
+       else{
+         while (!s.isEmpty() && !s.peek().equals("(") && ((arr[i].equals("+") || arr[i].equals("-")) && (s.peek().equals("+") || s.peek().equals("-") || s.peek().equals("*") || s.peek().equals("/") || s.peek().equals("%"))) || ((arr[i].equals("*") || arr[i].equals("/") || arr[i].equals("%")) && (s.peek().equals("*") || s.peek().equals("/") || s.peek().equals("%")))){
+                postfix += s.pop() + " ";
+         }
+         s.push(arr[i]);
+       }
+       while (!s.isEmpty()){
+        postfix += s.pop() + " ";
     }
     return postfix;
   }
