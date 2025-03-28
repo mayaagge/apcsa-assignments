@@ -93,7 +93,7 @@ public class Calculator{
         System.out.println(postfix);
       }
     }
-    s.toString()
+    s.toString();
     for (int i = 0; i < s.size(); i++){
       postfix += s.pop();
       System.out.println(postfix);
