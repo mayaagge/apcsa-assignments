@@ -82,7 +82,7 @@ public class Calculator{
          }  
          else if ((arr[i].equals("*") || arr[i].equals("/") || arr[i].equals("%"))){
            s.push(arr[i]);
-          postfix += s.pop();
+          //postfix += s.pop();
          }
          else{
           s.push(arr[i]);
