@@ -73,6 +73,7 @@ public class BurnTrees{
    *If you add more instance variables you can add more here,
    *otherwise it is complete
    */
+  private boolean burning;
   public BurnTrees(int width,int height, double density){
     map = new int[height][width];
     for(int r=0; r<map.length; r++ ){
