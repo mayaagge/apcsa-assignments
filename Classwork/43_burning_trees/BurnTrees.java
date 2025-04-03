@@ -29,7 +29,7 @@ public class BurnTrees{
     burning = false;
     int rows = map.length;
     int cols = map[0].length;
-    in[][]next = new int[rows][cols];
+    int[][]next = new int[rows][cols];
     for (int r = 0; r < rows; r++) {
       for (int c = 0; c < cols; c++) {
         next[r][c] = map[r][c];
