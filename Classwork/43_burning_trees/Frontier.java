@@ -1,3 +1,4 @@
+import java.util.ArrayDeque;
 public class Frontier{
   private ArrayDeque<int[]> frontier; // Replace ? with the type you want for your frontier
   public Frontier(){
