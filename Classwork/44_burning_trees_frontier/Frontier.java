@@ -14,6 +14,6 @@ public class Frontier{
     return frontier.remove();
   }
   public void print(){
-    System.out.println(Arrays.deepToString(myDeck.toArray(new int[1][1])));
+    System.out.println(Arrays.deepToString(frontier.toArray(new int[1][1])));
   }
 }
