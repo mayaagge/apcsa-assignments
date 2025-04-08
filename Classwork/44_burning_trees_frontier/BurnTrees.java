@@ -55,6 +55,7 @@ public class BurnTrees{
   private Frontier frontier;
   public BurnTrees(int width,int height, double density){
     map = new int[height][width];
+    frontier = new Frontier();
     for(int r=0; r<map.length; r++ ){
       for(int c=0; c<map[r].length; c++ ){
         if(Math.random() < density){
