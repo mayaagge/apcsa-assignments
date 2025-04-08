@@ -15,7 +15,7 @@ public class BurnTrees{
     //YOU MUST IMPLEMENT THIS METHOD
     //(BEFORE WRITING ANY CODE READ ALL OF THE CODE AND SEE HOW IT FITS TOGETHER)
     //HINT: do not check the board for fire which is an n^2 operation
-    return !burning;//placeholder for compilation purposes
+    return frontier.size() == 0;//placeholder for compilation purposes
   }
 
   /*This is the core of the simulation. All of the logic for advancing to the next round goes here.
@@ -26,45 +26,24 @@ public class BurnTrees{
     ticks++;//leave this here.
     //YOU MUST IMPLEMENT THE REST OF THIS METHOD
     //(BEFORE WRITING ANY CODE READ ALL OF THE CODE AND SEE HOW IT FITS TOGETHER)
-    burning = false;
-    int rows = map.length;
-    int cols = map[0].length;
-    int[][]next = new int[rows][cols];
-    for (int r = 0; r < rows; r++) {
-      for (int c = 0; c < cols; c++) {
-        next[r][c] = map[r][c];
-      }
-    }
-    for (int r = 0; r < rows; r++) {
-      for (int c = 0; c < cols; c++) {
-        if (map[r][c] == FIRE) {
-          if (r > 0 && map[r - 1][c] == TREE){
-            next[r - 1][c] = FIRE;
-          }
-          if (r < rows - 1 && map[r + 1][c] == TREE){
-            next[r + 1][c] = FIRE;
-          }
-          if (c > 0 && map[r][c - 1] == TREE){
-            next[r][c - 1] = FIRE;
-          }
-          if (c < cols - 1 && map[r][c + 1] == TREE){
-            next[r][c + 1] = FIRE;
+    int size = frontier.size();
+    for (int i = 0; i < size; i++) {
+    int[] pos = frontier.remove();
+    int r = pos[0];
+    int c = pos[1];
+    map[r][c] = ASH;
+    int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    for (int[] d : directions) {
+        int newr = r + d[0];
+        int newc = c + d[1];
+        if (newr >= 0 && newr < map.length && newc >= 0 && newc < map[0].length) {
+          if (map[newr][newc] == TREE) {
+            map[newr][newc] = FIRE;
+            frontier.add(new int[]{newr, newc});
           }
         }
       }
     }
-    for (int r = 0; r < rows; r++) {
-      for (int c = 0; c < cols; c++) {
-        if (map[r][c] == FIRE) {
-          map[r][c] = ASH;
-        } else if (map[r][c] == TREE && next[r][c] == FIRE) {
-          map[r][c] = FIRE;
-          burning = true; 
-        } else if (map[r][c] == FIRE) {
-          burning = true; 
-        }
-      }
-    }   
   }
 
   /***********************YOU MIGHT UPDATE THIS**************************/
@@ -73,7 +52,7 @@ public class BurnTrees{
    *If you add more instance variables you can add more here,
    *otherwise it is complete
    */
-  private boolean burning;
+  private Frontier frontier;
   public BurnTrees(int width,int height, double density){
     map = new int[height][width];
     for(int r=0; r<map.length; r++ ){
@@ -96,6 +75,7 @@ public class BurnTrees{
     for(int i = 0; i < map.length; i++){
       if(map[i][0]==TREE){
         map[i][0]=FIRE;
+        frontier.add(new int[]{i, 0});
       }
     }
   }
