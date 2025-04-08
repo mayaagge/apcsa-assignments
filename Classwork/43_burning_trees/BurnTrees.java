@@ -93,9 +93,11 @@ public class BurnTrees{
   public void start(){
     //If you add more instance variables you can add more here,
     //otherwise it is complete.
+    burning  = false;
     for(int i = 0; i < map.length; i++){
       if(map[i][0]==TREE){
         map[i][0]=FIRE;
+        burning = true;
       }
     }
   }
