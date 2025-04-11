@@ -75,6 +75,6 @@ void mouseClicked() {
   int col = mouseX / SQUARE_SIZE;
   int row = mouseY / SQUARE_SIZE;
   if (row >= 0 && row < grid.length && col >= 0 && col < grid[0].length) {
-    grid[row][col] = 1 - grid[row][col]; // toggle between 0 and 1
+    grid[row][col] = 1 - grid[row][col]; 
   }
 }
