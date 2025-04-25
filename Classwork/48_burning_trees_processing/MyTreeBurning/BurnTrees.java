@@ -81,34 +81,6 @@ public class BurnTrees{
     }
   }
 
-
-
-    public static void main(String[]args){
-      int WIDTH = 20;
-      int HEIGHT = 20;
-      int DELAY = 200;
-      double DENSITY = .7;
-      if(args.length > 1){
-        WIDTH = Integer.parseInt(args[0]);
-        HEIGHT = Integer.parseInt(args[1]);
-        DENSITY = Double.parseDouble(args[2]);
-      }
-      if(args.length > 3){
-        DELAY = Integer.parseInt(args[3]);
-      }
-      BurnTrees b = new BurnTrees(WIDTH,HEIGHT,DENSITY);
-
-
-      int ans = b.animate(DELAY);//animate all screens
-      System.out.println(ans);//print the final answer
-
-      //int ans = b.outputAll();//print all screens one after another
-      //System.out.println(ans);//print the final answer
-    }
-
-
-
-
   /***********************DO NOT UPDATE THINGS BELOW HERE**************************/
 
   /*DO NOT UPDATE THIS
@@ -144,38 +116,6 @@ public class BurnTrees{
       builder.append("\n");
     }
     return builder.toString();
-  }
-
-  /*DO NOT UPDATE THIS*/
-  public String toStringColor(){
-    StringBuilder builder = new StringBuilder();
-    for (int i = 0; i < map.length; i++) {
-      for (int c = 0; c < map[i].length; c++) {
-        if(map[i][c]==0)
-          builder.append(" ");
-        else if(map[i][c]==2)
-          builder.append(Text.color(Text.GREEN)+"@");
-        else if(map[i][c]==1)
-          builder.append(Text.color(Text.RED)+"w");
-        else if(map[i][c]==3)
-          builder.append(Text.color(Text.DARK)+".");
-      }
-      builder.append("\n"+Text.RESET);
-    }
-    return builder.toString()+ticks+"\n";
-  }
-
-  /*DO NOT UPDATE THIS*/
-  public int animate(int delay) {
-    System.out.print(Text.CLEAR_SCREEN);
-    System.out.println(Text.go(1,1)+toStringColor());
-    Text.wait(delay);
-    while(!done()){
-      tick();
-      System.out.println(Text.go(1,1)+toStringColor());
-      Text.wait(delay);
-    }
-    return getTicks();
   }
 
   /*DO NOT UPDATE THIS*/
