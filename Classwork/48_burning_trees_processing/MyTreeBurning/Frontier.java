@@ -1,0 +1,19 @@
+import java.util.*;
+public class Frontier{
+  private ArrayDeque<int[]> frontier; // Replace ? with the type you want for your frontier
+  public Frontier(){
+    frontier = new ArrayDeque<int[]>();
+  }
+  public int size(){
+    return frontier.size();
+  }
+  public void add(int[]location){
+    frontier.add(location);
+  }
+  public int[] remove(){
+    return frontier.remove();
+  }
+  public void print(){
+    System.out.println(Arrays.deepToString(frontier.toArray(new int[1][1])));
+  }
+}
