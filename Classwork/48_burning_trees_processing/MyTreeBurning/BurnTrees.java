@@ -1,6 +1,6 @@
 import java.util.*;
 public class BurnTrees{
-  private int[][]map;
+  public int[][]map;
   private int ticks;
   private static final int TREE = 2;
   private static final int FIRE = 1;
