@@ -57,5 +57,3 @@ public class Kernel {
     destination.updatePixels();
   }
 }
-
-}
