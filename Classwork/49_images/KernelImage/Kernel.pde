@@ -24,7 +24,7 @@ public class Kernel {
 
         if (boundaryMode == 1) { 
           if (xi < 0 || xi >= img.width || yj < 0 || yj >= img.height) {
-            continue;
+            return color(0,0,0);
           }
         } else if (boundaryMode == 2) { 
           xi = constrain(xi, 0, img.width - 1);
