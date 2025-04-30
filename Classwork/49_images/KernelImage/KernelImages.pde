@@ -12,7 +12,7 @@ void setup() {
     {-1,  8, -1},
     {-1, -1, -1}
   });
-  k2 = new Kernel( new float[][] {
+  Kernel k2 = new Kernel( new float[][] {
     {.11, .11, .11},
     {.11, .11, .11},
     {.11, .11, .11}
