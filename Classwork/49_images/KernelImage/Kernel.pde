@@ -1,18 +1,17 @@
 public class Kernel {
-  float[][]kernel;
+  float[][] kernel;
+  int boundaryMode = 1; 
 
-  /**Constructor takes the kernel that will be applied to the image
-  *This implementation only allows 3x3 kernels
-  */
-  public Kernel(float[][]init) {
+  public Kernel(float[][] init) {
     kernel = init;
   }
 
-  /**If part of the kernel is off of the image, return black, Otherwise
-  *Calculate the convolution of r/g/b separately, and return that color\
-  *if the calculation for any of the r,g,b values is outside the range
-  *     0-255, then clamp it to that range (< 0 becomes 0, >255 becomes 255)
-  */
+  void setBoundaryMode(int mode) {
+    if (mode >= 1 && mode <= 3) {
+      boundaryMode = mode;
+    }
+  }
+
   color calcNewColor(PImage img, int x, int y) {
     float r = 0;
     float g = 0;
@@ -23,8 +22,16 @@ public class Kernel {
         int xi = x + i;
         int yj = y + j;
 
-        if (xi < 0 || xi >= img.width || yj < 0 || yj >= img.height) {
-          continue; 
+        if (boundaryMode == 1) { 
+          if (xi < 0 || xi >= img.width || yj < 0 || yj >= img.height) {
+            continue;
+          }
+        } else if (boundaryMode == 2) { 
+          xi = constrain(xi, 0, img.width - 1);
+          yj = constrain(yj, 0, img.height - 1);
+        } else if (boundaryMode == 3) { 
+          xi = (xi + img.width) % img.width;
+          yj = (yj + img.height) % img.height;
         }
 
         color c = img.get(xi, yj);
@@ -39,11 +46,8 @@ public class Kernel {
     b = constrain(b, 0, 255);
 
     return color(r, g, b);
-
   }
 
-  /**Apply the kernel to the source,
-  *and saves the data to the destination.*/
   void apply(PImage source, PImage destination) {
     source.loadPixels();
     destination.loadPixels();
