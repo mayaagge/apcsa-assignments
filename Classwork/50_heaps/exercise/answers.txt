@@ -1,1 +1,3 @@
-The runtime of this algorithm is
+1. 200 would be added to the last level and from there it would be swapped upwards until it is not greater than its parent.
+2. Similarly, we would add 20 to the last level and swap it upwards until it is not greater than its parent.
+3. The runtime of this algorithm is O(logn)
