@@ -1,3 +1,11 @@
+Exercise 1
 1. 200 would be added to the last level and from there it would be swapped upwards until it is not greater than its parent.
 2. Similarly, we would add 20 to the last level and swap it upwards until it is not greater than its parent.
 3. The runtime of this algorithm is O(logn)
+
+Exercise 2
+1. To remove 200 you would swap with the rightmost element and then swap it back down with the greater one 
+2. The right-most would no longer be there
+3. It would be in order and the right side would be changed as 7 swaps down
+4. The next largest element would be 36 now and we would do the same thing making 25 the root
+5. The runtime of this algorithm is O(logn)
