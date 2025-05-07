@@ -78,7 +78,7 @@ public class MyHeap{
                         for (int j = i; j < 2*i + 1; j++){
                                 s += heap[j] + ",";
                         }
-                        s += heap[j+1];
+                        s += heap[2*i+1];
                         s += "\n";
                 }
                 return s;         
