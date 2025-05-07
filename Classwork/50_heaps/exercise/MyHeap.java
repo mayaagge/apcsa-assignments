@@ -51,8 +51,9 @@ public class MyHeap{
                 }
                 else{
                     while (pos > 0 && heap[pos] < heap[parent(pos)]) {
-                    swap(pos, parent(pos));
-                    pos = parent(pos);
+                            swap(pos, parent(pos));
+                            pos = parent(pos);
+                    }
                 }
                         
         }
@@ -74,8 +75,9 @@ public class MyHeap{
                 }
                 else{
                     while (pos > 0 && heap[pos] < heap[parent(pos)]) {
-                    swap(pos, parent(pos));
-                    pos = parent(pos);
+                            swap(pos, parent(pos));
+                            pos = parent(pos);
+                    }
                 }
         }
 
