@@ -60,7 +60,7 @@ public class myHeap{
         public void insert(int element) {
                 // YOUR CODE HERE
                 if (size == maxsize){
-                        throw new Exception("Max size reached for heap");
+                        throw new IllegalStateException("Max size reached for heap");
                 }
                 heap[size] = element;
                 heapifyUp(size);
@@ -86,7 +86,7 @@ public class myHeap{
         public int deleteRoot() {
             // YOUR CODE HERE
             if (size == 0) {
-                throw new Exception("Heap is empty");
+                throw new IllegalStateException("Heap is empty");
             }
             int root = heap[0];
             heap[0] = heap[size - 1];
