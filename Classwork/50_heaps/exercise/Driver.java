@@ -12,7 +12,7 @@ public class Driver{
         heap.insert(20);
         heap.insert(15);
 
-        heap.print();
+        heap.toString();
         System.out.println("The deleted value is " + heap.deleteRoot());
         heap.toString();
     }
