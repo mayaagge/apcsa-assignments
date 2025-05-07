@@ -36,22 +36,44 @@ public class MyHeap{
 
         private void heapifyDown(int pos) {
                 // YOUR CODE HERE
-                int i = pos;
-                if (leftChild(pos)< size && heap[leftChild(pos)] < heap[i]){
-                        i = leftChild(pos);
+                if (isMaxHeap == false){
+                        int i = pos;
+                        if (leftChild(pos)< size && heap[leftChild(pos)] < heap[i]){
+                                i = leftChild(pos);
+                        }
+                        if (rightChild(pos)< size && heap[rightChild(pos)] < heap[i]){
+                                i = rightChild(pos);
+                        }
+                        if (i != pos){
+                                swap(pos, i);
+                                heapifyDown(i);
+                        }
                 }
-                if (rightChild(pos)< size && heap[rightChild(pos)] < heap[i]){
-                        i = rightChild(pos);
+                else{
+                    while (pos > 0 && heap[pos] < heap[parent(pos)]) {
+                    swap(pos, parent(pos));
+                    pos = parent(pos);
                 }
-                if (i != pos){
-                        swap(pos, i);
-                        heapifyDown(i);
-                }
+                        
         }
         
         private void heapifyUp(int pos) {
                 // YOUR CODE HERE
-                while (pos > 0 && heap[pos] < heap[parent(pos)]) {
+                if (isMaxHeap == true){
+                        int i = pos;
+                        if (leftChild(pos)< size && heap[leftChild(pos)] < heap[i]){
+                                i = leftChild(pos);
+                        }
+                        if (rightChild(pos)< size && heap[rightChild(pos)] < heap[i]){
+                                i = rightChild(pos);
+                        }
+                        if (i != pos){
+                                swap(pos, i);
+                                heapifyDown(i);
+                        }
+                }
+                else{
+                    while (pos > 0 && heap[pos] < heap[parent(pos)]) {
                     swap(pos, parent(pos));
                     pos = parent(pos);
                 }
