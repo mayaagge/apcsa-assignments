@@ -35,51 +35,41 @@ public class MyHeap{
         
 
         private void heapifyDown(int pos) {
-                // YOUR CODE HERE
-                if (isMaxHeap == false){
-                        int i = pos;
-                        if (leftChild(pos)< size && heap[leftChild(pos)] < heap[i]){
-                                i = leftChild(pos);
-                        }
-                        if (rightChild(pos)< size && heap[rightChild(pos)] < heap[i]){
-                                i = rightChild(pos);
-                        }
-                        if (i != pos){
-                                swap(pos, i);
-                                heapifyDown(i);
-                        }
-                }
-                else{
-                    while (pos > 0 && heap[pos] < heap[parent(pos)]) {
-                            swap(pos, parent(pos));
-                            pos = parent(pos);
-                    }
-                }
-                        
-        }
+                int i = pos;
+                while (true) {
+                    int left = leftChild(i);
+                    int right = rightChild(i);
+                    int target = i;
         
-        private void heapifyUp(int pos) {
-                // YOUR CODE HERE
-                if (isMaxHeap == true){
-                        int i = pos;
-                        if (leftChild(pos)< size && heap[leftChild(pos)] < heap[i]){
-                                i = leftChild(pos);
-                        }
-                        if (rightChild(pos)< size && heap[rightChild(pos)] < heap[i]){
-                                i = rightChild(pos);
-                        }
-                        if (i != pos){
-                                swap(pos, i);
-                                heapifyDown(i);
-                        }
-                }
-                else{
-                    while (pos > 0 && heap[pos] < heap[parent(pos)]) {
-                            swap(pos, parent(pos));
-                            pos = parent(pos);
+                    if (isMaxHeap) {
+                        if (left < size && heap[left] > heap[target]) target = left;
+                        if (right < size && heap[right] > heap[target]) target = right;
+                    } else {
+                        if (left < size && heap[left] < heap[target]) target = left;
+                        if (right < size && heap[right] < heap[target]) target = right;
+                    }
+        
+                    if (target != i) {
+                        swap(i, target);
+                        i = target;
+                    } else {
+                        break;
                     }
                 }
-        }
+            }
+
+        private void heapifyUp(int pos) {
+                while (pos > 0) {
+                    int parentPos = parent(pos);
+                    if ((isMaxHeap && heap[pos] > heap[parentPos]) ||
+                        (!isMaxHeap && heap[pos] < heap[parentPos])) {
+                        swap(pos, parentPos);
+                        pos = parentPos;
+                    } else {
+                        break;
+                    }
+                }
+            }
 
         public void insert(int element) {
                 // YOUR CODE HERE
@@ -98,14 +88,18 @@ public class MyHeap{
                 //    20 30
                //  10 15 18 25
                 String s = "";
-                for (int i = 0; i < size; i= 2*i+1){
-                        s += heap[i];
-                        for (int j = i+1; j < 2*i + 1; j++){
-                                s += ", " + heap[j] ;
-                        }
-                        s += "\n";
+                int count = 0;
+                int level = 0;
+                while (count < size) {
+                    int numElements = (int) Math.pow(2, level);
+                    for (int i = 0; i < numElements && count < size; i++) {
+                        s += heap[count] + " ";
+                        count++;
+                    }
+                    s += "\n";
+                    level++;
                 }
-                return s;         
+                return s;      
         }
 
         public int deleteRoot() {
