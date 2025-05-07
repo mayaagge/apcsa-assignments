@@ -73,7 +73,7 @@ public class MyHeap{
                 //     100
                 //    20 30
                //  10 15 18 25
-                for (int i = 0; i < size; i*2+1){
+                for (int i = 0; i < size; i= 2*i+1){
                         for (int j = i; j < 2*i + 1; j++){
                                 System.out.print(heap[j]);
                         }
