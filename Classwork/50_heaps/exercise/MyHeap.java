@@ -75,11 +75,11 @@ public class MyHeap{
                //  10 15 18 25
                 String s = "";
                 for (int i = 0; i < size; i= 2*i+1){
+                        s += heap[i];
                         for (int j = i+1; j < 2*i + 1; j++){
-                                s += heap[j] + ",";
+                                s += ", " + heap[j] ;
                         }
                         s += "\n";
-                        s += heap[2*i+1];
                 }
                 return s;         
         }
