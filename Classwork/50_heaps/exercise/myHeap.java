@@ -60,7 +60,7 @@ public class MyHeap{
         public void insert(int element) {
                 // YOUR CODE HERE
                 if (size == maxSize){
-                        return;
+                        throw new Exception("Max size reached for heap");
                 }
                 heap[size] = element;
                 heapify(size);
@@ -73,7 +73,7 @@ public class MyHeap{
                 //     100
                 //    20 30
                //  10 15 18 25
-                for (int i = 0; i < heap.length; i*2+1){
+                for (int i = 0; i < size; i*2+1){
                         for (int j = i; j < 2*i + 1; j++){
                                 System.out.print(heap[j]);
                         }
@@ -82,8 +82,15 @@ public class MyHeap{
         }
 
         public int deleteRoot() {
-           // YOUR CODE HERE
-            return 0;
+            // YOUR CODE HERE
+            if (size == 0) {
+                throw new Exception("Heap is empty");
+            }
+            int root = heap[0];
+            heap[0] = heap[size - 1];
+            size--;
+            heapifyDown(0);
+            return root;
         }
 
 }
