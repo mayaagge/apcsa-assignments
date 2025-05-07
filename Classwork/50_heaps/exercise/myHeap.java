@@ -13,35 +13,58 @@ public class MyHeap{
 
         private int parent(int pos) {
             // RETURN POSTION PARENT
-            return heap[(pos-1)/2];
+            return (pos-1)/2;
         }
 
         private int leftChild(int pos) {
             // RETURN POSITION LEFTCHILD
-            return heap[2*pos+1];
+            return 2*pos+1;
         }
         
         private int rightChild(int pos) {
             // RETURN POSITION RIGHTCHILD
-            return heap[2*pos+2];
+            return 2*pos+2;
         }
         
         private void swap(int idx1, int idx2) {
                 // YOUR CODE HERE
+                int temp = heap[idx1];
+                heap[idx1] = heap[idx2];
+                heap[idx2] = temp;
         }
         
 
         private void heapifyDown(int pos) {
                 // YOUR CODE HERE
+                int i = pos;
+                if (leftChild(pos)< size && heap[leftChild(pos)] < heap[i]){
+                        i = leftChild(pos);
+                }
+                if (rightChild(pos)< size && heap[rightChild(pos)] < heap[i]){
+                        i = rightChild(pos);
+                }
+                if (i != pos){
+                        swap(pos, i);
+                        heapifyDown(i);
+                }
         }
         
         private void heapifyUp(int pos) {
                 // YOUR CODE HERE
+                while (pos > 0 && heap[pos] < heap[parent(pos)]) {
+                    swap(pos, parent(pos));
+                    pos = parent(pos);
+                }
         }
 
         public void insert(int element) {
                 // YOUR CODE HERE
-
+                if (size == maxSize){
+                        return;
+                }
+                heap[size] = element;
+                heapify(size);
+                size++;
         }
 
         public String toString() {
