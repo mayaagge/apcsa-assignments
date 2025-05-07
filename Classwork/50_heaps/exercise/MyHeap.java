@@ -1,10 +1,10 @@
-public class myHeap{
+public class MyHeap{
         private int[] heap;
         private int size;
         private int maxsize;
         private boolean isMaxHeap;
 
-        public myHeap(int numElements, boolean isMax) {
+        public MyHeap(int numElements, boolean isMax) {
              maxsize = numElements;
              size = 0;
              heap = new int[maxsize];
