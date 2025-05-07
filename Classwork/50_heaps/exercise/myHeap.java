@@ -59,11 +59,11 @@ public class MyHeap{
 
         public void insert(int element) {
                 // YOUR CODE HERE
-                if (size == maxSize){
+                if (size == maxsize){
                         throw new Exception("Max size reached for heap");
                 }
                 heap[size] = element;
-                heapify(size);
+                heapifyUp(size);
                 size++;
         }
 
