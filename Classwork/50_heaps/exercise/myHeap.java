@@ -4,7 +4,7 @@ public class myHeap{
         private int maxsize;
         private boolean isMaxHeap;
 
-        public MyHeap(int numElements, boolean isMax) {
+        public myHeap(int numElements, boolean isMax) {
              maxsize = numElements;
              size = 0;
              heap = new int[maxsize];
