@@ -113,5 +113,28 @@ public class MyHeap{
             heapifyDown(0);
             return root;
         }
-
+        public int[] heapSort(){
+            int[] tempHeap = new int[size];
+            for (int i = 0; i < size; i++) {
+                tempHeap[i] = heap[i];
+            }
+            int originalSize = size;
+            int[] sorted = new int[size];
+            for (int i = 0; i < sorted.length; i++) {
+                sorted[i] = deleteRoot();
+            }
+            heap = new int[maxsize];
+            for (int i = 0; i < originalSize; i++) {
+                heap[i] = tempHeap[i];
+            }
+            size = originalSize;
+            if (isMaxHeap) {
+                for (int i = 0; i < sorted.length / 2; i++) {
+                    int temp = sorted[i];
+                    sorted[i] = sorted[sorted.length - 1 - i];
+                    sorted[sorted.length - 1 - i] = temp;
+                }
+            }
+            return sorted;
+        }
 }
