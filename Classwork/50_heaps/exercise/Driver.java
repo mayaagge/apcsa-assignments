@@ -15,5 +15,6 @@ public class Driver{
         System.out.println(heap.toString());
         System.out.println("The deleted value is " + heap.deleteRoot());
         System.out.println(heap.toString());
+        System.out.println(heap.heapSort());
     }
 }
